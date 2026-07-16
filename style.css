@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.unorder{
+    /* display: flex; */
+    list-style: none;
+}
+.unorder li{
+    cursor: pointer;
+}
+.navi{
+    width: 30vw;  
+    margin-left: 2vw;
+    background-image: url(vegetable.webp);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-size: 28vw ,  8vh ; */
+}
+.itemss{
+  height: 7vh;
+    width: 8vw;
+    margin: 3vh 0vh 0vh 2.25vw ;
+}
+.itemss a{
+     text-transform: uppercase;
+     text-decoration: none;
+     color: rgb(246, 239, 239);
+}
+.itemss  :hover{
+border-bottom: 2px solid rgb(255, 0, 0)
+}
+.itemsss{
+    height: 7vh;
+    width: 8vw;
+     margin: 3vh 0vw 0vh 5vw;
+     cursor: pointer;
+ }
+ .itemsss a{
+    /* /* margin-left: 5vw; * */
+    text-transform: uppercase;
+     text-decoration: none;
+     color: rgb(246, 239, 239);
+} 
+.itemssss{
+    height: 7vh;
+    width: 8vw;
+     margin: 3vh 0vw 0vh 5vw;
+     cursor: pointer;
+ }
+ .itemssss a{
+    /* /* margin-left: 5vw; * */
+    text-transform: uppercase;
+     text-decoration: none;
+     color: rgb(246, 239, 239);
+} 
+
+
+.itemsss  :hover{
+border-bottom: 2px solid rgb(255, 0, 0)
+}
+.itemssss  :hover{
+border-bottom: 2px solid rgb(255, 0, 0)
+}
+.heading{
+    color: rgb(248, 241, 241);
+    /* background-color: rgb(255, 68, 0); */
+    /* width: 29vw; */
+    /* font-size: smaller; */
+    text-align: center;
+    margin-top: 1.7vh;
+    text-transform: uppercase;
+    font-family: "Betania Patmos In GDL", cursive;
+}
+.image{
+    height: 10vh;
+    cursor: pointer;
+}
+.head{
+    height: 10vh;
+    background-color:rgb(75, 75, 52);
+    display: flex;
+    z-index: 1;
+    /* align-items: center; */
+    /* margin-bottom: 5vh; */
+    width: 100vw;
+    position: fixed;
+}
+/* .searchbox{
+    margin: 20px 0px 0px 15px;
+} */
+.text{
+ outline-style: none; 
+}
+.button{
+   margin: 2.3vh 12.5vw ;
+     height: 4vh;
+    width: 6vw;
+}
+.signup{
+    color: white;
+    height: 4vh;
+    width: 6vw;
+     border-style: none;
+    background-color:hwb(16 0% 0%);
+    cursor: pointer;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase;
+}
+.images{
+    height: 3vh;
+    margin: 21px 0px;
+    outline-style: none;
+    cursor: pointer;
+}
+.unorder :hover{
+    color: rgb(229, 236, 236);
+}
+.container{
+    margin-top: 10vh;
+  height: 200vh;
+  width: 15vw;
+ background-color:rgb(108, 108, 71);
+ text-align: center;
+ margin-left: 4.55vw;
+ position: fixed
+}
+/* .container2{
+   transform: translate(-30vw);
+   transition-duration: 2s;
+} */
+.signup1{
+    z-index: 2;
+    position: absolute;
+    top: -5vh;
+    right: 0;
+    margin-right: 4vw;
+    height: 45vh;
+    width: 20vw;
+    margin-left: 30vw;
+    margin-top: 5vh;
+    background-color:rgb(108, 108, 71);
+    border: 1px solid gray;
+     text-align: center;
+  }
+    .signup2 :hover{
+        color: rgb(10, 10, 10);
+    }
+       .button :hover{
+        color: rgb(10, 10, 10);
+    }
+.bigcontainer{
+    display: flex;
+    width: 100vw;
+}
+.sig{
+    height: 4vh;
+    width: 6vw;
+    background-color:hwb(16 3% 2%);
+    color: rgb(239, 223, 217);
+    margin-top: 3vh;
+    cursor: pointer;
+    /* border: 1px solid gray; */
+    border-radius: 2%;
+    border-style: none;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase;
+}
+.list {
+    color: rgb(247, 178, 178);
+     font-family: "Betania Patmos In GDL", cursive;
+}
+.list a {
+        color: rgb(247, 178, 178);
+     font-family: "Betania Patmos In GDL", cursive;
+    text-decoration: none;
+}
+ .input{
+    border: 1px solid gray   ;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+.signup3{
+    position: absolute;
+    transform: translate(0 , -400vh);
+}
+.imaging{
+ height: 2vh;
+ width: 2vw;
+  float: right;
+  margin: 2vh 1vw 0 ;
+ cursor: pointer;
+}
+.remove{
+    height: 5vh;
+}
+.mar{
+    margin-bottom: 2vh;
+    color: rgb(216, 203, 203);
+}
+.information{
+    margin-top: 7vh;
+}
+.middle{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw ;
+    height: 100vh;
+    margin-left: 24.10vw;
+    margin-right: 5vw;
+}
+.container3{
+   height: 21vh;
+   width: 16vw;
+}
+.set{
+height: 20vh;
+width: 15vw;
+margin: 2vh 2vw;
+}
+.footer{
+    margin-left: 20vw;
+    /* margin-right: 20vw; */
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(14, 13, 13);
+    margin-top: 5vh;
+}
+ /* .itemscontainer4{
+    position: absolute;
+     display: flex;
+    flex-wrap: wrap;
+    width: 70% ;
+    height: 100%;
+    margin-left: 24.10vw;
+    margin-right: 5vw;
+    margin-top: 15vh;
+
+}  */
+  @media screen and (max-width : 1300px){
+    .navi{
+        width: 15vw ;
+        margin-left: 9vw;
+        /* background-color: aqua; */
+}
+.heading{
+    margin-top: 3vh;
+    font-size: smaller;
+}
+
+
+   }
+   @media screen and (max-width : 600px) { 
+.button{
+    margin-left: 10vw;
+    width: 5vw;
+}
+.signup{
+  color: white;
+    height: 4vh;
+    /* width: 3vw; */
+     border-style: none;
+    background-color:hwb(16 0% 0%);
+    cursor: pointer;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase;
+     font-size: xx-small;
+}
+.signup1{
+/* z-index: 2;
+    position: absolute; */
+    top: -5vh;
+    right: 0;
+    margin-right: 0vw;
+    height: 45vh;
+    width: 30vw;
+    margin-left: 10vw;
+    margin-top: 5vh;
+    background-color:rgb(108, 108, 71);
+    border: 1px solid gray;
+     text-align: center;
+}
+.sig{
+    height: 4vh;
+    width: 4.8vw;
+    background-color:hwb(16 2% 4%);
+    color: rgb(239, 223, 217);
+    margin-top: 3vh;
+    cursor: pointer;
+    font-size: xx-small;
+    /* border: 1px solid gray; */
+    border-radius: 2%;
+    border-style: none;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase;
+}
+.itemss{
+    height: 7vh;
+    width: 25vw;
+     margin: 3vh 0vw 0vh 10vw;
+     cursor: pointer;
+ }
+ .itemss  :hover{
+border-bottom: 2px solid rgb(255, 0, 0)
+}
+.itemsss{
+    margin-left: 10vw;
+}
+.list4{
+    font-size: xx-small;
+}
+.itemssss{
+    margin-left: 10vw;
+}
+.list3{
+     font-size: xx-small;
+}
+.list2{
+        font-size: xx-small;
+}
+.container{
+    margin-top: 10vh;
+  height: 200vh;
+  width: 25vw;
+   margin-left: 4.55vw;
+ background-color:rgb(108, 108, 71);
+ text-align: center;
+ position: fixed
+}
+.footer{
+    margin-left: 30vw;
+    /* margin-right: 20vw; */
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(14, 13, 13);
+    margin-top: 5vh;
+}
+ .cart{
+    margin-right: 16vw  ;
+} 
+/* .cart1{
+    font-size: xx-small;
+} */ 
+
+   }
