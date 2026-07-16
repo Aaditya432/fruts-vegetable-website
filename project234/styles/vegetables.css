@@ -1,0 +1,135 @@
+.itemscontainer4{
+    /* position: absolute; */
+     display: flex;
+    flex-wrap: wrap;
+    width: 70% ;
+    height: 100%;
+    margin-left: 24.10vw;
+    margin-right: 5vw;
+    margin-top: 15vh;
+}
+/* .items{
+    margin: 4vh 4vw;
+} */
+.manish4{
+    width: 15vw;
+    height: 25vh;
+  margin: 4vh 4vw;
+    cursor: pointer;
+    background-image: none;
+}
+.english4{
+    text-align: center;
+}
+.hindi4{
+    text-align: center;
+}
+.button3{
+    height: 2.8vh;
+    width: 2.8vw;
+    border-style: none;
+    /* background-color: rgb(2, 162, 255); */
+    margin-left: 0.5vw;
+}
+.button4{
+    /* display: inline; */
+    height: 3vh;
+    width: 2.5vw;
+    border-style: none;
+    background-color: rgb(0, 0, 0);
+    margin-left: 0.5vw;
+}
+.image57{
+    height: 3vh;
+    width: 3vw;
+     background-color: rgb(2, 162, 255);
+    cursor: pointer;
+}
+.image58{
+    height: 3vh;
+    width: 2.5vw;
+    cursor: pointer;
+}
+.printPrice2{
+    text-align: center;
+}
+.button35{
+    border-style: none;
+    height: 3vh;
+    width: 8vw;
+    color: white;
+   background-color: hwb(16 0% 0%);
+   margin-top: 2vh;
+   margin-left: 8vw;
+   cursor: pointer;
+}
+.cart3{
+    /* height: 3vh;
+    width: 2vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-left: 90vw;
+    margin-top: 15vh;
+    height: 5vh;
+    width: 8vw;
+    background-color: rgb(44, 45, 45);
+     text-transform: lowercase;
+    cursor: pointer;
+}
+.cart3 a {
+text-decoration: none;
+}
+.Bag2{
+    color: rgb(246, 233, 233);
+    /* margin-left: 1vw;
+    margin-top: 2vh ; */
+
+}
+@media screen and (max-width : 600px) { 
+    .cart3{
+   font-size: xx-small;
+    margin-left: 85vw;
+    }
+    .itemscontainer4{
+     /* display: flex;
+    flex-wrap: wrap; */
+    width: 48% ;
+    height: 100%;
+    margin-left: 35vw;
+    margin-right:  17vw;
+    margin-top: 21vh;
+}
+.button35{
+    border-style: none;
+    height: 3vh;
+    width: 10vw;
+    font-size: xx-small;
+    color: white;
+   background-color: hwb(16 0% 0%);
+   margin-top: 1vh;
+   margin-left: 7vw;
+   cursor: pointer;
+}
+.manish4{
+    width: 15vw;
+    height: 15vh;
+  margin: 1vh 4vw;
+    cursor: pointer;
+    background-image: none;
+}
+.english4{
+    font-size: x-small;
+}
+.hindi4{
+    font-size: x-small;
+}
+.manish1{
+    font-size: x-small;
+}
+.naresh1{
+    font-size: x-small;
+}
+}
+    
