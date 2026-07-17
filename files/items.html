@@ -84,6 +84,53 @@
     <script src="../javascript/vegetables.js"></script>
     <script src="../javascript/fruits.js"></script>
     <script src="../javascript/items.js"></script>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
+    authDomain: "fruitsvegetable-website.firebaseapp.com",
+    projectId: "fruitsvegetable-website",
+    storageBucket: "fruitsvegetable-website.firebasestorage.app",
+    messagingSenderId: "930353495099",
+    appId: "1:930353495099:web:4b0beba40fea843426b01e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Page load hote hi Firebase se cart uthao
+  async function loadCart(){
+    const cartContainer = document.querySelector('.cart-items'); // tumhare cart wale div ki class
+    cartContainer.innerHTML = ""; // pehle khali karo
+
+    const snapshot = await getDocs(collection(db, "cart"));
+    
+    if(snapshot.empty){
+      cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
+      return;
+    }
+
+    snapshot.forEach(docSnap => {
+      const item = docSnap.data();
+      cartContainer.innerHTML += `
+        <div class="cart-item">
+          <p><b>${item.name}</b> - ${item.price}</p>
+          <button onclick="deleteItem('${docSnap.id}')">X</button>
+        </div>
+      `;
+    });
+  }
+
+  loadCart();
+
+  // Delete button ka function
+  window.deleteItem = async function(id){
+    await deleteDoc(doc(db, "cart", id));
+    location.reload(); // refresh karke wapas load hoga
+  }
+</script>
 </body>
 
 </html>
