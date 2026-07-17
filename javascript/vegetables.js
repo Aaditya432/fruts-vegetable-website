@@ -115,3 +115,28 @@ vegetables.forEach( items => {
                  <button class = "button35" onclick = "displayBagItemsN(${items.id})">Add-to-bag</button>
               </section>`
 })
+// Firebase se add to cart function
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+document.addEventListener('click', async function(e){
+    if(e.target.classList.contains('add-to-bag')){
+        const productCard = e.target.closest('.product'); // product ka div
+        const name = productCard.querySelector('.product-name').innerText;
+        const price = productCard.querySelector('.product-price').innerText;
+        const img = productCard.querySelector('img').src;
+
+        try {
+            await addDoc(collection(window.db, "cart"), {
+                name: name,
+                price: price,
+                image: img,
+                qty: 1,
+                time: new Date()
+            });
+            alert(name + " added to cart!");
+            console.log("Saved to Firebase");
+        } catch (error) {
+            console.error("Error: ", error);
+        }
+    }
+});
