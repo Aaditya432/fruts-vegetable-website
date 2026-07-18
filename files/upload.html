@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload data</title>
+</head>
+<body>
+  <h1>Upload ho raha hai... ruko</h1>
 
+  <script type="module">
+    // 1. firebase.js ka path sahi karo
+    import { db } from "./firebase.js"; 
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    // 2. Yahan apna pura data.js wala array paste karo
+    let fruits = [
+      {
+        images: "images/banana2.jpg",
+        id: "001",
+        kilogram: 1,
+        price: 50,
+        englishName: "Bannana",
+        hindiName: "kela",
+        minusId: "930",
+        button4: "plusbut3.png",
+        button5: "minus.png",
+        cross: "otherimage/cross.png"
+      },
+      // ... baaki ke 550 item yahan paste
+    ];
+
+    async function uploadData() {
+      for(let item of fruits) {
+        await addDoc(collection(db, "products"), item); 
+      }
+      alert("Upload ho gaya! ✅ Ab ye page band kar do");
+      document.querySelector("h1").innerText = "Done! Ab Firebase check karo";
+    }
+    uploadData();
+  </script>
+</body>
+</html>
