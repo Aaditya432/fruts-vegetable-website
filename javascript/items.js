@@ -169,7 +169,7 @@ details.innerHTML+= `
 // })
    function displayItems(){
      itemBag.forEach(items =>{
-   itemscontainer23.innerHTML  += `<section class="items4">
+   itemsContainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
                     <img  class="manish4" src=../${items.images} alt="">
                 </div>
