@@ -182,7 +182,7 @@ details.innerHTML+= `
                 </button>
                 </div>
                </ section> 
-                `;
+                `
     });
   }
      loadCart();
