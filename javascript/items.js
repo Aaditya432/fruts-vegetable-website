@@ -28,7 +28,7 @@ let Bags;
       const itemsimp = docSnap.data();
         products.push({
     images: itemsimp.images,         
-     // id: itemsimp.id,
+     id: itemsimp.id,
     minusId: itemsimp.minusId,
     button4: itemsimp.button4,
     kilogram: itemsimp.kilogram,
@@ -168,7 +168,7 @@ details.innerHTML+= `
    
 // })
    function displayItems(){
-     itembag.forEach(items =>{
+     itemBag.forEach(items =>{
    itemscontainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
                     <img  class="manish4" src=../${items.images} alt="">
