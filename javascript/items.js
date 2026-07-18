@@ -13,6 +13,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
+let products = [];
 
 let itemBag;
 let Bags;
@@ -24,6 +25,11 @@ let Bags;
     cartContainer.innerHTML = ""; // pehle khali karo
 
     const snapshot = await getDocs(collection(db, "products"));
+     snapshot.foreach(itemsimp =>{
+        products.push({
+           
+        }
+     })
     
     if(snapshot.empty){
         
