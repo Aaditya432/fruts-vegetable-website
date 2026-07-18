@@ -118,21 +118,21 @@ details.innerHTML+= `
 function displayItems(){
     itemsContainer23.innerHTML = ' ';
 itemBag.forEach((items)=>{
-itemsContainer23.innerHTML  += `<section class="items4">
-                <div class="images3">
-                    <img  class="manish4" src=../${items.images} alt="">
-                </div>
-                <div class = "printPrice1">
-                 <h3 class="english33">${items.englishName}</h3>
-                 <h3 class="hindi33">(${items.hindiName})</h3>
-                <h2 class = "kg1" > kilogram : ${items.kilogram}Kg</h2>
-                <h2 class = "naresh2">Price : ${items.price} Rs </h2>
-                </div>
-                <div class = "crossButton ">
-                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
-                </button>
-                </div>
-               </ section> 
-                `
+// itemsContainer23.innerHTML  += `<section class="items4">
+//                 <div class="images3">
+//                     <img  class="manish4" src=../${items.images} alt="">
+//                 </div>
+//                 <div class = "printPrice1">
+//                  <h3 class="english33">${items.englishName}</h3>
+//                  <h3 class="hindi33">(${items.hindiName})</h3>
+//                 <h2 class = "kg1" > kilogram : ${items.kilogram}Kg</h2>
+//                 <h2 class = "naresh2">Price : ${items.price} Rs </h2>
+//                 </div>
+//                 <div class = "crossButton ">
+//                 <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
+//                 </button>
+//                 </div>
+//                </ section> 
+//                 `
 })
 }
