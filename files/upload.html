@@ -9,10 +9,24 @@
   <h1>Upload ho raha hai... ruko</h1>
 
   <script type="module">
-    // 1. firebase.js ka path sahi karo
-    import { db } from "./firebase.js"; 
-    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+  // Yahan apna firebase config daalo
+  const firebaseConfig = {
+    apiKey: "AIza...",
+    authDomain: "fruts-vegetable.firebaseapp.com",
+    projectId: "fruts-vegetable",
+    storageBucket: "fruts-vegetable.appspot.com",
+    messagingSenderId: "123...",
+    appId: "1:123...:web:abc"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  ...baaki code same...
     // 2. Yahan apna pura data.js wala array paste karo
  let fruits = [{
     images: "images/banana2.jpg",
