@@ -46,6 +46,7 @@ let Bags;
       cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
       return;
     }
+  }
 
 
 
@@ -178,13 +179,14 @@ details.innerHTML+= `
                 <h2 class = "naresh2">Price : ${items.price} Rs </h2>
                 </div>
                 <div class = "crossButton ">
-                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
+                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src =" ../${items.cross}" alt="">  
                 </button>
                 </div>
-               </ section> 
+               </section> 
                 `
     });
   }
+    
      loadCart();
 
   // Delete button ka function
