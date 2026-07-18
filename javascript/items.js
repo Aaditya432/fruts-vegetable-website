@@ -1,7 +1,7 @@
 let itemBag;
 let Bags;
  mango = [ ];
- data = fruits.concat(vegetables)
+ // data = fruits.concat(vegetables)
 const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
 const quantity =document.querySelector(".Quantityitem");
@@ -17,9 +17,9 @@ function onload(){
 console.log(data)
 function itemsFruits(){
 itemBag = namit.map(item =>{
-    for(let i = 0; i < data.length; i++){
-    if(item == data[i].id ){
-    return data[i]
+    for(let i = 0; i < products.length; i++){
+    if(item == products[i].id ){
+    return products[i]
     }
 }
 })}
