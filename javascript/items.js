@@ -20,12 +20,12 @@ let Bags;
 
   // Page load hote hi Firebase se cart uthao
   async function loadCart(){
-    const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
-    cartContainer.innerHTML = ""; // pehle khali karo
+    // const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
+    // cartContainer.innerHTML = ""; // pehle khali karo
 
     const snapshot = await getDocs(collection(db, "products"));
-     snapshot.forEach(items =>{
-        const itemsimp = items.data();
+      snapshot.forEach(docSnap => {
+      const itemsimp = docSnap.data();
         products.push({
     images: itemsimp.images,         
     id: items.id,
@@ -46,6 +46,7 @@ let Bags;
       cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
       return;
     }
+    
   }
 
 
@@ -167,9 +168,8 @@ details.innerHTML+= `
    
 // })
    function displayItems(){
-      snapshot.forEach(docSnap => {
-      const items = docSnap.data();
-  cartContainer.innerHTML  += `<section class="items4">
+     itembag.forEach(items =>{
+   itemscontainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
                     <img  class="manish4" src=../${items.images} alt="">
                 </div>
