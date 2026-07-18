@@ -105,7 +105,7 @@
     const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
     cartContainer.innerHTML = ""; // pehle khali karo
 
-    const snapshot = await getDocs(collection(db, "cart"));
+    const snapshot = await getDocs(collection(db, "products"));
     
     if(snapshot.empty){
         
@@ -138,7 +138,7 @@
 
   // Delete button ka function
   window.deleteItem = async function(id){
-    await deleteDoc(doc(db, "cart", id));
+    await deleteDoc(doc(db, "products", id));
     location.reload(); // refresh karke wapas load hoga
   }
 </script>
