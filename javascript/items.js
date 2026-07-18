@@ -192,9 +192,9 @@ details.innerHTML+= `
     await deleteDoc(doc(db, "products", id));
     location.reload(); // refresh karke wapas load hoga
   }
-function displayItems(){
-    itemsContainer23.innerHTML = ' ';
-itemBag.forEach((items)=>{
+// function displayItems(){
+//     itemsContainer23.innerHTML = ' ';
+// itemBag.forEach((items)=>{
 // itemsContainer23.innerHTML  += `<section class="items4">
 //                 <div class="images3">
 //                     <img  class="manish4" src=../${items.images} alt="">
