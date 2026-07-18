@@ -57,6 +57,7 @@ const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
+     loadCart();
     itemsFruits();
     displayItems();
     quantityNumbers();
@@ -187,13 +188,13 @@ details.innerHTML+= `
     });
   }
     
-     loadCart();
+  
 
   // Delete button ka function
-  window.deleteItem = async function(id){
-    await deleteDoc(doc(db, "products", id));
-    location.reload(); // refresh karke wapas load hoga
-  }
+  // window.deleteItem = async function(id){
+  //   await deleteDoc(doc(db, "products", id));
+  //   location.reload(); // refresh karke wapas load hoga
+  // }
 // function displayItems(){
 //     itemsContainer23.innerHTML = ' ';
 // itemBag.forEach((items)=>{
