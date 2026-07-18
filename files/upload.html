@@ -8,20 +8,19 @@
 <body>
   <h1>Upload ho raha hai... ruko</h1>
 
-  <script type="module">
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
   // Yahan apna firebase config daalo
-  const firebaseConfig = {
-    apiKey: "AIza...",
-    authDomain: "fruts-vegetable.firebaseapp.com",
-    projectId: "fruts-vegetable",
-    storageBucket: "fruts-vegetable.appspot.com",
-    messagingSenderId: "123...",
-    appId: "1:123...:web:abc"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
+  authDomain: "fruitsvegetable-website.firebaseapp.com",
+  projectId: "fruitsvegetable-website",
+  storageBucket: "fruitsvegetable-website.firebasestorage.app",
+  messagingSenderId: "930353495099",
+  appId: "1:930353495099:web:4b0beba40fea843426b01e"
+};
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
