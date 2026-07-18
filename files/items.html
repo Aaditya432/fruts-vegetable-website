@@ -102,12 +102,13 @@
 
   // Page load hote hi Firebase se cart uthao
   async function loadCart(){
-    const cartContainer = document.querySelector('.cart-items'); // tumhare cart wale div ki class
+    const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
     cartContainer.innerHTML = ""; // pehle khali karo
 
     const snapshot = await getDocs(collection(db, "cart"));
     
     if(snapshot.empty){
+        
       cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
       return;
     }
