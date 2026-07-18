@@ -7,20 +7,18 @@
 </head>
 <body>
   <h1>Upload ho raha hai... ruko</h1>
-
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"; // setDoc import kiya
 
-  // Yahan apna firebase config daalo
-const firebaseConfig = {
-  apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
-  authDomain: "fruitsvegetable-website.firebaseapp.com",
-  projectId: "fruitsvegetable-website",
-  storageBucket: "fruitsvegetable-website.firebasestorage.app",
-  messagingSenderId: "930353495099",
-  appId: "1:930353495099:web:4b0beba40fea843426b01e"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
+    authDomain: "fruitsvegetable-website.firebaseapp.com",
+    projectId: "fruitsvegetable-website",
+    storageBucket: "fruitsvegetable-website.firebasestorage.app",
+    messagingSenderId: "930353495099",
+    appId: "1:930353495099:web:4b0beba40fea843426b01e"
+  };
 
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
@@ -304,14 +302,20 @@ let vegetables = [
     },
 ]
 
-    async function uploadData() {
-      for(let item of fruits) {
-        await addDoc(collection(db, "products"), item); 
-      }
-      alert("Upload ho gaya! ✅ Ab ye page band kar do");
-      document.querySelector("h1").innerText = "Done! Ab Firebase check karo";
+  async function uploadData() {
+    // fruits upload
+    for(let item of fruits) {
+      await setDoc(doc(db, "products", item.id), item); // Yaha tumhari id se save hoga
     }
-    uploadData();
-  </script>
+    // vegetables upload
+    for(let item of vegetables) {
+      await setDoc(doc(db, "products", item.id), item); // Yaha bhi
+    }
+    alert("Sab Upload ho gaya! ✅ 550 items tumhari id ke saath");
+    document.querySelector("h1").innerText = "Done! Ab page band kar do";
+  }
+  uploadData();
+</script>
+<h1>Upload ho raha hai... 2-3 min lagenge</h1>
 </body>
 </html>
