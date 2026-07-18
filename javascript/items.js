@@ -1,6 +1,36 @@
 let itemBag;
 let Bags;
  mango = [ ];
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
+    authDomain: "fruitsvegetable-website.firebaseapp.com",
+    projectId: "fruitsvegetable-website",
+    storageBucket: "fruitsvegetable-website.firebasestorage.app",
+    messagingSenderId: "930353495099",
+    appId: "1:930353495099:web:4b0beba40fea843426b01e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Page load hote hi Firebase se cart uthao
+  async function loadCart(){
+    const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
+    cartContainer.innerHTML = ""; // pehle khali karo
+
+    const snapshot = await getDocs(collection(db, "products"));
+    
+    if(snapshot.empty){
+        
+      cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
+      return;
+    }
+
+
+
  // data = fruits.concat(vegetables)
 const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
@@ -114,7 +144,36 @@ details.innerHTML+= `
                  </div>
                  </div>`
  }) }
+   
 // })
+   function displayItems(){
+      snapshot.forEach(docSnap => {
+      const items = docSnap.data();
+  cartContainer.innerHTML  += `<section class="items4">
+                <div class="images3">
+                    <img  class="manish4" src=../${items.images} alt="">
+                </div>
+                <div class = "printPrice1">
+                 <h3 class="english33">${items.englishName}</h3>
+                 <h3 class="hindi33">(${items.hindiName})</h3>
+                <h2 class = "kg1" > kilogram : ${items.kilogram}Kg</h2>
+                <h2 class = "naresh2">Price : ${items.price} Rs </h2>
+                </div>
+                <div class = "crossButton ">
+                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
+                </button>
+                </div>
+               </ section> 
+                `;
+    });
+  }
+     loadCart();
+
+  // Delete button ka function
+  window.deleteItem = async function(id){
+    await deleteDoc(doc(db, "products", id));
+    location.reload(); // refresh karke wapas load hoga
+  }
 function displayItems(){
     itemsContainer23.innerHTML = ' ';
 itemBag.forEach((items)=>{
