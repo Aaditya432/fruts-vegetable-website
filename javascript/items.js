@@ -1,4 +1,3 @@
-   type="module"
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
   const firebaseConfig = {
@@ -25,10 +24,21 @@ let Bags;
     cartContainer.innerHTML = ""; // pehle khali karo
 
     const snapshot = await getDocs(collection(db, "products"));
-     snapshot.foreach(itemsimp =>{
+     snapshot.forEach(items =>{
+        const itemsimp = items.data();
         products.push({
+    images: itemsimp.images,         
+    id: items.id,
+    minusId: itemsimp.minusId,
+    button4: itemsimp.button4,
+    kilogram: itemsimp.kilogram,
+    price: itemsimp.price,
+    button5: itemsimp.button5,
+    englishName: itemsimp.englishName,
+   hindiName: itemsimp.hindiName,
+   cross : itemsimp.cross,
            
-        }
+        })
      })
     
     if(snapshot.empty){
