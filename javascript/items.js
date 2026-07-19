@@ -40,7 +40,7 @@ console.log(namit);
            
         })
      })
-     console.log(products[i].id);
+     console.log( typeof( products[i].id));
       // console.log(products)
     
     if(snapshot.empty){
