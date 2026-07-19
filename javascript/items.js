@@ -74,6 +74,7 @@ itemBag = namit.map(item =>{
     return products[i]
     }
 }
+  console.log(itemBag);
 })}
 // function displayLength(){
 //         if(namit.length > 0){
