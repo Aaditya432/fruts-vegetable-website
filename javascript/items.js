@@ -70,6 +70,7 @@ function onload(){
 }
 console.log(data)
 function itemsFruits(){
+  console.log(products);
 itemBag = namit.map(item =>{
     for(let i = 0; i < products.length; i++){
     if(item == products[i].id ){
