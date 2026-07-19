@@ -27,8 +27,8 @@ console.log(namit);
       snapshot.forEach(docSnap => {
       const itemsimp = docSnap.data();
         products.push({
+           id: docSnap.id,
     images: itemsimp.images,         
-     id: docSnap.id,
     minusId: itemsimp.minusId,
     button4: itemsimp.button4,
     kilogram: itemsimp.kilogram,
