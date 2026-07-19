@@ -89,7 +89,7 @@ itemBag = namit.map(item =>{
  if (mangoItems != undefined){
   mango = JSON.parse(mangoItems)
  }
-    // itemsValue = localStorage.getItem("val")
+    itemsValue = localStorage.getItem("val")
 if (itemsValue != undefined){
   namit = JSON.parse(itemsValue)
   console.log(namit)
