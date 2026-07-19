@@ -40,6 +40,7 @@ let Bags;
            
         })
      })
+      console.log(products)
     
     if(snapshot.empty){
         
@@ -59,7 +60,6 @@ const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
      loadCart();
-  console.log(products)
     itemsFruits();
     displayItems();
     quantityNumbers();
@@ -172,7 +172,7 @@ details.innerHTML+= `
      itemBag.forEach(items =>{
    itemsContainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
-                    <img class="manish4" src=${items.images} alt="">
+                    // <img class="manish4" src=${items.images} alt="">
                 </div>
                 <div class = "printPrice1">
                  <h3 class="english33">${items.englishName}</h3>
