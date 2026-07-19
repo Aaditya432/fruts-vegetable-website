@@ -57,9 +57,10 @@ const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
 const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
-loadCart();
+
 onload();
 function onload(){
+  loadCart();
     itemsFruits();
     displayItems();
     quantityNumbers();
@@ -76,6 +77,7 @@ itemBag = namit.map(item =>{
 }
 
 })
+  console.log(products[i].id);
   console.log(itemBag);}
 // function displayLength(){
 //         if(namit.length > 0){
