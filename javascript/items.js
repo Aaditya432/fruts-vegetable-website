@@ -40,6 +40,7 @@ console.log(namit);
            
         })
      })
+     console.log(products[i].id);
       // console.log(products)
     
     if(snapshot.empty){
@@ -77,7 +78,7 @@ itemBag = namit.map(item =>{
 }
 
 })
-  console.log(products[i].id);
+ 
   console.log(itemBag);}
 // function displayLength(){
 //         if(namit.length > 0){
