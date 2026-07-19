@@ -59,6 +59,7 @@ const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
      loadCart();
+  console.log(products)
     itemsFruits();
     displayItems();
     quantityNumbers();
