@@ -28,7 +28,7 @@ console.log(namit);
       const itemsimp = docSnap.data();
         products.push({
     images: itemsimp.images,         
-     id: itemsimp.id,
+     id: docSnap.id,
     minusId: itemsimp.minusId,
     button4: itemsimp.button4,
     kilogram: itemsimp.kilogram,
