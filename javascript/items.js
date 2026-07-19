@@ -41,11 +41,11 @@ console.log(namit);
         })
      })
      // console.log( typeof( products[i].id));
-      itemsFruits();
-    displayItems();
-    quantityNumbers();
-    itemsQuantity();
-    displayTotalPrice();
+    //   itemsFruits();
+    // displayItems();
+    // quantityNumbers();
+    // itemsQuantity();
+    // displayTotalPrice();
       // console.log(products)
     
     if(snapshot.empty){
@@ -67,6 +67,11 @@ const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
   loadCart();
+       itemsFruits();
+    displayItems();
+    quantityNumbers();
+    itemsQuantity();
+    displayTotalPrice();
 }
 console.log(data)
 function itemsFruits(){
@@ -74,7 +79,7 @@ function itemsFruits(){
 itemBag = namit.map(item =>{
     for(let i = 0; i < products.length; i++){
     if(item == products[i].id ){
-    return products[i]
+    return products[i];
     }
 }
 
