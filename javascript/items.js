@@ -40,7 +40,7 @@ let Bags;
            
         })
      })
-      console.log(products)
+      // console.log(products)
     
     if(snapshot.empty){
         
@@ -172,7 +172,7 @@ details.innerHTML+= `
      itemBag.forEach(items =>{
    itemsContainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
-                    // <img class="manish4" src=${items.images} alt="">
+                   <img class="manish4" src=../${items.images} alt="">
                 </div>
                 <div class = "printPrice1">
                  <h3 class="english33">${items.englishName}</h3>
@@ -181,7 +181,7 @@ details.innerHTML+= `
                 <h2 class = "naresh2">Price : ${items.price} Rs </h2>
                 </div>
                 <div class = "crossButton ">
-                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src =" ../${items.cross}" alt="">  
+                <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
                 </button>
                 </div>
                </section> 
