@@ -17,7 +17,7 @@ let products = [];
 let itemBag;
 let Bags;
  mango = [ ];
-
+console.log(namit);
   // Page load hote hi Firebase se cart uthao
   async function loadCart(){
     // const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
