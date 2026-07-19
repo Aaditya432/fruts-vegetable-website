@@ -74,8 +74,9 @@ itemBag = namit.map(item =>{
     return products[i]
     }
 }
-  console.log(itemBag);
-})}
+
+})
+  console.log(itemBag);}
 // function displayLength(){
 //         if(namit.length > 0){
 //               BagItems.style.visitbility = "visible"
