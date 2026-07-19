@@ -40,7 +40,7 @@ console.log(namit);
            
         })
      })
-     console.log( typeof( products[i].id));
+     // console.log( typeof( products[i].id));
       itemsFruits();
     displayItems();
     quantityNumbers();
