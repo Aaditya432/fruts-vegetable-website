@@ -41,6 +41,11 @@ console.log(namit);
         })
      })
      console.log( typeof( products[i].id));
+      itemsFruits();
+    displayItems();
+    quantityNumbers();
+    itemsQuantity();
+    displayTotalPrice();
       // console.log(products)
     
     if(snapshot.empty){
@@ -62,11 +67,6 @@ const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
   loadCart();
-    itemsFruits();
-    displayItems();
-    quantityNumbers();
-    itemsQuantity();
-    displayTotalPrice();
 }
 console.log(data)
 function itemsFruits(){
