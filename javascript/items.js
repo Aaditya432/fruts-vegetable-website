@@ -60,11 +60,11 @@ const totalPrice = document.querySelector(".totalprice");
 onload();
 function onload(){
   loadCart();
-       itemsFruits();
-    displayItems();
-    quantityNumbers();
-    itemsQuantity();
-    displayTotalPrice();
+  itemsFruits();
+  displayItems();
+  quantityNumbers();
+  itemsQuantity();
+  displayTotalPrice();
 }
 console.log(data)
 function itemsFruits(){
@@ -74,11 +74,7 @@ itemBag = namit.map(item =>{
     if(item == products[i].id ){
     return products[i];
     }
-}
-
-})
- 
-  console.log(itemBag)
+}})
 }
 // function displayLength(){
 //         if(namit.length > 0){
