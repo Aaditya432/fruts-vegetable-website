@@ -6,7 +6,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https
     projectId: "fruitsvegetable-website",
     storageBucket: "fruitsvegetable-website.firebasestorage.app",
     messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e"
+    appId: "1:930353495099:web:4b0beba40fea843426b01e",
   };
 
   const app = initializeApp(firebaseConfig);
