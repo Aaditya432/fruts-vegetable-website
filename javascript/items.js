@@ -53,12 +53,11 @@ function onload(){
   itemsQuantity();
   displayTotalPrice();
 }
-console.log(data)
 function itemsFruits(){
 itemBag = namit.map( item => {
   for(let i = 0; i < products.length; i++){
-   if(item != products[i].id){
-    return products[i];
+   if(item == products[i].id){
+   return products[i];
     }
 }
 })
