@@ -106,7 +106,7 @@
   window.db = db;
   window.auth = auth;
 </script>
-    <script type="module">
+    <!-- <script type="module">
   import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
   document.addEventListener('click', async function(e){
@@ -117,8 +117,8 @@
         const name = productDiv.querySelector('b').innerText; // "Cauliflower"
         const img = productDiv.previousElementSibling.src; // upar wali img
 
-        try {
-            await addDoc(collection(window.db, "cart"), {
+        try { -->
+            <!-- await addDoc(collection(window.db, "cart"), {
                 name: name,
                 price: priceText,
                 image: img,
@@ -131,8 +131,8 @@
             console.error("Error: ", error);
             alert("Error aa gaya");
         }
-    }
-  });
+    } -->
+  <!-- }); -->
 </script>
     <!-- <script src="../javascript/vegetables.js"></script> -->
      <!-- <script src="../javascript/allitems.js"></script> -->
