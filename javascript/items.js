@@ -61,8 +61,9 @@ itemBag = namit.map( item =>{
     if(item == products[i].id ){
     return products[i].id;
     }
+       console.lgo(products[i].id)
 }})
-  console.lgo(products[i].id)
+ 
   console.log(itemBag)
 }
 // function displayLength(){
