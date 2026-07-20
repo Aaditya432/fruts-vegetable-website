@@ -198,7 +198,7 @@ details.innerHTML+= `
                 </div>
                </section> 
                 `
-    });
+    })
   }
     
   
