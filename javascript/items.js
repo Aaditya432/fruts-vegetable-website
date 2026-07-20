@@ -13,7 +13,6 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https
   const db = getFirestore(app);
 
 let products = [];
-
 let itemBag;
 let Bags;
  mango = [ ];
@@ -22,12 +21,11 @@ console.log(namit);
   async function loadCart(){
     // const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
     // cartContainer.innerHTML = ""; // pehle khali karo
-
-    const snapshot = await getDocs(collection(db, "products"));
+  const snapshot = await getDocs(collection(db, "products"));
       snapshot.forEach(docSnap => {
       const itemsimp = docSnap.data();
         products.push({
-           id: docSnap.id,
+     id: docSnap.id,
     images: itemsimp.images,         
     minusId: itemsimp.minusId,
     button4: itemsimp.button4,
@@ -37,20 +35,9 @@ console.log(namit);
     englishName: itemsimp.englishName,
    hindiName: itemsimp.hindiName,
    cross : itemsimp.cross,
-           
-        })
+    })
      })
-    
-    if(snapshot.empty){
-        
-      cartContainer.innerHTML = "<h2>Cart Khali hai</h2>";
-      return;
-    }
-    
-  }
-
-
-
+      }
  // data = fruits.concat(vegetables)
 const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
