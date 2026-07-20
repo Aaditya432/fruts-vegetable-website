@@ -62,6 +62,7 @@ itemBag = namit.map( item =>{
     return products[i].id;
     }
 }})
+  console.lgo(products[i].id)
   console.log(itemBag)
 }
 // function displayLength(){
