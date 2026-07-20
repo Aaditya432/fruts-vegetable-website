@@ -17,6 +17,7 @@ let itemBag;
 let Bags;
  mango = [ ];
 console.log(namit);
+  loadCart();
   // Page load hote hi Firebase se cart uthao
   async function loadCart(){
     // const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
@@ -37,6 +38,7 @@ console.log(namit);
    cross : itemsimp.cross,
     })
      })
+    onload();
       }
  // data = fruits.concat(vegetables)
 const itemsContainer23 =  document.querySelector(".itemscontainer234");
@@ -44,9 +46,8 @@ const  details =  document.querySelector(".itemsDetails");
 const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
 
-onload();
+// onload();
 function onload(){
-  loadCart();
   itemsFruits();
   displayItems();
   quantityNumbers();
