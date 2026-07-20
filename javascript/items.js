@@ -72,9 +72,10 @@ function itemsFruits(){
 itemBag = namit.map( item =>{
     for(let i = 0; i < products.length; i++){
     if(item == products[i].id ){
-    return products[i];
+    return products[i].id;
     }
 }})
+  console.log(itembag)
 }
 // function displayLength(){
 //         if(namit.length > 0){
