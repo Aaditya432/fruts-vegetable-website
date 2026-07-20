@@ -57,13 +57,14 @@ console.log(data)
 function itemsFruits(){
   console.log(products)
   console.log(namit)
-itemBag = namit.map( item =>{
+itemBag = namit.map( item => {
     for(let i = 0; i < products.length; i++){
     if(item == products[i].id){
-    return products[i]
+    return products[i];
     }
 }
 })
+
   console.log(itemBag)
 }
 // function displayLength(){
