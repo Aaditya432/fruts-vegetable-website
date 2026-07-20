@@ -58,7 +58,7 @@ function displayQuantity1() {
   manju.shift()
   localStorage.setItem("itemsPrice", JSON.stringify(vegetables))
 }
-meenu = localStorage.getItem("itemsPrice");
+// meenu = localStorage.getItem("itemsPrice");
 // console.log(mahesh);
 if (meenu != undefined) {
   vegetables = JSON.parse(meenu);
