@@ -15,9 +15,9 @@ const signup1 = document.querySelector(".signup1")
 // container.classList.remove("container2")
 // }
 // )
-signup.addEventListener("click" , ()=>{
-signup1.classList.toggle("signup3")
-})
+// signup.addEventListener("click" , ()=>{
+// signup1.classList.toggle("signup3")
+// })
 document.querySelector(".imaging").addEventListener("click" , ()=>{
 signup1.classList.toggle("signup3")
 })
