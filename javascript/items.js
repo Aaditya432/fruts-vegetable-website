@@ -12,12 +12,44 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from "https
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
 
-let products = [];
+let products = fruits.concat(vegetables)
 let itemBag;
 let Bags;
  mango = [ ];
 console.log(namit);
+syncCartToDatabase():
+async function syncCartToDatabase(){
+  // let product = JSON.parse(localStorage.getItem("cart")) || [];
+  // if(cart.length === 0) return;
+
+  // Purana cart collection delete
+  const snap = await getDocs(collection(db, "product"));
+  await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "product", d.id))));
+
+  // Naya data daalo
+  for( item of products){
+    let id = item.id ? item.id : item; 
+    let product = products.find(p => String(p.id) === String(id));
+    
+    if(product){
+      await setDoc(doc(db, "product", String(id).padStart(3, '0')), {
+        id: product.id,
+        name: product.images,
+        minusId: product.minusId,
+        button4: product.button4,
+        kilogram: product.kilogram,
+        price : product.price ,
+        button5: product.button5,
+       englishName: product.englishName,
+       hindiName: product.hindiName,
+       cross : product.cross,
+    
+      });
+    }
+  }
   loadCart();
+}
+
   // Page load hote hi Firebase se cart uthao
   async function loadCart(){
     // const cartContainer = document.querySelector('.itemscontainer234'); // tumhare cart wale div ki class
@@ -40,6 +72,7 @@ console.log(namit);
      })
     onload();
       }
+
  // data = fruits.concat(vegetables)
 const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
