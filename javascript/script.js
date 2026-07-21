@@ -50,5 +50,80 @@ document.querySelector(".sig").addEventListener("click" , (e)=>{
 //  const value = input.value.trim()
 //  await getData(value)
 // })
+ 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
+// 1. Apna Firebase Config yaha paste karo
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN", 
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// 2. SIGNUP
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Firestore me name save
+    await setDoc(doc(db, "customers", user.uid), {
+      name: name,
+      email: email,
+      createdAt: new Date()
+    });
+
+    alert("Signup success!");
+  } catch (error) {
+    alert("Signup Error: " + error.message);
+  }
+});
+
+// 3. LOGIN
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    alert("Login success!");
+  } catch (error) {
+    alert("Login Error: " + error.message);
+  }
+});
+
+// 4. Login hai ya nahi check karna
+onAuthStateChanged(auth, async (user) => {
+  if (user) {
+    // Login hai
+    const userDoc = await getDoc(doc(db, "customers", user.uid));
+    document.getElementById("userInfo").innerHTML = 
+      Welcome ${userDoc.data().name} <button onclick="logout()">Logout</button>;
+  } else {
+    // Logout hai
+    document.getElementById("userInfo").innerHTML = "Not logged in";
+  }
+});
+
+// 5. Logout function
+window.logout = async function() {
+  await signOut(auth);
+  alert("Logged out");
+}
+</script>
