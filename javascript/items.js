@@ -187,7 +187,7 @@ details.innerHTML+= `
    
 // })
    function displayItems(){
-     itemBag.innerHTML = ' ';
+     itemsContainer23.innerHTML = ' ';
      itemBag.forEach(items =>{
    itemsContainer23.innerHTML  += `<section class="items4">
                 <div class="images3">
