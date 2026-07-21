@@ -17,7 +17,7 @@ let itemBag;
 let Bags;
  mango = [ ];
 console.log(namit);
-syncCartToDatabase():
+syncCartToDatabase();
 async function syncCartToDatabase(){
   // let product = JSON.parse(localStorage.getItem("cart")) || [];
   // if(cart.length === 0) return;
