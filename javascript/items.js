@@ -212,11 +212,13 @@ details.innerHTML+= `
     
   
 
-  // Delete button ka function
-  // window.deleteItem = async function(id){
-  //   await deleteDoc(doc(db, "products", id));
-  //   location.reload(); // refresh karke wapas load hoga
-  // }
+  Delete button ka function
+  window.deleteItem = async function(id){
+    await deleteDoc(doc(db, "products", id));
+     loadCart();
+      onload();
+
+  }
 // function displayItems(){
 //     itemsContainer23.innerHTML = ' ';
 // itemBag.forEach((items)=>{
