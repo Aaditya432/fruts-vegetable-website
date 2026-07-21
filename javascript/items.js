@@ -23,8 +23,8 @@ async function syncCartToDatabase(){
   // if(cart.length === 0) return;
 
   // Purana cart collection delete
-  const snap = await getDocs(collection(db, "product"));
-  await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "product", d.id))));
+  const snap = await getDocs(collection(db, "products"));
+  await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "products", d.id))));
 
   // Naya data daalo
   for( item of products){
