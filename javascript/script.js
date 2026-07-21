@@ -97,7 +97,7 @@ signup1.classList.toggle("signup3")
 });
 
 // 3. LOGIN
-document.getElementById("signup2").addEventListener("sig", async (e) => {
+document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
