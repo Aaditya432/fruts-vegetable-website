@@ -27,7 +27,7 @@ async function syncCartToDatabase(){
   await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "products", d.id))));
 
   // Naya data daalo
-  for( item of products){
+  for(let item of products){
     let id = item.id ? item.id : item; 
     let product = products.find(p => String(p.id) === String(id));
     
