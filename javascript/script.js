@@ -57,14 +57,14 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // 1. Apna Firebase Config yaha paste karo
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN", 
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
+    authDomain: "fruitsvegetable-website.firebaseapp.com",
+    projectId: "fruitsvegetable-website",
+    storageBucket: "fruitsvegetable-website.firebasestorage.app",
+    messagingSenderId: "930353495099",
+    appId: "1:930353495099:web:4b0beba40fea843426b01e",
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
