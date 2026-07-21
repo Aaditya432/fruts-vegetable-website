@@ -119,7 +119,7 @@ else{
   namit = [ ]
 }
 
-function removeItem(itemid){
+window.removeItem = function (itemid){
    mango =  namit.filter((Bagitem)=>{
       if( Bagitem != itemid ){
         return true;
