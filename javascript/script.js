@@ -1,4 +1,9 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
 // const image = document.querySelector(".hamburger")
+
 const container = document.querySelector(".container")
 // const para = document.querySelector(".container2")
 const main = document.querySelector(".contet")
@@ -51,10 +56,6 @@ document.querySelector(".sig").addEventListener("click" , (e)=>{
 //  await getData(value)
 // })
  
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 // 1. Apna Firebase Config yaha paste karo
   const firebaseConfig = {
