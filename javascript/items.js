@@ -130,12 +130,9 @@ function removeItem(itemid){
      namit =Array.from(Mango1)
         localStorage.setItem("mango", JSON.stringify(mango) )
        localStorage.setItem('val' , JSON.stringify(namit))
-             itemsFruits();
-            displayItems();
-            // displayLength();
-            quantityNumbers();
-            itemsQuantity();
-            displayTotalPrice();
+          syncCartToDatabase();
+              loadCart();
+              onload();
 }
 
 // function displayLength(){
@@ -212,13 +209,13 @@ details.innerHTML+= `
     
   
 
-  Delete button ka function
-  window.deleteItem = async function(id){
-    await deleteDoc(doc(db, "products", id));
-     loadCart();
-      onload();
+  // Delete button ka function
+  // window.deleteItem = async function(id){
+  //   await deleteDoc(doc(db, "products", id));
+  //    loadCart();
+  //     onload();
 
-  }
+  // }
 // function displayItems(){
 //     itemsContainer23.innerHTML = ' ';
 // itemBag.forEach((items)=>{
