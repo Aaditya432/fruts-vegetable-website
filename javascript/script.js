@@ -71,10 +71,10 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-document.getElementById("signupForm").addEventListener("submit", async (e) => {
+document.getElementById("signup2").addEventListener("sig", async (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("emailid").value;
   const password = document.getElementById("password").value;
 
   try {
@@ -84,7 +84,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     // Firestore me name save
     await setDoc(doc(db, "customers", user.uid), {
       name: name,
-      email: email,
+      emailid: email,
       createdAt: new Date()
     });
 
@@ -95,10 +95,10 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 });
 
 // 3. LOGIN
-document.getElementById("loginForm").addEventListener("submit", async (e) => {
+document.getElementById("signup2").addEventListener("sig", async (e) => {
   e.preventDefault();
-  const email = document.getElementById("loginEmail").value;
-  const password = document.getElementById("loginPassword").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
