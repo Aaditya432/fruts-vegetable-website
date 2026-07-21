@@ -32,7 +32,7 @@ async function syncCartToDatabase(){
     let product = products.find(p => String(p.id) === String(id));
     
     if(product){
-      await setDoc(doc(db, "product", String(id).padStart(3, '0')), {
+      await setDoc(doc(db, "products", String(id).padStart(3, '0')), {
         id: product.id,
         name: product.images,
         minusId: product.minusId,
