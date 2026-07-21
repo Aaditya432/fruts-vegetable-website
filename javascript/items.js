@@ -131,7 +131,7 @@ window.removeItem = function (itemid){
         localStorage.setItem("mango", JSON.stringify(mango) )
        localStorage.setItem('val' , JSON.stringify(namit))
           syncCartToDatabase();
-              loadCart();
+              // loadCart();
               onload();
 }
 
