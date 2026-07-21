@@ -72,8 +72,9 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-document.getElementById("signup2").addEventListener("sig", async (e) => {
-  e.preventDefault();
+signup.addEventListener("click" , ()=>{
+signup1.classList.toggle("signup3")
+
   const name = document.getElementById("name").value;
   const email = document.getElementById("emailid").value;
   const password = document.getElementById("password").value;
