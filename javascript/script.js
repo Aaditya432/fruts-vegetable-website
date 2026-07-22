@@ -119,21 +119,21 @@ document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
 });
 
 // 4. Login hai ya nahi check karna
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    // Login hai
-    const userDoc = await getDoc(doc(db, "customers", user.uid));
-    document.getElementById("userInfo").innerHTML = 
-      Welcome ${userDoc.data().name} <button onclick="logout()">Logout</button>;
-  } else {
-    // Logout hai
-    document.getElementById("userInfo").innerHTML = "Not logged in";
-  }
-});
+// onAuthStateChanged(auth, async (user) => {
+//   if (user) {
+//     // Login hai
+//     const userDoc = await getDoc(doc(db, "customers", user.uid));
+//     document.getElementById("userInfo").innerHTML = 
+//       Welcome ${userDoc.data().name} <button onclick="logout()">Logout</button>;
+//   } else {
+//     // Logout hai
+//     document.getElementById("userInfo").innerHTML = "Not logged in";
+//   }
+// });
 
 // 5. Logout function
-window.logout = async function() {
-  await signOut(auth);
-  alert("Logged out");
-}
+// window.logout = async function() {
+//   await signOut(auth);
+//   alert("Logged out");
+// }
 </script>
