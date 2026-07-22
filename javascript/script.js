@@ -136,4 +136,4 @@ document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
 //   await signOut(auth);
 //   alert("Logged out");
 // }
-</script>
+// </script>
