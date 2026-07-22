@@ -83,6 +83,7 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
   import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+   import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";        
 
   // 2. Tumhara Config
   const firebaseConfig = {
@@ -96,6 +97,10 @@
 
   // 3. Firebase shuru karo
   const app = initializeApp(firebaseConfig);
+    const appCheck = initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+    isTokenAutoRefreshEnabled: true
+  });        
   const db = getFirestore(app);
   const auth = getAuth(app);
   
