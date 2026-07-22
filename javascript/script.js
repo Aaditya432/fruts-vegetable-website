@@ -88,8 +88,8 @@ const name = document.getElementById("name").value;
   const password = document.getElementById("password").value;
 
   try {
-    // const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    // const user = userCredential.user;
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
 
     // Firestore me name save
     await setDoc(doc(db, "customers", user.uid), {
