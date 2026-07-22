@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+  import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
   const firebaseConfig = {
     apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
     authDomain: "fruitsvegetable-website.firebaseapp.com",
@@ -10,6 +11,11 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
   };
 
   const app = initializeApp(firebaseConfig);
+  // 3. App Check - Yaha SITE KEY paste karni hai
+  const appCheck = initializeAppCheck(app, {
+    provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+    isTokenAutoRefreshEnabled: true
+  });
   const db = getFirestore(app);
 
 let products = fruits.concat(vegetables)
