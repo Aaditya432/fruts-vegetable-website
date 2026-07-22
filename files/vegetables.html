@@ -97,10 +97,10 @@
 
   // 3. Firebase shuru karo
   const app = initializeApp(firebaseConfig);
-    const appCheck = initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
-    isTokenAutoRefreshEnabled: true
-  });        
+  //   const appCheck = initializeAppCheck(app, {
+  //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+  //   isTokenAutoRefreshEnabled: true
+  // });        
   const db = getFirestore(app);
   const auth = getAuth(app);
   
