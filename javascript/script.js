@@ -19,13 +19,15 @@ const signup1 = document.querySelector(".signup1")
 // signup.addEventListener("click" , ()=>{
 // signup1.classList.toggle("signup3")
 // })
+signup.addEventListener("click" , ()=>{
+signup1.classList.toggle("signup3")})
 document.querySelector(".imaging").addEventListener("click" , ()=>{
 signup1.classList.toggle("signup3")
 })
-document.querySelector(".sig").addEventListener("click" , (e)=>{
-    e.preventDefault()
-    console.log("madhav")
-})
+// document.querySelector(".sig").addEventListener("click" , (e)=>{
+//     e.preventDefault()
+//     console.log("madhav")
+// })
 
 // const url = "https://static.openfoodfacts.org/data/openfoodfacts-products.jsonl.gz"
 
@@ -78,10 +80,10 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-signup.addEventListener("click" , ()=>{
-signup1.classList.toggle("signup3")
-
-  const name = document.getElementById("name").value;
+document.querySelector(".sig").addEventListener("click" , (e)=>{
+    e.preventDefault()
+    console.log("madhav")
+const name = document.getElementById("name").value;
   const email = document.getElementById("emailid").value;
   const password = document.getElementById("password").value;
 
