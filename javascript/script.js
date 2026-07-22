@@ -61,21 +61,21 @@ signup1.classList.toggle("signup3")
  
 
 // 1. Apna Firebase Config yaha paste karo
-  const firebaseConfig = {
-    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
-    authDomain: "fruitsvegetable-website.firebaseapp.com",
-    projectId: "fruitsvegetable-website",
-    storageBucket: "fruitsvegetable-website.firebasestorage.app",
-    messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e",
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
+  authDomain: "fruitsvegetable-website.firebaseapp.com",
+  projectId: "fruitsvegetable-website",
+  storageBucket: "fruitsvegetable-website.firebasestorage.app",
+  messagingSenderId: "930353495099",
+  appId: "1:930353495099:web:4b0beba40fea843426b01e"
+};
 
 const app = initializeApp(firebaseConfig);
   // 3. App Check - Yaha SITE KEY paste karni hai
-  const appCheck = initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
-    isTokenAutoRefreshEnabled: true
-  });
+  // const appCheck = initializeAppCheck(app, {
+  //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+  //   isTokenAutoRefreshEnabled: true
+  // });
 const auth = getAuth(app);
 const db = getFirestore(app);
 
