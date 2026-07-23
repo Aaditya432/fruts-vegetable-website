@@ -133,8 +133,8 @@ border-bottom: 2px solid rgb(255, 0, 0)
    position: absolute;
      display: flex;
     /* flex-wrap: wrap; */
-    width: 70% ;
-    height: 100%;
+    width: 100vw ;
+    height: 100vh;
     justify-content: center;
     align-item: center
     /* margin-left: 24.10vw;
@@ -215,15 +215,15 @@ border-bottom: 2px solid rgb(255, 0, 0)
 height: 20vh;
 width: 15vw;
 margin: 2vh 2vw;
-}
-.footer{
-    margin-left: 20vw;
+/* }
+.footer{ */
+    /* margin-left: 20vw; */
     /* margin-right: 20vw; */
-    height: 30vh;
+    /* height: 30vh;
     width: 100%;
     background-color: rgb(14, 13, 13);
-    margin-top: 5vh;
-}
+    margin-top: 5vh; */
+/* } */
  /* .itemscontainer4{
     position: absolute;
      display: flex;
