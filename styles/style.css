@@ -136,15 +136,16 @@ border-bottom: 2px solid rgb(255, 0, 0)
     width: 100vw ;
     height: 100vh;
     justify-content: center;
-    align-item: center
+    align-item: center;
     /* margin-left: 24.10vw;
     margin-right: 5vw;
     margin-top: 15vh; */
+     background-color: rgb(108, 108, 71);
   }
-.formsubmit{
-     background-color:rgb(108, 108, 71);
+/* .formsubmit{
+    
 }
-    .signup2 :hover{
+    .signup2 :hover{ */
         color: rgb(10, 10, 10);
     }
        .button :hover{
