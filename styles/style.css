@@ -12,7 +12,7 @@
 .navi{
     width: 30vw;  
     margin-left: 2vw;
-    background-image: url(vegetable.webp);
+    /* background-image: url(vegetable.webp); */
     background-size: cover;
     /* background-repeat: no-repeat; */
     /* background-size: 28vw ,  8vh ; */
