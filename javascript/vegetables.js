@@ -61,7 +61,7 @@ function displayQuantity1() {
 meenu = localStorage.getItem("itemsPrice");
 // console.log(mahesh);
 if (meenu != undefined) {
-  // vegetables = JSON.parse(meenu);
+  vegetables = JSON.parse(meenu);
 }
 else {
   vegetables = []
