@@ -102,6 +102,8 @@ const name = document.getElementById("name").value;
   } catch (error) {
     alert("Signup Error: " + error.message);
   }
+ signup1.classList.toggle("signup3")
+ 
 });
 
 // 3. LOGIN
