@@ -46,12 +46,12 @@ function displayQuantity1() {
       if (vegetables[i].id == VId) {
         vegetables[i].kilogram += 1;
         vegetables[i].price = vegetables[i].kilogram * 50;
-        return vegetables[i]
+        return vegetables[i];
       }
       else if (vegetables[i].minusId == VId) {
         vegetables[i].kilogram -= 1;
         vegetables[i].price = vegetables[i].kilogram * 50
-        return vegetables[i]
+        return vegetables[i];
       }
     }
   })
