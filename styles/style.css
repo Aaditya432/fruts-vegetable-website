@@ -143,11 +143,16 @@ border-bottom: 2px solid rgb(255, 0, 0)
      background-color: rgb(108, 108, 71);
   }
 /* .formsubmit{
-    
+
+
 }
+
     .signup2 :hover{ */
         color: rgb(10, 10, 10);
     }
+.signup2{
+    margin-top: 30vh
+}
        .button :hover{
         color: rgb(10, 10, 10);
     }
