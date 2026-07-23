@@ -70,7 +70,7 @@ const firebaseConfig = {
   appId: "1:930353495099:web:4b0beba40fea843426b01e"
 };
 
-const app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
   // 3. App Check - Yaha SITE KEY paste karni hai
   // const appCheck = initializeAppCheck(app, {
   //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
