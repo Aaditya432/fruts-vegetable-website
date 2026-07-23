@@ -130,7 +130,7 @@ border-bottom: 2px solid rgb(255, 0, 0)
    transition-duration: 2s;
 } */
 .signup1{
-   position: absolute;
+   /* position: absolute; */
      display: flex;
     /* flex-wrap: wrap; */
     width: 100vw ;
