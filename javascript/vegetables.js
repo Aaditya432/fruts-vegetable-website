@@ -66,6 +66,7 @@ if (meenu != undefined) {
 else {
   vegetables = []
 }
+console.log(vegetables)
 
 function displayFruits4(Vsid) {
   manju.push(Vsid)
