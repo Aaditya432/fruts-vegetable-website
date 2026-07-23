@@ -58,15 +58,15 @@ function displayQuantity1() {
   manju.shift()
   localStorage.setItem("itemsPrice", JSON.stringify(vegetables))
 }
-// meenu = localStorage.getItem("itemsPrice");
-// // console.log(mahesh);
-// if (meenu != undefined) {
-//   vegetables = JSON.parse(meenu);
-// }
-// else {
-//   vegetables = []
-// }
-// console.log(vegetables)
+meenu = localStorage.getItem("itemsPrice");
+// console.log(mahesh);
+if (meenu != undefined) {
+  vegetables = JSON.parse(meenu);
+}
+else {
+  vegetables = []
+}
+console.log(vegetables)
 
 function displayFruits4(Vsid) {
   manju.push(Vsid)
