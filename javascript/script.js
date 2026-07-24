@@ -80,7 +80,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-// document.querySelector(".sig").addEventListener("click" , async (e) => {
+document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
     console.log("madhav")
 const name = document.getElementById("name").value;
