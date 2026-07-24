@@ -99,12 +99,12 @@ let name = document.getElementById("name").value;
       emailid: email,
       createdAt: new Date()
     });
-     name = '';
-    email = '';
-    password = '';
+    
     alert("Signup success!");
     window.location.href = "/fruts-vegetable-website/files/vegetables.html";
-   
+    name = '';
+    email = '';
+    password = '';
   } catch (error) {
     alert("Signup Error: " + error.message);
   }
