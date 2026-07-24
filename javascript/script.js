@@ -83,9 +83,9 @@ const db = getFirestore(app);
 document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
     console.log("madhav")
-const name = document.getElementById("name").value;
-  const email = document.getElementById("emailid").value;
-  const password = document.getElementById("password").value;
+let name = document.getElementById("name").value;
+  let email = document.getElementById("emailid").value;
+  let password = document.getElementById("password").value;
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
