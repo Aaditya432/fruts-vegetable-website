@@ -89,7 +89,7 @@ let name = document.getElementById("name").value;
   let password = document.getElementById("password").value;
 
   try {
-      const userCredential1 = await signInWithEmailAndPassword(auth, email, password);
+      // const userCredential1 = await signInWithEmailAndPassword(auth, email, password);
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
