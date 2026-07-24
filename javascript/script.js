@@ -80,7 +80,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-document.querySelector(".si").addEventListener("click" , async (e) => {
+document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
     console.log("madhav")
 const name = document.getElementById("name").value;
@@ -102,7 +102,7 @@ const name = document.getElementById("name").value;
   } catch (error) {
     alert("Signup Error: " + error.message);
   }
- signup1.classList.toggle("signup3")
+
  
 });
 
