@@ -19,11 +19,11 @@ const signup1 = document.querySelector(".signup1")
 // signup.addEventListener("click" , ()=>{
 // signup1.classList.toggle("signup3")
 // })
-signup.addEventListener("click" , ()=>{
-signup1.classList.toggle("signup3")})
-document.querySelector(".imaging").addEventListener("click" , ()=>{
-signup1.classList.toggle("signup3")
-})
+// signup.addEventListener("click" , ()=>{
+// signup1.classList.toggle("signup3")})
+// document.querySelector(".imaging").addEventListener("click" , ()=>{
+// signup1.classList.toggle("signup3")
+// })
 // document.querySelector(".sig").addEventListener("click" , (e)=>{
 //     e.preventDefault()
 //     console.log("madhav")
