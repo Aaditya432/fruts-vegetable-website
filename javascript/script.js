@@ -89,6 +89,7 @@ let name = document.getElementById("name").value;
   let password = document.getElementById("password").value;
 
   try {
+      const userCredential1 = await signInWithEmailAndPassword(auth, email, password);
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
@@ -112,24 +113,24 @@ let name = document.getElementById("name").value;
  
 });
 // LOGIN CODE
-if(loginBtn){
-    loginBtn.addEventListener("click", async () => {
-        const email = document.querySelector("#email").value;
-        const password = document.querySelector("#password").value;
+// if(loginBtn){
+//     loginBtn.addEventListener("click", async () => {
+//         const email = document.querySelector("#email").value;
+//         const password = document.querySelector("#password").value;
 
-        try {
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            alert("Login success!");
+//         try {
+//             const userCredential = await signInWithEmailAndPassword(auth, email, password);
+//             alert("Login success!");
             
-            // Login ke baad vegetables page pe bhej do
-            window.location.href = "/fruts-vegetable-website/files/vegetables.html";
+//             // Login ke baad vegetables page pe bhej do
+//             window.location.href = "/fruts-vegetable-website/files/vegetables.html";
 
-        } catch (error) {
-            alert("Login Error: " + error.message); 
-            // common error: auth/wrong-password, auth/user-not-found
-        }
-    });
-}
+//         } catch (error) {
+//             alert("Login Error: " + error.message); 
+//             // common error: auth/wrong-password, auth/user-not-found
+//         }
+//     });
+// }
 
 // 3. LOGIN
 // document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
