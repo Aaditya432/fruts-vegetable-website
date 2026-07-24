@@ -151,8 +151,9 @@ border-bottom: 2px solid rgb(255, 0, 0)
         color: rgb(10, 10, 10);
     }
 .heading34{
-    text-align: center;
-     margin-top: 27vh;
+  position: absolute;
+    margin-left:37vw;
+    margin-top: 27vh;
 }
 .signup2{
     position: absolute;
