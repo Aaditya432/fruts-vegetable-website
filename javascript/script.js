@@ -1,4 +1,4 @@
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
@@ -69,18 +69,18 @@ const firebaseConfig = {
   messagingSenderId: "930353495099",
   appId: "1:930353495099:web:4b0beba40fea843426b01e"
 };
-
-// const app = initializeApp(firebaseConfig);
+// 
+const app = initializeApp(firebaseConfig);
   // 3. App Check - Yaha SITE KEY paste karni hai
-  // const appCheck = initializeAppCheck(app, {
-  //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
-  //   isTokenAutoRefreshEnabled: true
-  // });
+//   const appCheck = initializeAppCheck(app, {
+//     provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+    // isTokenAutoRefreshEnabled: true
+//   });
 const auth = getAuth(app);
 const db = getFirestore(app);
 
 // 2. SIGNUP
-document.querySelector(".sig").addEventListener("click" , async (e) => {
+// document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
     console.log("madhav")
 const name = document.getElementById("name").value;
