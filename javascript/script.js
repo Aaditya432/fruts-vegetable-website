@@ -1,10 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
 
 // const image = document.querySelector(".hamburger")
-
+const loginBtn = document.querySelector(".sig");
 const container = document.querySelector(".container")
 // const para = document.querySelector(".container2")
 const main = document.querySelector(".contet")
@@ -110,6 +111,25 @@ let name = document.getElementById("name").value;
 
  
 });
+// LOGIN CODE
+if(loginBtn){
+    loginBtn.addEventListener("click", async () => {
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            alert("Login success!");
+            
+            // Login ke baad vegetables page pe bhej do
+            window.location.href = "/fruts-vegetable-website/files/vegetables.html";
+
+        } catch (error) {
+            alert("Login Error: " + error.message); 
+            // common error: auth/wrong-password, auth/user-not-found
+        }
+    });
+}
 
 // 3. LOGIN
 // document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
