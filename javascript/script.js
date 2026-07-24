@@ -99,9 +99,14 @@ const name = document.getElementById("name").value;
     });
 
     alert("Signup success!");
+    window.location.href = "../files/vegetables.html";
+    name = '';
+    email = '';
+    password = '';
   } catch (error) {
     alert("Signup Error: " + error.message);
   }
+
 
  
 });
