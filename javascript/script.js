@@ -99,7 +99,7 @@ let name = document.getElementById("name").value;
     });
 
     alert("Signup success!");
-    window.location.href = "../files/vegetables.html";
+    window.location.href = "/fruts-vegetable-website/files/vegetables.html";
     name = '';
     email = '';
     password = '';
