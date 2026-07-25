@@ -1,3 +1,26 @@
+import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+async function placeOrder() {
+    if (!currentUser) return alert("Pehle login karo");
+
+    if (userCart.length === 0) return alert("Cart khali hai");
+
+    const orderData = {
+        userId: currentUser.uid,        // kisne khareeda
+        email: currentUser.email,       // email bhi save kar lo
+        items: userCart,                // pura cart yahi save ho jayega
+        totalAmount: calculateTotal(),  // total kitna hua
+        status: "Placed",               // Placed, Shipped, Delivered
+        orderDate: serverTimestamp()    // time auto save
+    };
+
+    // "orders" collection me naya document ban jayega
+    await addDoc(collection(db, "orders"), orderData);
+
+    userCart = []; // cart khali
+    saveCart(); // firebase cart bhi khali
+    alert("Order placed successfully!");
+}
 const containerinner = document.querySelector('containerinner');
 const details45 = document.querySelector("itemsDetails45");
 
