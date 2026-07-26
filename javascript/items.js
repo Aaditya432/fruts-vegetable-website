@@ -12,10 +12,10 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
 
   const app = initializeApp(firebaseConfig);
   // 3. App Check - Yaha SITE KEY paste karni hai
-  const appCheck = initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
-    isTokenAutoRefreshEnabled: true
-  });
+  // const appCheck = initializeAppCheck(app, {
+  //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
+  //   isTokenAutoRefreshEnabled: true
+  // });
   const db = getFirestore(app);
 
 let products = fruits.concat(vegetables)
