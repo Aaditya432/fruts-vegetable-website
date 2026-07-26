@@ -3,10 +3,6 @@ import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/fir
 const containerInner = document.querySelector('.containerinner');
 const details45 = document.querySelector(".itemsDetails45");
 
-let orderItem;
-  itemsorder():
-    displayorderitems();
-    itemsQuantityorder();
 
 async function placeOrder() {
     if (!currentUser) return alert("Pehle login karo");
@@ -29,22 +25,8 @@ async function placeOrder() {
     saveCart(); // firebase cart bhi khali
     alert("Order placed successfully!");
 
-  
-    
-
-function itemsorder() {
-  orderItem = namit.map(item => {
-    for (let i = 0; i < products.length; i++){
-      if (item == products[i].id)
-        return products[i]
-    }
-  })
-console.log(orderItem);
-}
-function itemsQuantityOrder(){
 //   let totalPriceRu = 0;
-    details45.innerHTML = ' ';
-orderItem.forEach((orderdetail)=>{
+itemBag.forEach((orderdetail)=>{
 details45.innerHTML+= `
                   <div class="details45">
                 <div class="naming45">
@@ -60,14 +42,13 @@ details45.innerHTML+= `
                 <span class="pAout45">Rs ${orderdetail.price}</span>
                  </div>
                  </div>`
- }) }
+  }
 
-function displayorderitems() {
-   contaInerinner.innerHTML = '';
-  orderItem.forEach(item => {
+
+
+  itemBag.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.images} alt="">
                 </div>
                 `
-  });
 }
