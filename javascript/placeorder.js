@@ -1,7 +1,7 @@
 import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-const containerinner = document.querySelector('containerinner');
-const details45 = document.querySelector("itemsDetails45");
+const containerinner = document.querySelector('.containerinner');
+const details45 = document.querySelector(".itemsDetails45");
 
 let orderItem;
 
