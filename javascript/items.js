@@ -94,7 +94,7 @@ function onload(){
   itemsQuantity();
   displayTotalPrice();
 }
-function itemsFruits(){
+async function itemsFruits(){
 itemBag = namit.map( item => {
   for(let i = 0; i < products.length; i++){
    if(item == products[i].id){
