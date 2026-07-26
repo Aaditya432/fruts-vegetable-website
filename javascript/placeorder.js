@@ -13,8 +13,8 @@ async function placeOrder() {
     const orderData = {
         userId: currentUser.uid,        // kisne khareeda
         email: currentUser.email,       // email bhi save kar lo
-        items: userCart,                // pura cart yahi save ho jayega
-        totalAmount: calculateTotal(),  // total kitna hua
+        items: itemBag,                // pura cart yahi save ho jayega
+        totalAmount: totalPriceRu,  // total kitna hua
         status: "Placed",               // Placed, Shipped, Delivered
         orderDate: serverTimestamp()    // time auto save
     };
