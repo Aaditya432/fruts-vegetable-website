@@ -103,6 +103,7 @@ itemBag = namit.map( item => {
 }
 })
 }
+console.log(itemBag);
 // function displayLength(){
 //         if(namit.length > 0){
 //               BagItems.style.visitbility = "visible"
