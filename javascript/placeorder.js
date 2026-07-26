@@ -4,26 +4,26 @@ const containerInner = document.querySelector('.containerinner');
 const details45 = document.querySelector(".itemsDetails45");
 
 
-async function placeOrder() {
-    if (!currentUser) return alert("Pehle login karo");
+// async function placeOrder() {
+//     if (!currentUser) return alert("Pehle login karo");
 
-    if (userCart.length === 0) return alert("Cart khali hai");
+//     if (userCart.length === 0) return alert("Cart khali hai");
 
-    const orderData = {
-        userId: currentUser.uid,        // kisne khareeda
-        email: currentUser.email,       // email bhi save kar lo
-        items: itemBag,                // pura cart yahi save ho jayega
-        totalAmount: totalPriceRu,  // total kitna hua
-        status: "Placed",               // Placed, Shipped, Delivered
-        orderDate: serverTimestamp()    // time auto save
-    };
+    // const orderData = {
+    //     userId: currentUser.uid,        // kisne khareeda
+    //     email: currentUser.email,       // email bhi save kar lo
+    //     items: itemBag,                // pura cart yahi save ho jayega
+    //     totalAmount: totalPriceRu,  // total kitna hua
+    //     status: "Placed",               // Placed, Shipped, Delivered
+    //     orderDate: serverTimestamp()    // time auto save
+    // };
 
     // "orders" collection me naya document ban jayega
-    await addDoc(collection(db, "orders"), orderData);
+    // await addDoc(collection(db, "orders"), orderData);
 
-    userCart = []; // cart khali
-    saveCart(); // firebase cart bhi khali
-    alert("Order placed successfully!");
+    // userCart = []; // cart khali
+    // saveCart(); // firebase cart bhi khali
+    // alert("Order placed successfully!");
 
 //   let totalPriceRu = 0;
 itemBag.forEach((orderdetail)=>{
