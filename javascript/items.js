@@ -107,7 +107,7 @@ itemBag = namit.map( item => {
     let products = itemBag.find(p => String(p.id) === String(id));
     
     if(products){
-      await setDoc(doc(db, "orders", String(id).padStart(3, '0')), {
+      await setDoc(doc(db, "itemBag", String(id).padStart(3, '0')), {
         id: product.id,
         name: product.images,
         kilogram: product.kilogram,
