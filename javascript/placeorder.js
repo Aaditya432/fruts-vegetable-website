@@ -1,6 +1,6 @@
 import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-const containerinner = document.querySelector('.containerinner');
+const containerInner = document.querySelector('.containerinner');
 const details45 = document.querySelector(".itemsDetails45");
 
 let orderItem;
@@ -63,9 +63,9 @@ details45.innerHTML+= `
  }) }
 
 function displayorderitems() {
-   containerinner.innerHTML = '';
+   contaInerinner.innerHTML = '';
   orderItem.forEach(item => {
-    containerinner.innerHTML +=    `    <div class="images38">
+    containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.images} alt="">
                 </div>
                 `
