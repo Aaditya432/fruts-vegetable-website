@@ -4,6 +4,9 @@ const containerinner = document.querySelector('.containerinner');
 const details45 = document.querySelector(".itemsDetails45");
 
 let orderItem;
+  itemsorder():
+    displayorderitems();
+    itemsQuantityorder();
 
 async function placeOrder() {
     if (!currentUser) return alert("Pehle login karo");
@@ -25,14 +28,10 @@ async function placeOrder() {
     userCart = []; // cart khali
     saveCart(); // firebase cart bhi khali
     alert("Order placed successfully!");
-}
-load();
-function load(){
-    itemsorder():
-    displayorderitems();
-    itemsQuantityorder();
+
+  
     
-}
+
 function itemsorder() {
   orderItem = namit.map(item => {
     for (let i = 0; i < products.length; i++){
