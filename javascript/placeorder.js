@@ -77,6 +77,7 @@ const details45 = document.querySelector(".itemsDetails45");
     // alert("Order placed successfully!");
 
 //   let totalPriceRu = 0;
+console.log(itemBag);
 console.log(namit);
 itemBag.forEach((orderdetail)=>{
 details45.innerHTML+= `
