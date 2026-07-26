@@ -26,7 +26,13 @@ async function placeOrder() {
     saveCart(); // firebase cart bhi khali
     alert("Order placed successfully!");
 }
-
+load();
+function load(){
+    itemsorder():
+    displayorderitems();
+    itemsquantityorder();
+    
+}
 function itemsorder() {
   orderItem = namit.map(item => {
     for (let i = 0; i < products.length; i++){
