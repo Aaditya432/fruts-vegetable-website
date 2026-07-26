@@ -116,7 +116,9 @@ itemBag = namit.map( item => {
        hindiName: product.hindiName,
         });
 }
+   }
 console.log(itemBag);
+}
 // function displayLength(){
 //         if(namit.length > 0){
 //               BagItems.style.visitbility = "visible"
