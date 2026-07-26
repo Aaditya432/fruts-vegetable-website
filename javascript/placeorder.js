@@ -63,7 +63,7 @@ details45.innerHTML+= `
  }) }
 
 function displayorderitems() {
-
+   containerinner.innerHTML = '';
   orderItem.forEach(item => {
     containerinner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.images} alt="">
