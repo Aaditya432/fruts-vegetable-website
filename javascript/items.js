@@ -108,12 +108,12 @@ itemBag = namit.map( item => {
     
     if(products){
       await setDoc(doc(db, "itemBag", String(id).padStart(3, '0')), {
-        id: product.id,
-        name: product.images,
-        kilogram: product.kilogram,
-        price : product.price ,
-       englishName: product.englishName,
-       hindiName: product.hindiName,
+        id: products.id,
+        name: products.images,
+        kilogram: products.kilogram,
+        price : products.price ,
+       englishName: products.englishName,
+       hindiName: products.hindiName,
         });
 }
    }
