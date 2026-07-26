@@ -113,18 +113,18 @@ itemBag = namit.map( item => {
 
 //              }
 // }
- mangoItems = localStorage.getItem("mango")
- if (mangoItems != undefined){
-  mango = JSON.parse(mangoItems)
- }
-    itemsValue = localStorage.getItem("val")
-if (itemsValue != undefined){
-  namit = JSON.parse(itemsValue)
-  console.log(namit)
-} 
-else{
-  namit = [ ]
-}
+//  mangoItems = localStorage.getItem("mango")
+//  if (mangoItems != undefined){
+//   mango = JSON.parse(mangoItems)
+//  }
+//     itemsValue = localStorage.getItem("val")
+// if (itemsValue != undefined){
+//   namit = JSON.parse(itemsValue)
+//   console.log(namit)
+// } 
+// else{
+//   namit = [ ]
+// }
 
 window.removeItem = function (itemid){
    mango =  namit.filter((Bagitem)=>{
