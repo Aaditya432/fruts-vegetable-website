@@ -94,7 +94,7 @@ details45.innerHTML+= `
                 <span class="pAout45">Rs ${orderdetail.price}</span>
                  </div>
                  </div>`
-  }
+  })
 
 
 
@@ -103,4 +103,4 @@ details45.innerHTML+= `
                     <img  class="manish89" src=../${item.images} alt="">
                 </div>
                 `
-}
+})
