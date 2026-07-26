@@ -1,5 +1,10 @@
 import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+const containerinner = document.querySelector('containerinner');
+const details45 = document.querySelector("itemsDetails45");
+
+let orderItem;
+
 async function placeOrder() {
     if (!currentUser) return alert("Pehle login karo");
 
@@ -21,10 +26,7 @@ async function placeOrder() {
     saveCart(); // firebase cart bhi khali
     alert("Order placed successfully!");
 }
-const containerinner = document.querySelector('containerinner');
-const details45 = document.querySelector("itemsDetails45");
 
-let orderItem;
 function itemsorder() {
   orderItem = namit.map(item => {
     for (let i = 0; i < products.length; i++){
