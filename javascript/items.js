@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
   const firebaseConfig = {
     apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
@@ -16,6 +17,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
   //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
   //   isTokenAutoRefreshEnabled: true
   // });
+const auth = getAuth(app); 
   const db = getFirestore(app);
 
 let products = fruits.concat(vegetables)
@@ -109,6 +111,7 @@ itemBag = namit.map( item => {
     if(products){
       await setDoc(doc(db, "itemBag", String(id).padStart(3, '0')), {
         id: products.id,
+        userid: auth.currentUser.uid,
         name: products.images,
         kilogram: products.kilogram,
         price : products.price ,
