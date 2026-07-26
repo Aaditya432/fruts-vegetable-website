@@ -102,6 +102,19 @@ itemBag = namit.map( item => {
     }
 }
 })
+   for(let item of itembag){
+    let id = item.id ? item.id : item; 
+    let products = itemBag.find(p => String(p.id) === String(id));
+    
+    if(products){
+      await setDoc(doc(db, "orders", String(id).padStart(3, '0')), {
+        id: product.id,
+        name: product.images,
+        kilogram: product.kilogram,
+        price : product.price ,
+       englishName: product.englishName,
+       hindiName: product.hindiName,
+        });
 }
 console.log(itemBag);
 // function displayLength(){
