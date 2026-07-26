@@ -1,4 +1,4 @@
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
