@@ -6,12 +6,14 @@ import { getFirestore, collection, query, where, getDocs, orderBy, limit } from 
 import { addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // 2. Apna config yaha paste karo
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  // ...baki sab
-};
+  const firebaseConfig = {
+    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
+    authDomain: "fruitsvegetable-website.firebaseapp.com",
+    projectId: "fruitsvegetable-website",
+    storageBucket: "fruitsvegetable-website.firebasestorage.app",
+    messagingSenderId: "930353495099",
+    appId: "1:930353495099:web:4b0beba40fea843426b01e",
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
