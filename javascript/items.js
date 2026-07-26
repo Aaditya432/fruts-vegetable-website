@@ -19,6 +19,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
   const db = getFirestore(app);
 
 let products = fruits.concat(vegetables)
+ let totalPriceRu;
 let itemBag;
 let Bags;
  mango = [ ];
@@ -159,7 +160,7 @@ function quantityNumbers (){
                 </div>`
 }
 function displayTotalPrice (){
-    let totalPriceRu = 0;
+     totalPriceRu = 0;
     itemBag.forEach((itemsss)=>{
      totalPriceRu +=  itemsss.price ; 
     })
