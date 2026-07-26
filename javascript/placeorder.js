@@ -30,7 +30,7 @@ load();
 function load(){
     itemsorder():
     displayorderitems();
-    itemsquantityorder();
+    itemsQuantityorder();
     
 }
 function itemsorder() {
@@ -40,7 +40,7 @@ function itemsorder() {
         return products[i]
     }
   })
-
+console.log(orderItem);
 }
 function itemsQuantityOrder(){
 //   let totalPriceRu = 0;
