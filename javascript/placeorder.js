@@ -41,7 +41,10 @@ onAuthStateChanged(auth, async (user) => {
   } else {
     containerInner.innerHTML = "<p>Pehle login karo</p>";
   }
-});
+}  
+orderDetails();
+orderITem();
+);
 // async function placeOrder() {
 //     if (!currentUser) return alert("Pehle login karo");
 
@@ -64,6 +67,7 @@ onAuthStateChanged(auth, async (user) => {
     // alert("Order placed successfully!");
 
 //   let totalPriceRu = 0;
+function orderDetails () {
 orderItem.forEach((orderdetail)=>{
 details45.innerHTML += `   <div class="details45">
                 <div class="naming45">
@@ -80,12 +84,14 @@ details45.innerHTML += `   <div class="details45">
                  </div>
                  </div>`
   })
+}
 
 
-
+  function orderITem (){
   orderItem.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.images} alt="">
                 </div>
                 `
 })
+  }
