@@ -61,7 +61,7 @@ const signup1 = document.querySelector(".signup1")
 // })
  
 
-1. Apna Firebase Config yaha paste karo
+// 1. Apna Firebase Config yaha paste karo
 const firebaseConfig = {
   apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
   authDomain: "fruitsvegetable-website.firebaseapp.com",
