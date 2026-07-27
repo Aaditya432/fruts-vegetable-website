@@ -37,6 +37,7 @@ onAuthStateChanged(auth, async (user) => {
      
       });
     }
+  }
     console.log(orderItem);
 
 orderDetails();
