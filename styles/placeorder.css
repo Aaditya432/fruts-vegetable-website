@@ -6,6 +6,7 @@ text-align: center;
 }
 .purchaseditem{
   display: flex;
+  justify-content: center;
 }
 .itemsDetails{
    margin-top: 21vh;
