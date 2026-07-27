@@ -19,7 +19,7 @@ onAuthStateChanged(auth, async (user) => {
       where("userid", "==", user.uid),
  // sirf last wala order
     );
-
+  }
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.empty) {
@@ -38,10 +38,10 @@ onAuthStateChanged(auth, async (user) => {
       });
     }
     console.log(orderItem);
-  } else {
+   else {
     containerInner.innerHTML = "<p>Pehle login karo</p>";
   }
-}  
+}
 orderDetails();
 orderITem();
 );
