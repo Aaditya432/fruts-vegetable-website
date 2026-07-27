@@ -28,17 +28,17 @@ onAuthStateChanged(auth, async (user) => {
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
-        orderItem.push(
+        orderItem.push({
         name : order.name,
         englishName : order.englishName,
         hindiName : order.hindiName,
         kg : order.kilogram,
         price :  order.price,
-        ) 
+        })
      
       });
     }
-
+    console.log(orderItem);
   } else {
     containerInner.innerHTML = "<p>Pehle login karo</p>";
   }
