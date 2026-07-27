@@ -3,14 +3,15 @@ import { initializeApp, getApps } from "https://www.gstatic.com/firebasejs/10.12
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
-    authDomain: "fruitsvegetable-website.firebaseapp.com",
-    projectId: "fruitsvegetable-website",
-    storageBucket: "fruitsvegetable-website.firebasestorage.app",
-    messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e",
-  };
+ 
+const firebaseConfig = {
+  apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
+  authDomain: "fruitsvegetable-website.firebaseapp.com",
+  projectId: "fruitsvegetable-website",
+  storageBucket: "fruitsvegetable-website.firebasestorage.app",
+  messagingSenderId: "930353495099",
+  appId: "1:930353495099:web:4b0beba40fea843426b01e"
+};
 
 const app = getApps().length === 0? initializeApp(firebaseConfig) : getApps()[0];
 
