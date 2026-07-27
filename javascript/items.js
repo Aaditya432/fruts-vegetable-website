@@ -1,4 +1,4 @@
- // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
@@ -11,7 +11,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
   //   appId: "1:930353495099:web:4b0beba40fea843426b01e",
   // };
 
-  // const app = initializeApp();
+  const app = initializeApp();
   // 3. App Check - Yaha SITE KEY paste karni hai
   // const appCheck = initializeAppCheck(app, {
   //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
