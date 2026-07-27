@@ -88,7 +88,7 @@ details45.innerHTML += `   <div class="details45">
   function orderITem (){
   orderItem.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
-                    <img  class="manish89" src=../${item.images} alt="">
+                    <img  class="manish89" src=../${item.name} alt="">
                 </div>
                 `
 })
