@@ -1,4 +1,4 @@
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 // import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
@@ -61,24 +61,24 @@ const signup1 = document.querySelector(".signup1")
 // })
  
 
-// 1. Apna Firebase Config yaha paste karo
-// const firebaseConfig = {
-//   apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
-//   authDomain: "fruitsvegetable-website.firebaseapp.com",
-//   projectId: "fruitsvegetable-website",
-//   storageBucket: "fruitsvegetable-website.firebasestorage.app",
-//   messagingSenderId: "930353495099",
-//   appId: "1:930353495099:web:4b0beba40fea843426b01e"
-// };
-// 
-// const app = initializeApp();
+1. Apna Firebase Config yaha paste karo
+const firebaseConfig = {
+  apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavOe6mQCnjuBpI",
+  authDomain: "fruitsvegetable-website.firebaseapp.com",
+  projectId: "fruitsvegetable-website",
+  storageBucket: "fruitsvegetable-website.firebasestorage.app",
+  messagingSenderId: "930353495099",
+  appId: "1:930353495099:web:4b0beba40fea843426b01e"
+};
+
+const app = initializeApp( firebaseConfig);
   // 3. App Check - Yaha SITE KEY paste karni hai
 //   const appCheck = initializeAppCheck(app, {
 //     provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
     // isTokenAutoRefreshEnabled: true
 //   });
-const auth = getAuth();
-const db = getFirestore();
+const auth = getAuth( app);
+const db = getFirestore( app);
 
 // 2. SIGNUP
 document.querySelector(".sig").addEventListener("click" , async (e) => {
