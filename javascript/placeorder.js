@@ -38,9 +38,6 @@ onAuthStateChanged(auth, async (user) => {
       });
     }
     console.log(orderItem);
-   else {
-    containerInner.innerHTML = "<p>Pehle login karo</p>";
-  }
 }
 orderDetails();
 orderITem();
