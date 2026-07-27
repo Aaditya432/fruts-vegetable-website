@@ -77,7 +77,7 @@ const signup1 = document.querySelector(".signup1")
 //     provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
     // isTokenAutoRefreshEnabled: true
 //   });
-const auth = getAuth(;
+const auth = getAuth();
 const db = getFirestore();
 
 // 2. SIGNUP
