@@ -1,4 +1,3 @@
-
 // 1. Firebase import
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
@@ -19,13 +18,13 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-const orderContainer = document.getElementById("order-items"); // HTML me ye div banao
+const containerInner = document.querySelector(".containerinner");
 
 // 3. Login hai to latest order uthao
 onAuthStateChanged(auth, async (user) => {
   if (user) {
     const q = query(
-      collection(db, "orders"),
+      collection(db, "itemBag"),
       where("userId", "==", user.uid),
       orderBy("orderDate", "desc"),
       limit(1) // sirf last wala order
@@ -34,15 +33,11 @@ onAuthStateChanged(auth, async (user) => {
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.empty) {
-      orderContainer.innerHTML = "<p>Koi order nahi mila</p>";
+      containerInner.innerHTML = "<p>Koi order nahi mila</p>";
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
-        let html = `<h3>Order Total: ₹${order.totalAmount}</h3>`;
-        order.items.forEach(item => {
-          html += `<p>${item.name} - Qty: ${item.qty} - ₹${item.price}</p>`;
-        });
-        orderContainer.innerHTML = html;
+     
       });
     }
 
@@ -50,8 +45,9 @@ onAuthStateChanged(auth, async (user) => {
     orderContainer.innerHTML = "<p>Pehle login karo</p>";
   }
 });
+let orderItem;
 
-const containerInner = document.querySelector('.containerinner');
+
 const details45 = document.querySelector(".itemsDetails45");
 
 
