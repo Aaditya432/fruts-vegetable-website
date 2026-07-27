@@ -74,7 +74,7 @@ details45.innerHTML += `   <div class="details45">
                  </div>
                  <div class="kilo45">
                  <span class="kilogram45">kilogram</span>
-                 <span class="kquantity45">${orderdetail.kilogram} kg</span>
+                 <span class="kquantity45">${orderdetail.kg} kg</span>
                  </div>
                  <div class="priceitems45">
                 <span class="pri45">price</span>
