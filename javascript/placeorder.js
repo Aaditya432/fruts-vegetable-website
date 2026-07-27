@@ -38,10 +38,10 @@ onAuthStateChanged(auth, async (user) => {
       });
     }
     console.log(orderItem);
-}
+
 orderDetails();
 orderITem();
-);
+});
 // async function placeOrder() {
 //     if (!currentUser) return alert("Pehle login karo");
 
