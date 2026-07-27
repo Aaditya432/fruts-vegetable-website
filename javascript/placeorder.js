@@ -1,24 +1,15 @@
 // 1. Firebase import
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { auth, db } from './firebase.js';
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, collection, query, where, getDocs, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-// 2. Apna config yaha paste karo
-  const firebaseConfig = {
-    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
-    authDomain: "fruitsvegetable-website.firebaseapp.com",
-    projectId: "fruitsvegetable-website",
-    storageBucket: "fruitsvegetable-website.firebasestorage.app",
-    messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e",
-  };
+let orderItem = [];
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+// 2. Apna config yaha paste kar
 
 const containerInner = document.querySelector(".containerinner");
+const details45 = document.querySelector(".itemsDetails45");
 
 // 3. Login hai to latest order uthao
 onAuthStateChanged(auth, async (user) => {
@@ -37,20 +28,21 @@ onAuthStateChanged(auth, async (user) => {
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
+        orderItem.push(
+        name : order.name,
+        englishName : order.englishName,
+        hindiName : order.hindiName,
+        kg : order.kilogram,
+        price :  order.price,
+        ) 
      
       });
     }
 
   } else {
-    orderContainer.innerHTML = "<p>Pehle login karo</p>";
+    containerInner.innerHTML = "<p>Pehle login karo</p>";
   }
 });
-let orderItem;
-
-
-const details45 = document.querySelector(".itemsDetails45");
-
-
 // async function placeOrder() {
 //     if (!currentUser) return alert("Pehle login karo");
 
@@ -75,7 +67,7 @@ const details45 = document.querySelector(".itemsDetails45");
 //   let totalPriceRu = 0;
 console.log(itemBag);
 console.log(namit);
-itemBag.forEach((orderdetail)=>{
+orderItem.forEach((orderdetail)=>{
 details45.innerHTML+= `
                   <div class="details45">
                 <div class="naming45">
@@ -95,7 +87,7 @@ details45.innerHTML+= `
 
 
 
-  itemBag.forEach(item => {
+  orderItem.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.images} alt="">
                 </div>
