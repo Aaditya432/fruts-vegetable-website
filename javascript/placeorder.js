@@ -64,11 +64,8 @@ onAuthStateChanged(auth, async (user) => {
     // alert("Order placed successfully!");
 
 //   let totalPriceRu = 0;
-console.log(itemBag);
-console.log(namit);
 orderItem.forEach((orderdetail)=>{
-details45.innerHTML+= `
-                  <div class="details45">
+details45.innerHTML += `   <div class="details45">
                 <div class="naming45">
                 <span class="fruits45">Fruit name </span>
                  <span class="iname45">${orderdetail.englishName}</span>
