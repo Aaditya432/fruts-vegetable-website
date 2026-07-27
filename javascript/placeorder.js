@@ -16,9 +16,8 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     const q = query(
       collection(db, "itemBag"),
-      where("userId", "==", user.uid),
-      orderBy("orderDate", "desc"),
-      limit(1) // sirf last wala order
+      where("userid", "==", user.uid),
+ // sirf last wala order
     );
 
     const querySnapshot = await getDocs(q);
