@@ -18,7 +18,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
   //   isTokenAutoRefreshEnabled: true
   // });
   // const auth = getAuth(); 
-  // const db = getFirestore();
+  const db = getFirestore();
 
 let products = fruits.concat(vegetables)
  let totalPriceRu;
