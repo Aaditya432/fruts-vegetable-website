@@ -1,25 +1,25 @@
 // import { getApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { auth, db } from './firebaseconfig.js';
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
-  const firebaseConfig = {
-    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
-    authDomain: "fruitsvegetable-website.firebaseapp.com",
-    projectId: "fruitsvegetable-website",
-    storageBucket: "fruitsvegetable-website.firebasestorage.app",
-    messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e",
-  };
+  // const firebaseConfig = {
+  //   apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
+  //   authDomain: "fruitsvegetable-website.firebaseapp.com",
+  //   projectId: "fruitsvegetable-website",
+  //   storageBucket: "fruitsvegetable-website.firebasestorage.app",
+  //   messagingSenderId: "930353495099",
+  //   appId: "1:930353495099:web:4b0beba40fea843426b01e",
+  // };
 
-const app = initializeApp(firebaseConfig); // naya mat banao
+ // naya mat banao
   // 3. App Check - Yaha SITE KEY paste karni hai
   // const appCheck = initializeAppCheck(app, {
   //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
   //   isTokenAutoRefreshEnabled: true
   // });
-  const auth = getAuth(app); 
-  const db = getFirestore(app);
+
 
 let products = fruits.concat(vegetables)
  let totalPriceRu;
