@@ -16,11 +16,13 @@ text-align: center;
 .images38{
   height: 20vh;
   border-bottom:  2px solid rgb(10, 10, 10);
+  border:  2px solid rgb(10, 10, 10);
   margin-top: 2vh;
 }
 .details45{
   height: 20vh;
   border-bottom:  2px solid rgb(10, 10, 10);
+  border:  2px solid rgb(10, 10, 10);
 }
 .naming45{
   margin-top: 2vh;
@@ -41,7 +43,7 @@ color: rgb(0, 0, 0)
   height: 15vh;
 }
 .fruits45{
-  margin-left: 5.2vw;
+  margin-left: 5.7vw;
   color: rgb(0, 0, 0)
 }
 .kilo45{
