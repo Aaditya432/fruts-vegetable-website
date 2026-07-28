@@ -91,12 +91,15 @@ text-decoration: none;
     .itemscontainer{
      /* display: flex;
     flex-wrap: wrap; */
-    width: 48% ;
+    width: 55% ;
     height: 100%;
-    margin-left: 35vw;
+    margin-left: 26vw;
     margin-right:  17vw;
     margin-top: 21vh;
 }
+     .items{
+          margin-left: 4vw;
+     }
 .button37{
     border-style: none;
     height: 3vh;
