@@ -262,8 +262,19 @@ margin: 2vh 2vw;
     margin-top: 15vh;
 
 }  */
-  @media screen and (max-width : 1300px){
+  /* @media screen and (max-width : 1200px){
     .navi{
+        width: 15vw ;
+        margin-left: 9vw;
+        /* background-color: aqua; */
+/* }
+.heading{
+    margin-top: 3vh;
+    font-size: smaller;
+} */ 
+
+   @media screen and (max-width : 600px) { 
+        .navi{
         width: 15vw ;
         margin-left: 9vw;
         /* background-color: aqua; */
@@ -272,10 +283,6 @@ margin: 2vh 2vw;
     margin-top: 3vh;
     font-size: smaller;
 }
-
-
-   }
-   @media screen and (max-width : 600px) { 
 .button{
     margin-left: 10vw;
     width: 5vw;
