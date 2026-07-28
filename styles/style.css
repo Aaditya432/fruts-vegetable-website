@@ -70,7 +70,7 @@ border-bottom: 2px solid rgb(255, 0, 0)
     text-align: center;
     margin-top: 1.7vh;
     text-transform: uppercase;
-    font-family: "Betania Patmos In GDL", cursive;
+    font-family:  cursive;
 }
 .image{
     height: 10vh;
@@ -274,11 +274,9 @@ margin: 2vh 2vw;
 } */ 
 
    @media screen and (max-width : 600px) { 
-        .navi{
+    .navi{
         width: 15vw ;
-        margin-left: 9vw;
-        /* background-color: aqua; */
-}
+    }
 .heading{
     margin-top: 3vh;
     font-size: smaller;
