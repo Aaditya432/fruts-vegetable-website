@@ -106,7 +106,7 @@ itemBag = namit.map( item => {
     }
 }
 })
-     itemOrder.push(itemBag);              )
+                )
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
@@ -123,7 +123,8 @@ itemBag = namit.map( item => {
         });
 }
    }
-console.log(itemBag);
+  itemOrder.push(itemBag);
+    console.log(itemBag);
 }
 // function displayLength(){
 //         if(namit.length > 0){
