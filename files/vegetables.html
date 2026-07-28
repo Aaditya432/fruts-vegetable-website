@@ -71,38 +71,20 @@
         </section>
     
     </footer>
-      <script type="module">
-  // 1. Firebase import karo CDN se
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-  import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";        
+   <script type="module">
+    // 1. Sirf firebaseconfig.js se import karo
+    import { db, auth } from "./firebaseconfig.js"; 
+    import { collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-  // 2. Tumhara Config
-  const firebaseConfig = {
-    apiKey: "AIzaSyC-YvuHU_0xSWt5NdLHxavQe6mQCnjuBpl",
-    authDomain: "fruitsvegetable-website.firebaseapp.com",
-    projectId: "fruitsvegetable-website",
-    storageBucket: "fruitsvegetable-website.firebasestorage.app",
-    messagingSenderId: "930353495099",
-    appId: "1:930353495099:web:4b0beba40fea843426b01e"
-  };
+    // 2. Baaki ka tumhara code yahi se chalu karo
+    // db aur auth ab yahi use hoga
+    // const db = getFirestore(app);  <- ye line hata do
+    // const auth = getAuth(app);     <- ye line hata do
+    
+    // Example: data lana hai to
+    // const querySnapshot = await getDocs(collection(db, "fruits"));
 
-  // 3. Firebase shuru karo
-  const app = initializeApp(firebaseConfig);
-  //   const appCheck = initializeAppCheck(app, {
-  //   provider: new ReCaptchaV3Provider('6LcVU18tAAAAAOAhGM1-oML_w-luo1DyzHhOBkjE'), // <-- Yaha
-  //   isTokenAutoRefreshEnabled: true
-  // });        
-  const db = getFirestore(app);
-  const auth = getAuth(app);
-  
-  // Test ke liye
-  console.log("Firebase Connected!");
-  
-  // Ab db aur auth ko global bana do taaki script.js use kar sake
-  window.db = db;
-  window.auth = auth;
 </script>
          <script type = "module" src="../javascript/script.js"></script>
          <script src="../javascript/data.js"></script>
