@@ -25,6 +25,7 @@ let products = fruits.concat(vegetables)
  let totalPriceRu;
 let itemBag;
 let Bags;
+let itemOrder = []
  mango = [ ];
 console.log(namit);
 syncCartToDatabase();
@@ -105,6 +106,7 @@ itemBag = namit.map( item => {
     }
 }
 })
+     itemOrder.push(itemBag);              )
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
