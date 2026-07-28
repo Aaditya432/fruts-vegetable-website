@@ -6,11 +6,11 @@ import { addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.1
 
 let orderItem;
 let items;
-console.log(itemOrder);
 
-items = localstorage.getitem("orderitems")
+
+items = localStorage.getItem("orderitems")
 if(items != undefined){
-    orderItem = json.parse(items);
+    orderItem = Json.parse(items);
 }
 console.log(orderItem);
 // 2. Apna config yaha paste kar
