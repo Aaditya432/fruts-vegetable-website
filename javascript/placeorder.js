@@ -4,8 +4,8 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 import { getFirestore, collection, query, where, getDocs, orderBy, limit, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-let orderItem = itemOrder;
-console.log(orderItem);
+let orderItem = [];
+console.log(itemOrder);
 // 2. Apna config yaha paste kar
 
 const containerInner = document.querySelector(".containerinner");
