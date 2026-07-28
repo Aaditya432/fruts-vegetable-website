@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/
 import { getFirestore, collection, query, where, getDocs, orderBy, limit, setDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+let realItem = [];
 let orderItem;
 let items;
 
@@ -54,11 +55,11 @@ onAuthStateChanged(auth, async (user) => {
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
-        orderItem.push({
+        realItem.push({
         name : order.name,
         englishName : order.englishName,
         hindiName : order.hindiName,
-        kg : order.kilogram,
+        kg : order.kg,
         price :  order.price,
         })
      
@@ -93,7 +94,7 @@ orderITem();
 
 //   let totalPriceRu = 0;
 function orderDetails () {
-orderItem.forEach((orderdetail)=>{
+realItem.forEach((orderdetail)=>{
 details45.innerHTML += `   <div class="details45">
                 <div class="naming45">
                 <span class="fruits45">Fruit name </span>
@@ -113,7 +114,7 @@ details45.innerHTML += `   <div class="details45">
 
 
   function orderITem (){
-  orderItem.forEach(item => {
+  realItem.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.name} alt="">
                 </div>
