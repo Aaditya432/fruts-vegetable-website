@@ -17,6 +17,7 @@ text-align: center;
   height: 20vh;
   border-bottom:  2px solid rgb(10, 10, 10);
   border:  2px solid rgb(10, 10, 10);
+   background-color: rgb(255, 162, 162);
   /* margin-top: 2vh; */
 }
 .details45{
@@ -42,6 +43,7 @@ color: rgb(0, 0, 0)
 } 
 .manish89{
   height: 15vh;
+  mix-blend-mode: multiply;
 }
 .fruits45{
   margin-left: 5.7vw;
