@@ -46,7 +46,7 @@ color: rgb(0, 0, 0)
 .kilo45{
   diplay: flex;
   flex-content: space-between;
-  jsutify-content: center;
+  justify-content: center;
   margin-top: 2vh;
   /* text-align: center; */
      font-size: large;
