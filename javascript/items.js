@@ -106,7 +106,6 @@ itemBag = namit.map( item => {
     }
 }
 })
-                )
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
