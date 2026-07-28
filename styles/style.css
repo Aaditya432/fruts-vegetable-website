@@ -17,6 +17,10 @@
     /* background-repeat: no-repeat; */
     /* background-size: 28vw ,  8vh ; */
 }
+.heading{
+    margin-top: 3vh;
+    font-size:  xx-small;
+}
 .itemss{
   height: 7vh;
     width: 8vw;
