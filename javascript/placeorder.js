@@ -10,7 +10,7 @@ let items;
 
 items = localStorage.getItem("orderitems")
 if(items != undefined){
-    orderItem = Json.parse(items);
+    orderItem = JSon.parse(items);
 }
 console.log(orderItem);
 // 2. Apna config yaha paste kar
