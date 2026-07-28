@@ -24,7 +24,7 @@ text-align: center;
 }
 .naming45{
   margin-top: 2vh;
-   text-align: center;
+   /* text-align: center; */
    font-size: large;
    font-weight: bold;
    border-bottom: 2px solid rgb(10, 10, 10);
@@ -32,7 +32,7 @@ text-align: center;
     /* background-color: rgb(255, 162, 162); */
 }
 .iname45{
-  margin-left: 4vw;
+  margin-left: 6vw;
 /* color: rgb(255, 0, 51); */
 color: rgb(0, 0, 0)
 
@@ -41,6 +41,7 @@ color: rgb(0, 0, 0)
   height: 15vh;
 }
 .fruits45{
+  margin-left: 6vw;
   color: rgb(0, 0, 0)
 }
 .kilo45{
