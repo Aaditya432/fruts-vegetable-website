@@ -15,6 +15,14 @@ text-align: center;
    width: 30vw;
    height: 100%;
 }
+.images38{
+  height: 20vh;
+  border-bottom:  2px solid rgb(10, 10, 10);
+}
+.details45{
+  height: 20vh;
+  border-bottom:  2px solid rgb(10, 10, 10);
+}
 .naming45{
   margin-top: 2vh;
    text-align: center;
