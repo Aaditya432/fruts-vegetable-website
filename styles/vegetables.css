@@ -95,12 +95,15 @@ text-decoration: none;
     .itemscontainer4{
      /* display: flex;
     flex-wrap: wrap; */
-    width: 48% ;
+    width: 55vw% ;
     height: 100%;
     margin-left: 28vw;
     margin-right:  17vw;
     margin-top: 21vh;
 }
+    .items4{
+        margin-left: 4vw;
+    }
 .button35{
     border-style: none;
     height: 3vh;
