@@ -44,8 +44,8 @@ color: rgb(0, 0, 0)
   color: rgb(0, 0, 0)
 }
 .kilo45{
-  diplay: flex;
-  flex-content: space-between;
+  /* diplay: flex;
+  flex-content: space-between; */
   justify-content: center;
   margin-top: 2vh;
   /* text-align: center; */
