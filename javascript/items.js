@@ -25,7 +25,7 @@ let products = fruits.concat(vegetables)
  let totalPriceRu;
 let itemBag;
 let Bags;
-let itemOrder = []
+ let itemOrder = []
  mango = [ ];
 console.log(namit);
 syncCartToDatabase();
@@ -122,8 +122,8 @@ itemBag = namit.map( item => {
         });
 }
    }
-  itemOrder.push(itemBag);
-    console.log(itemBag);
+   localStorage.setItem("orderitems", JSON.stringify(itemBag) )
+   
 }
 // function displayLength(){
 //         if(namit.length > 0){
