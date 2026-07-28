@@ -22,3 +22,11 @@ const appCheck = initializeAppCheck(app, {
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+import { getToken } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check.js";
+
+getToken(appCheck).then((result) => {
+  console.log("✅ AppCheck Token MIL GAYA:", result.token.substring(0, 30), "...");
+}).catch((err) => {
+  console.log("❌ AppCheck ERROR:", err);
+});
