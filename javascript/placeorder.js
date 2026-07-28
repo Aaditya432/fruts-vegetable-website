@@ -35,7 +35,7 @@ onAuthStateChanged(auth, async (user) => {
         price : orderI.price ,
        englishName: orderI.englishName,
        hindiName: orderI.hindiName,
-       userId : auth.uid,
+       userId : auth.currentUser.uid,
     
       });
     }
