@@ -287,7 +287,7 @@ margin: 2vh 2vw;
     margin-top: 3vh;
     font-size:  xx-small;
 }
-.button{
+/* .button{
     margin-left: 10vw;
     width: 5vw;
 } 
@@ -301,7 +301,7 @@ margin: 2vh 2vw;
      font-family: "Betania Patmos In GDL", cursive;
      text-transform: uppercase;
      font-size: xx-small;
-}
+} */
 .signup1{ 
  z-index: 2;
     position: absolute; 
