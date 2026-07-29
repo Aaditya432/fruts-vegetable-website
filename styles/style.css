@@ -277,7 +277,7 @@ margin: 2vh 2vw;
     font-size: smaller;
 } */ 
 
-   @media screen and (max-width : 600px) { 
+   /* @media screen and (max-width : 600px) { 
     .navi{
         width: 15vw ;
     }
@@ -293,17 +293,17 @@ margin: 2vh 2vw;
   color: white;
     height: 4vh;
     /* width: 3vw; */
-     border-style: none;
+     /* border-style: none;
     background-color:hwb(16 0% 0%);
     cursor: pointer;
      font-family: "Betania Patmos In GDL", cursive;
      text-transform: uppercase;
      font-size: xx-small;
 }
-.signup1{
+.signup1{ */
 /* z-index: 2;
     position: absolute; */
-    top: -5vh;
+    /* top: -5vh;
     right: 0;
     margin-right: 0vw;
     height: 45vh;
@@ -323,7 +323,7 @@ margin: 2vh 2vw;
     cursor: pointer;
     font-size: xx-small;
     /* border: 1px solid gray; */
-    border-radius: 2%;
+    /* border-radius: 2%;
     border-style: none;
      font-family: "Betania Patmos In GDL", cursive;
      text-transform: uppercase;
@@ -334,13 +334,13 @@ margin: 2vh 2vw;
      margin: 3vh 0vw 0vh 10vw;
      cursor: pointer;
  }
- .itemss  :hover{
-border-bottom: 2px solid rgb(255, 0, 0)
+ .itemss  :hover{ */
+/* border-bottom: 2px solid rgb(255, 0, 0)
 }
 /* .itemsss{
     margin-left: 10vw;
 } */
-.list4{
+/* .list4{
     font-size: xx-small;
 }
 .itemssss{
@@ -353,9 +353,9 @@ border-bottom: 2px solid rgb(255, 0, 0)
      font-size: xx-small;
 }
 .container{
-    margin-top: 10vh;
-  height: 200vh;
-  width: 30vw;
+    margin-top: 10vh; */
+  height: 200vh; */
+  /* width: 30vw;
    margin-left: 4.55vw;
  background-color:rgb(108, 108, 71);
  text-align: center;
@@ -369,11 +369,11 @@ border-bottom: 2px solid rgb(255, 0, 0)
     background-color: rgb(14, 13, 13);
     margin-top: 5vh;
 }
- .cart{
+ .cart{ */
     margin-right: 16vw  ;
 } 
 /* .cart1{
     font-size: xx-small;
 } */ 
 
-   }
+   } */ */
