@@ -197,75 +197,76 @@ function displayTotalPrice (){
             </div> `
 
 }
-// function addressdetails(){
-//   addressOfCustomer.innerHTML = `
-//   <h2>Delivery Address</h2>
-//   <form id="addressForm">
-//     <input type="text" id="name" placeholder="Full Name" required><br>
-//     <input type="tel" id="phone" placeholder="Phone Number" required><br>
-//     <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
-//       <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
-//   </form>
-//    <div id="addressDisplay" class="address-box hidden">
-//       <h3>Saved Address</h3>
-//       <p id="displayName"></p>
-//       <p id="displayPhone"></p>
-//       <p id="displayAddress"></p>
-//       <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
-//     </div>`
+function addressdetails(){
+  addressOfCustomer.innerHTML = `
+  <h2>Delivery Address</h2>
+  <form id="addressForm">
+    <input type="text" id="name" placeholder="Full Name" required><br>
+    <input type="tel" id="phone" placeholder="Phone Number" required><br>
+    <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
+      <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
+  </form>
+   <div id="addressDisplay" class="address-box hidden">
+      <h3>Saved Address</h3>
+      <p id="displayName"></p>
+      <p id="displayPhone"></p>
+      <p id="displayAddress"></p>
+      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
+    </div>`
 
-//         const form = document.getElementById('addressForm');
-//     const btn = document.getElementById('submitBtn');
-//      const addressDisplay = document.getElementById('addressDisplay');
-//     const changeBtn = document.getElementById('changeAddressBtn');
-//       let addressDocId;
-//       let savedAddressSData;
+        const form = document.getElementById('addressForm');
+    const btn = document.getElementById('submitBtn');
+     const addressDisplay = document.getElementById('addressDisplay');
+    const changeBtn = document.getElementById('changeAddressBtn');
+      let addressDocId;
+      let savedAddressSData;
 
-//     onAuthStateChanged(auth, async (user) => {
-//    if(user){
-// form.addEventListener('submit', async (e) => {
-//       e.preventDefault();
-//       btn.innerText = "Saving...";
-//       btn.disabled = true;
+    onAuthStateChanged(auth, async (user) => {
+   if(user){
+form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.innerText = "Saving...";
+      btn.disabled = true;
 
-//       const addressData = {
-//         name: document.getElementById('name').value,
-//         phone: document.getElementById('phone').value,
-//         address: document.getElementById('address').value,
-//         userId: auth.currentUser.uid,
-//       };
+      const addressData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        userId: auth.currentUser.uid,
+      };
 
-//       try {
-//         await addDoc(collection(db, "addresses"), addressData);
-//         const q = query(collection(db, "addresses"), where("userId", "==", User.uid));
-//       const querySnapshot = await getDocs(q);
+      try {
+        await addDoc(collection(db, "addresses"), addressData);
+        const q = query(collection(db, "addresses"), where("userId", "==", User.uid));
+      const querySnapshot = await getDocs(q);
 
-//       if (!querySnapshot.empty) {
-//         const docSnap = querySnapshot.docs[0]; // pehla address le lo
-//         addressDocId = docSnap.id;
-//         savedAddressData = docSnap.data();
-//         showAddress(savedAddressData);
+      if (!querySnapshot.empty) {
+        const docSnap = querySnapshot.docs[0]; // pehla address le lo
+        addressDocId = docSnap.id;
+        savedAddressData = docSnap.data();
+        showAddress(savedAddressData);
         
-//         // direct address dikhao
-//        function showAddress(data) {
-//       document.getElementById('displayName').innerText = "Name: " + data.name;
-//       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-//       document.getElementById('displayAddress').innerText = "Address: " + data.address;
-//       form.classList.add('hidden'); // form chupao
-//       addressDisplay.classList.remove('hidden'); // address dikhao
-//     }
-//       btn.innerText = "Save Address";
-//       btn.disabled = false;
+        // direct address dikhao
+       function showAddress(data) {
+      document.getElementById('displayName').innerText = "Name: " + data.name;
+      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+      document.getElementById('displayAddress').innerText = "Address: " + data.address;
+      form.classList.add('hidden'); // form chupao
+      addressDisplay.classList.remove('hidden'); // address dikhao
+    }
+      btn.innerText = "Save Address";
+      btn.disabled = false;
   
-// }
-//       }
-//  catch (error) {
-//         alert("Error: " + error.message);
-//       }
-// })
+}
+      }
+ catch (error) {
+        alert("Error: " + error.message);
+      }
+})
      
-//                       }
-//     })
+                      }
+    })
+}
                       
 
 function itemsQuantity(){
