@@ -278,7 +278,7 @@ margin: 2vh 2vw;
     font-size: smaller;
 } */ 
 
-    @media screen and (max-width : 600px) { 
+    @media screen and (max-width : 500px) { 
     .navi{
         width: 15vw ;
         margin-left: 9vw;
@@ -303,13 +303,15 @@ margin: 2vh 2vw;
      font-size: xx-small;
 } */
 .signup1{ 
+    height: 45vh;
+    width: 30vw:   
     background-color:rgb(108, 108, 71);
     border: 1px solid gray;
      text-align: center;
 }
 .sig{
     height: 4vh;
-    width: 4.8vw;
+    width: 7vw;
     background-color:hwb(16 2% 4%);
     color: rgb(239, 223, 217);
     margin-top: 3vh;
