@@ -263,7 +263,7 @@ form.addEventListener('submit', async (e) => {
 })
      
                       }
-    });
+    })
                       
 
 function itemsQuantity(){
