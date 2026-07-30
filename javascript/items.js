@@ -89,6 +89,7 @@ const itemsContainer23 =  document.querySelector(".itemscontainer234");
 const  details =  document.querySelector(".itemsDetails");
 const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
+const addressOfCustomer = document.querySelector(".addressofcustomer");
 
 // onload();
 function onload(){
@@ -97,6 +98,7 @@ function onload(){
   quantityNumbers();
   itemsQuantity();
   displayTotalPrice();
+  addressdetails();
 }
 async function itemsFruits(){
 itemBag = namit.map( item => {
@@ -192,6 +194,16 @@ function displayTotalPrice (){
                 <span class="rupees">Rs ${totalPriceRu}</span>
             </div> `
 
+}
+function addressdetails(){
+  addressOfCustomer.innerHTML = `
+  <h2>Delivery Address</h2>
+  <form id="addressForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="address" placeholder="House No, Street, Area" rows="3" required></textarea>
+      <button type="submit" id="submitBtn">Save Address</button>
+  </form>`
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
