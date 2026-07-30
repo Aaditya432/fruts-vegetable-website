@@ -1,7 +1,7 @@
 // import { getApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { auth, db } from './firebaseconfig.js';
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
+import { getAuth,  onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";
   // const firebaseConfig = {
@@ -212,12 +212,15 @@ function addressdetails(){
       <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
     </div>`
 
+    onAuthStateChanged(auth, async (user) => {
+   if(user)
      const form = document.getElementById('addressForm');
     const btn = document.getElementById('submitBtn');
      const addressDisplay = document.getElementById('addressDisplay');
     const changeBtn = document.getElementById('changeAddressBtn');
-
-    form.addEventListener('submit', async (e) => {
+      let addressDocId;
+      let savedAddressSData;
+form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.innerText = "Saving...";
       btn.disabled = true;
@@ -226,16 +229,28 @@ function addressdetails(){
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value,
+        userId: auth.currentuser.uid,
       };
 
       try {
         await addDoc(collection(db, "addresses"), addressData);
-        alert("Address Saved Successfully!");
-        form.reset(); // form khali kar do
-      } catch (error) {
-        alert("Error: " + error.message);
-      }
+        const q = query(collection(db, "addresses"), where("userId", "==", currentUser.uid));
+      const querySnapshot = await getDocs(q);
 
+      if (!querySnapshot.empty) {
+        const docSnap = querySnapshot.docs[0]; // pehla address le lo
+        addressDocId = docSnap.id;
+        savedAddressData = docSnap.data();
+        showAddress(savedAddressData);
+        
+        // direct address dikhao
+       function showAddress(data) {
+      document.getElementById('displayName').innerText = "Name: " + data.name;
+      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+      document.getElementById('displayAddress').innerText = "Address: " + data.address;
+      form.classList.add('hidden'); // form chupao
+      addressDisplay.classList.remove('hidden'); // address dikhao
+    }
       btn.innerText = "Save Address";
       btn.disabled = false;
     });
