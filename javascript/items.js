@@ -229,7 +229,7 @@ function addressdetails(){
       };
 
       try {
-        await setDoc(collection(db, "addresses"), addressData);
+        await addDoc(collection(db, "addresses"), addressData);
         alert("Address Saved Successfully!");
         form.reset(); // form khali kar do
       } catch (error) {
