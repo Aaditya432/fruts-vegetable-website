@@ -48,6 +48,9 @@ mix-blend-mode: multiply;
    width: 30vw;
    height: 100%;
 }
+.addressofdetails{
+   margin-left: 67vw;
+}
 .naming{
   margin-top: 2vh;
    text-align: center;
