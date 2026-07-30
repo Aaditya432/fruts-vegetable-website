@@ -195,6 +195,15 @@ function displayTotalPrice (){
             </div> `
 
 }
+function saveaddress(){
+  addressOfCustomer.innerHTML = '';
+  addressofcustomer.innerHTML = 
+  `
+  <P>your address is saved></p>
+  <span>${addressData.address}</span>
+  
+  `
+}
 function addressdetails(){
   addressOfCustomer.innerHTML = `
   <h2>Delivery Address</h2>
@@ -217,7 +226,6 @@ function addressdetails(){
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value,
-        createdAt: serverTimestamp()
       };
 
       try {
@@ -232,15 +240,7 @@ function addressdetails(){
       btn.disabled = false;
     });
 }
-function saveaddress (){
-  addressOfCustomer.innerHTML = '';
-  addressofcustomer.innerHTML = 
-  `
-  <P>your address is saved></p>
-  <span>${addressData.address}</span>
-  
-  `
-}
+
 function itemsQuantity(){
 //   let totalPriceRu = 0;
     details.innerHTML = ' ';
