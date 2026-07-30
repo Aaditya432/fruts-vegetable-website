@@ -303,15 +303,6 @@ margin: 2vh 2vw;
      font-size: xx-small;
 } */
 .signup1{ 
- z-index: 2;
-    position: absolute; 
-    /top: -5vh;
-    right: 0;
-    margin-right: 0vw;
-    height: 45vh;
-    width: 30vw;
-    margin-left: 10vw;
-    margin-top: 5vh;
     background-color:rgb(108, 108, 71);
     border: 1px solid gray;
      text-align: center;
