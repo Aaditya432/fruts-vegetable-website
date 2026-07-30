@@ -230,12 +230,12 @@ form.addEventListener('submit', async (e) => {
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value,
-        userId: auth.currentuser.uid,
+        userId: auth.currentUser.uid,
       };
 
       try {
         await addDoc(collection(db, "addresses"), addressData);
-        const q = query(collection(db, "addresses"), where("userId", "==", currentUser.uid));
+        const q = query(collection(db, "addresses"), where("userId", "==", User.uid));
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
@@ -256,6 +256,9 @@ form.addEventListener('submit', async (e) => {
       btn.disabled = false;
   
 }
+      }
+ atch (error) {
+        alert("Error: " + error.message);
       }
 }
                       }
