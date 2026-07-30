@@ -212,14 +212,15 @@ function addressdetails(){
       <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
     </div>`
 
-    onAuthStateChanged(auth, async (user) => {
-   if(user)
-     const form = document.getElementById('addressForm');
+        const form = document.getElementById('addressForm');
     const btn = document.getElementById('submitBtn');
      const addressDisplay = document.getElementById('addressDisplay');
     const changeBtn = document.getElementById('changeAddressBtn');
       let addressDocId;
       let savedAddressSData;
+
+    onAuthStateChanged(auth, async (user) => {
+   if(user)
 form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.innerText = "Saving...";
