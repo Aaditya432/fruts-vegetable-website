@@ -195,15 +195,6 @@ function displayTotalPrice (){
             </div> `
 
 }
-function saveaddress(){
-  addressOfCustomer.innerHTML = '';
-  addressofcustomer.innerHTML = 
-  `
-  <P>your address is saved></p>
-  <span>${addressData.address}</span>
-  
-  `
-}
 function addressdetails(){
   addressOfCustomer.innerHTML = `
   <h2>Delivery Address</h2>
@@ -212,10 +203,19 @@ function addressdetails(){
     <input type="tel" id="phone" placeholder="Phone Number" required><br>
     <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
       <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
-  </form>`
+  </form>
+   <div id="addressDisplay" class="address-box hidden">
+      <h3>Saved Address</h3>
+      <p id="displayName"></p>
+      <p id="displayPhone"></p>
+      <p id="displayAddress"></p>
+      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
+    </div>`
 
      const form = document.getElementById('addressForm');
     const btn = document.getElementById('submitBtn');
+     const addressDisplay = document.getElementById('addressDisplay');
+    const changeBtn = document.getElementById('changeAddressBtn');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
