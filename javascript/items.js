@@ -201,8 +201,8 @@ function addressdetails(){
   <form id="addressForm">
     <input type="text" id="name" placeholder="Full Name" required><br>
     <input type="tel" id="phone" placeholder="Phone Number" required><br>
-    <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea>
-      <button type="submit" id="submitBtn">Save Address</button>
+    <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
+      <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
   </form>`
 
      const form = document.getElementById('addressForm');
@@ -231,6 +231,15 @@ function addressdetails(){
       btn.innerText = "Save Address";
       btn.disabled = false;
     });
+}
+function saveaddress (){
+  addressOfCustomer.innerHTML = '';
+  addressofcustomer.innerHTML = 
+  `
+  <P>your address is saved></p>
+  <span>${addressData.address}</span>
+  
+  `
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
