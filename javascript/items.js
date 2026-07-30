@@ -30,7 +30,7 @@ let Bags;
  let itemOrder = []
  mango = [ ];
       let addressDocId;
-      let savedAddressSData;
+      let savedAddressData;
 console.log(namit);
 syncCartToDatabase();
 async function syncCartToDatabase(){
