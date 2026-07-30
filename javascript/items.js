@@ -199,11 +199,38 @@ function addressdetails(){
   addressOfCustomer.innerHTML = `
   <h2>Delivery Address</h2>
   <form id="addressForm">
-    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="name" placeholder="Full Name" required><br>
     <input type="tel" id="phone" placeholder="Phone Number" required>
-    <textarea id="address" placeholder="House No, Street, Area" rows="3" required></textarea>
+    <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea>
       <button type="submit" id="submitBtn">Save Address</button>
   </form>`
+
+     const form = document.getElementById('addressForm');
+    const btn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.innerText = "Saving...";
+      btn.disabled = true;
+
+      const addressData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        createdAt: serverTimestamp()
+      };
+
+      try {
+        await addDoc(collection(db, "addresses"), addressData);
+        alert("Address Saved Successfully!");
+        form.reset(); // form khali kar do
+      } catch (error) {
+        alert("Error: " + error.message);
+      }
+
+      btn.innerText = "Save Address";
+      btn.disabled = false;
+    });
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
