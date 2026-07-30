@@ -234,11 +234,13 @@ form.addEventListener('submit', async (e) => {
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value,
         userId: auth.currentUser.uid,
+        createdAt : serverTimestamp()
       };
 
       try {
         await addDoc(collection(db, "addresses"), addressData);
-        const q = query(collection(db, "addresses"), where("userId", "==", user.uid));
+        const q = query(collection(db, "addresses"), where("userId", "==", user.uid)
+                       orderby("createdAt",  "desc"));
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
