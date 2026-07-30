@@ -257,7 +257,7 @@ form.addEventListener('submit', async (e) => {
   
 }
       }
- atch (error) {
+ catch (error) {
         alert("Error: " + error.message);
       }
 }
