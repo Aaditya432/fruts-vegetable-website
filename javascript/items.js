@@ -237,7 +237,7 @@ form.addEventListener('submit', async (e) => {
 
       try {
         await addDoc(collection(db, "addresses"), addressData);
-        const q = query(collection(db, "addresses"), where("userId", "==", User.uid));
+        const q = query(collection(db, "addresses"), where("userId", "==", user.uid));
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
