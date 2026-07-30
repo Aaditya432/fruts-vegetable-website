@@ -200,7 +200,7 @@ function addressdetails(){
   <h2>Delivery Address</h2>
   <form id="addressForm">
     <input type="text" id="name" placeholder="Full Name" required><br>
-    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required><br>
     <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea>
       <button type="submit" id="submitBtn">Save Address</button>
   </form>`
