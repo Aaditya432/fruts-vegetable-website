@@ -310,7 +310,10 @@ margin: 2vh 2vw;
     border: 1px solid gray;
      text-align: center;
 }
-.sig{
+.signup2{
+    margin-top:8vh;
+}
+.sig{ 
     height: 10vh;
     width: 17vw;
     background-color:hwb(16 2% 4%);
