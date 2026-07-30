@@ -29,6 +29,8 @@ let itemBag;
 let Bags;
  let itemOrder = []
  mango = [ ];
+      let addressDocId;
+      let savedAddressSData;
 console.log(namit);
 syncCartToDatabase();
 async function syncCartToDatabase(){
@@ -218,8 +220,7 @@ function addressdetails(){
     const btn = document.getElementById('submitBtn');
      const addressDisplay = document.getElementById('addressDisplay');
     const changeBtn = document.getElementById('changeAddressBtn');
-      let addressDocId;
-      let savedAddressSData;
+
 
     onAuthStateChanged(auth, async (user) => {
    if(user){
