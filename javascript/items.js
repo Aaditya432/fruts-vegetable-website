@@ -2,7 +2,7 @@
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { auth, db } from './firebaseconfig.js';
 import { getAuth,  onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"; // 1. Ye auth ke liye
-import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , setDoc, addDoc, query } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
   // import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app-check.js";'
 
 
