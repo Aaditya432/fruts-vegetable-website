@@ -221,7 +221,7 @@ function addressdetails(){
       };
 
       try {
-        await addDoc(collection(db, "addresses"), addressData);
+        await setDoc(collection(db, "addresses"), addressData);
         alert("Address Saved Successfully!");
         form.reset(); // form khali kar do
       } catch (error) {
