@@ -220,7 +220,7 @@ function addressdetails(){
       let savedAddressSData;
 
     onAuthStateChanged(auth, async (user) => {
-   if(user)
+   if(user){
 form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.innerText = "Saving...";
@@ -254,8 +254,13 @@ form.addEventListener('submit', async (e) => {
     }
       btn.innerText = "Save Address";
       btn.disabled = false;
-    });
+  
 }
+      }
+}
+                      }
+    });
+                      
 
 function itemsQuantity(){
 //   let totalPriceRu = 0;
