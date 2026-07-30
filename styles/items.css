@@ -131,6 +131,9 @@ color: rgb(0, 0, 0)
    margin-left: 71vw;
    top: 15vh;
 }
+.hidden{
+   display: none!importantl
+}
 .address{
    width: 30vw;
 }
