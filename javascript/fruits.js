@@ -7,18 +7,18 @@ let itemsValue
 let namit;
   let BagItems = document.querySelector(".Bag1")
 const fruitsContainer = document.querySelector(".itemscontainer3") ;
-const fruitsLink = document.querySelector(".list3")
-fruitsLink.addEventListener("click", (e) => {
-  e.preventDefault()
- if(auth.currentUser){
-   window.location.href = "/fruts-vegetable-website/files/frutis.html"
- }
-  else{
-    alert("please sign in then see content")
-    window.location.href = "/fruts-vegetable-website/index.html"
-  }
+// const fruitsLink = document.querySelector(".list3")
+// fruitsLink.addEventListener("click", (e) => {
+//   e.preventDefault()
+//  if(auth.currentUser){
+//    window.location.href = "/fruts-vegetable-website/files/frutis.html"
+//  }
+//   else{
+//     alert("please sign in then see content")
+//     window.location.href = "/fruts-vegetable-website/index.html"
+//   }
   
-})
+// })
 
  function addToBag(itemid){
             mango.push(itemid)
