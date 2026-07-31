@@ -311,6 +311,7 @@ margin: 2vh 2vw;
 }
 .signup2{
     margin-top:33vh;
+    margin-left: 10vw;
       background-color:rgb(108, 108, 71);
 }
 .sig{ 
@@ -359,14 +360,14 @@ margin: 2vh 2vw;
  text-align: center;
  position: fixed
 }
-/* .footer{
+.footer{
     margin-left: 30vw;
     /* margin-right: 20vw; */
     /* height: 30vh;
     width: 100%;
-    background-color: rgb(14, 13, 13);
-    margin-top: 5vh; */
- 
+  background-color:rgb(108, 108, 71);
+    margin-top: 5vh;
+}
  .cart{ 
     margin-right: 16vw  ;
 } 
