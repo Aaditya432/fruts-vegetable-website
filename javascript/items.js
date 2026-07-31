@@ -95,6 +95,7 @@ const  details =  document.querySelector(".itemsDetails");
 const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
 const addressOfCustomer = document.querySelector(".addressofcustomer");
+const saveAddress = document.querySelector(".saveaddress");
 
 // onload();
 function onload(){
@@ -238,10 +239,26 @@ form.addEventListener('submit', async (e) => {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
+        addressData.innerHTML = 
+          `  <div id="addressDisplay" class="address-box hidden">
+      <h3>Saved Address</h3>
+      <p id="displayName"></p>
+      <p id="displayPhone"></p>
+      <p id="displayAddress"></p>
+      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
+    </div>`
         const docSnap = querySnapshot.docs[0]; // pehla address le lo
         addressDocId = docSnap.id;
         savedAddressData = docSnap.data();
         showAddress(savedAddressData);
+        function showAddress(data){
+      document.getElementById('displayName').innerText = "Name: " + data.name;
+      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+      document.getElementById('displayAddress').innerText = "Address: " + data.address;
+          
+      addressDisplay.classList.remove('hidden'); // address dikhao
+  
+}
         
         // direct address dikhao
       btn.innerText = "Save Address";
@@ -258,21 +275,7 @@ form.addEventListener('submit', async (e) => {
     })
 }
 
-function saveAddress(){
-      document.getElementById('displayName').innerText = "Name: " + data.name;
-      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-      document.getElementById('displayAddress').innerText = "Address: " + data.address;
-      form.classList.add('hidden'); // form chupao
-      addressDisplay.classList.remove('hidden'); // address dikhao
-  
-    <div id="addressDisplay" class="address-box hidden">
-      <h3>Saved Address</h3>
-      <p id="displayName"></p>
-      <p id="displayPhone"></p>
-      <p id="displayAddress"></p>
-      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
-    </div>`
-}
+
 
 function itemsQuantity(){
 //   let totalPriceRu = 0;
