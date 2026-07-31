@@ -11,11 +11,11 @@ const fruitsLink = document.querySelector(".list3")
 fruits.addEventListener("click", (e) => {
   e.preventDefault()
  if(auth.currentUser){
-   window.location.href = "fruits.html";
+   window.location.href = "/fruts-vegetable-website/files/frutis.html"
  }
   else{
     alert("please sign in then see content")
-    window.location.href = 
+    window.location.href = "/fruts-vegetable-website/index.html"
   }
   
 })
