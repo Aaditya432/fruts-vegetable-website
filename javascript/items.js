@@ -255,7 +255,7 @@ form.addEventListener('submit', async (e) => {
       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
       document.getElementById('displayAddress').innerText = "Address: " + data.address;
           
-      addressDisplay.classList.remove('hidden'); // address dikhao
+   // address dikhao
   
 }
         
