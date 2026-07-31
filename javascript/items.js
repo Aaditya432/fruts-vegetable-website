@@ -217,7 +217,10 @@ function addressdetails(){
      // const addressDisplay = document.getElementById('addressDisplay');
     // const changeBtn = document.getElementById('changeAddressBtn');
 
-
+  form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.innerText = "Saving...";
+      btn.disabled = true;
     onAuthStateChanged(auth, async (user) => {
    if(user){
 
@@ -233,6 +236,9 @@ function addressdetails(){
         await addDoc(collection(db, "addresses"), addressData);
         const q = query(collection(db, "addresses"), where("userId", "==", user.uid), orderBy("createdAt",  "desc"));
       const querySnapshot = await getDocs(q);
+          const docSnap = querySnapshot.docs[0]; // pehla address le lo
+        addressDocId = docSnap.id;
+        savedAddressData = docSnap.data();
 
       if (!querySnapshot.empty) {
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
@@ -242,9 +248,7 @@ function addressdetails(){
       <p id="displayAddress"></p>
       <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
     </div>`
-        const docSnap = querySnapshot.docs[0]; // pehla address le lo
-        addressDocId = docSnap.id;
-        savedAddressData = docSnap.data();
+      
         showAddress(savedAddressData);
         function showAddress(data){
       document.getElementById('displayName').innerText = "Name: " + data.name;
@@ -265,11 +269,10 @@ function addressdetails(){
 })
      
                       }
-    //   form.addEventListener('submit', async (e) => {
-    //   e.preventDefault();
-    //   btn.innerText = "Saving...";
-    //   btn.disabled = true;
-    // })
+    
+    })
+  })
+}
 
                        
 
