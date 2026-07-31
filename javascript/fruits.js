@@ -7,6 +7,19 @@ let itemsValue
 let namit;
   let BagItems = document.querySelector(".Bag1")
 const fruitsContainer = document.querySelector(".itemscontainer3") ;
+const fruitsLink = document.querySelector(".list3")
+fruits.addEventListener("click", (e) => {
+  e.preventDefault()
+ if(auth.currentUser){
+   window.location.href = "fruits.html";
+ }
+  else{
+    alert("please sign in then see content")
+    window.location.href = 
+  }
+  
+})
+
  function addToBag(itemid){
             mango.push(itemid)
            Mango1 = new Set(mango)
