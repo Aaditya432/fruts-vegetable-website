@@ -31,6 +31,7 @@ let Bags;
  mango = [ ];
       let addressDocId;
       let savedAddressData;
+let addressData;
 console.log(namit);
 syncCartToDatabase();
 async function syncCartToDatabase(){
@@ -208,13 +209,7 @@ function addressdetails(){
     <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
       <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
   </form>
-   <div id="addressDisplay" class="address-box hidden">
-      <h3>Saved Address</h3>
-      <p id="displayName"></p>
-      <p id="displayPhone"></p>
-      <p id="displayAddress"></p>
-      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
-    </div>`
+ `
 
         const form = document.getElementById('addressForm');
     const btn = document.getElementById('submitBtn');
@@ -229,7 +224,7 @@ form.addEventListener('submit', async (e) => {
       btn.innerText = "Saving...";
       btn.disabled = true;
 
-      const addressData = {
+    addressData = {
         name: document.getElementById('name').value,
         phone: document.getElementById('phone').value,
         address: document.getElementById('address').value,
@@ -249,13 +244,6 @@ form.addEventListener('submit', async (e) => {
         showAddress(savedAddressData);
         
         // direct address dikhao
-       function showAddress(data) {
-      document.getElementById('displayName').innerText = "Name: " + data.name;
-      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-      document.getElementById('displayAddress').innerText = "Address: " + data.address;
-      form.classList.add('hidden'); // form chupao
-      addressDisplay.classList.remove('hidden'); // address dikhao
-    }
       btn.innerText = "Save Address";
       btn.disabled = false;
   
@@ -269,7 +257,22 @@ form.addEventListener('submit', async (e) => {
                       }
     })
 }
-                      
+
+function saveAddress(){
+      document.getElementById('displayName').innerText = "Name: " + data.name;
+      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+      document.getElementById('displayAddress').innerText = "Address: " + data.address;
+      form.classList.add('hidden'); // form chupao
+      addressDisplay.classList.remove('hidden'); // address dikhao
+  
+    <div id="addressDisplay" class="address-box hidden">
+      <h3>Saved Address</h3>
+      <p id="displayName"></p>
+      <p id="displayPhone"></p>
+      <p id="displayAddress"></p>
+      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
+    </div>`
+}
 
 function itemsQuantity(){
 //   let totalPriceRu = 0;
