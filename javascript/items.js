@@ -222,7 +222,6 @@ function addressdetails(){
       btn.innerText = "Saving...";
       btn.disabled = true;
     onAuthStateChanged(auth, async (user) => {
-   if(user){
 
     addressData = {
         name: document.getElementById('name').value,
@@ -234,6 +233,7 @@ function addressdetails(){
 
       try {
         await addDoc(collection(db, "addresses"), addressData);
+     if(user) {
         const q = query(collection(db, "addresses"), where("userId", "==", user.uid), orderBy("createdAt",  "desc"));
       const querySnapshot = await getDocs(q);
           const docSnap = querySnapshot.docs[0]; // pehla address le lo
@@ -260,11 +260,12 @@ function addressdetails(){
 }
   }
       }
+      }
  catch (error) {
         alert("Error: " + error.message);
       }
      
-                      }
+                      
     
     })
   })
