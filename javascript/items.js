@@ -220,10 +220,6 @@ function addressdetails(){
 
     onAuthStateChanged(auth, async (user) => {
    if(user){
-form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      btn.innerText = "Saving...";
-      btn.disabled = true;
 
     addressData = {
         name: document.getElementById('name').value,
@@ -274,8 +270,8 @@ form.addEventListener('submit', async (e) => {
     //   btn.innerText = "Saving...";
     //   btn.disabled = true;
     // })
-}
-                       }
+
+                       
 
 
 
