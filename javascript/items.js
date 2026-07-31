@@ -239,8 +239,7 @@ form.addEventListener('submit', async (e) => {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        addressData.innerHTML = 
-          `  <div id="addressDisplay" class="address-box hidden">
+        saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
       <h3>Saved Address</h3>
       <p id="displayName"></p>
       <p id="displayPhone"></p>
