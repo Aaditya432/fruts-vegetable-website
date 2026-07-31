@@ -217,22 +217,22 @@ function addressdetails(){
      // const addressDisplay = document.getElementById('addressDisplay');
     // const changeBtn = document.getElementById('changeAddressBtn');
 
-  form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      btn.innerText = "Saving...";
-      btn.disabled = true;
+  // form.addEventListener('submit', async (e) => {
+  //     e.preventDefault();
+  //     btn.innerText = "Saving...";
+  //     btn.disabled = true;
     onAuthStateChanged(auth, async (user) => {
 
-    addressData = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        address: document.getElementById('address').value,
-        userId: auth.currentUser.uid,
-        createdAt : serverTimestamp()
-      };
+    // addressData = {
+    //     name: document.getElementById('name').value,
+    //     phone: document.getElementById('phone').value,
+    //     address: document.getElementById('address').value,
+    //     userId: auth.currentUser.uid,
+    //     createdAt : serverTimestamp()
+    //   };
 
       try {
-        await addDoc(collection(db, "addresses"), addressData);
+        // await addDoc(collection(db, "addresses"), addressData);
      if(user) {
         const q = query(collection(db, "addresses"), where("userId", "==", user.uid), orderBy("createdAt",  "desc"));
       const querySnapshot = await getDocs(q);
@@ -244,21 +244,21 @@ function addressdetails(){
       if (!querySnapshot.empty) {
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
       <h3>Saved Address</h3>
-      <p id="displayName"></p>
-      <p id="displayPhone"></p>
-      <p id="displayAddress"></p>
+      <p id="displayName">  ${savedAddressData.name}</p>
+      <p id="displayPhone"> ${savedAddressData.phone}</p>
+      <p id="displayAddress"> ${savedAddressData.address}</p>
       <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
     </div>`
       
-        showAddress(savedAddressData);
-        function showAddress(data){
-      document.getElementById('displayName').innerText = "Name: " + data.name;
-      document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-      document.getElementById('displayAddress').innerText = "Address: " + data.address;
+//         showAddress(savedAddressData);
+//         function showAddress(data){
+//       document.getElementById('displayName').innerText = "Name: " + data.name;
+//       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+//       document.getElementById('displayAddress').innerText = "Address: " + data.address;
           
-   // address dikhao
+//    // address dikhao
   
-}
+// }
   }
       }
       }
@@ -269,7 +269,7 @@ function addressdetails(){
                       
     
     })
-  })
+  // })
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
