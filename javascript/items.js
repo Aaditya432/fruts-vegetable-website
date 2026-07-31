@@ -239,6 +239,7 @@ function addressdetails(){
           const docSnap = querySnapshot.docs[0]; // pehla address le lo
         addressDocId = docSnap.id;
         savedAddressData = docSnap.data();
+       console.log(savedAddressData);
 
       if (!querySnapshot.empty) {
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
