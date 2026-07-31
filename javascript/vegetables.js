@@ -64,7 +64,7 @@ if (meenu != undefined) {
   vegetables = JSON.parse(meenu);
 }
 else {
-  vegetables = []
+  // vegetables = []
 }
 console.log(vegetables)
 
