@@ -258,26 +258,17 @@ function addressdetails(){
    // address dikhao
   
 }
-        
-        // direct address dikhao
-  
-}
+  }
       }
  catch (error) {
         alert("Error: " + error.message);
       }
-})
      
                       }
     
     })
   })
 }
-
-                       
-
-
-
 function itemsQuantity(){
 //   let totalPriceRu = 0;
     details.innerHTML = ' ';
