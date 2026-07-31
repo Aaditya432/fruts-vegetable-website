@@ -260,8 +260,6 @@ form.addEventListener('submit', async (e) => {
 }
         
         // direct address dikhao
-      btn.innerText = "Save Address";
-      btn.disabled = false;
   
 }
       }
@@ -271,7 +269,11 @@ form.addEventListener('submit', async (e) => {
 })
      
                       }
-    })
+    //   form.addEventListener('submit', async (e) => {
+    //   e.preventDefault();
+    //   btn.innerText = "Saving...";
+    //   btn.disabled = true;
+    // })
 }
 
 
