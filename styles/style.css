@@ -305,12 +305,13 @@ margin: 2vh 2vw;
 .signup1{ 
     height: 45vh;
     width: 30vw:   
-    background-color:rgb(108, 108, 71);
+    
     border: 1px solid gray;
      text-align: center;
 }
 .signup2{
-    margin-top:60vh;
+    margin-top:30vh;
+    background-color:rgb(108, 108, 71);
 }
 .sig{ 
     height: 5vh;
