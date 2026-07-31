@@ -214,8 +214,8 @@ function addressdetails(){
 
         const form = document.getElementById('addressForm');
     const btn = document.getElementById('submitBtn');
-     const addressDisplay = document.getElementById('addressDisplay');
-    const changeBtn = document.getElementById('changeAddressBtn');
+     // const addressDisplay = document.getElementById('addressDisplay');
+    // const changeBtn = document.getElementById('changeAddressBtn');
 
 
     onAuthStateChanged(auth, async (user) => {
