@@ -63,9 +63,9 @@ meenu = localStorage.getItem("itemsPrice");
 if (meenu != undefined) {
   vegetables = JSON.parse(meenu);
 }
-else {
-  vegetables = []
-}
+//else {
+//  vegetables = [];
+//
 console.log(vegetables)
 
 function displayFruits4(Vsid) {
