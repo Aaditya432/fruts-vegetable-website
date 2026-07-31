@@ -8,7 +8,7 @@ let namit;
   let BagItems = document.querySelector(".Bag1")
 const fruitsContainer = document.querySelector(".itemscontainer3") ;
 const fruitsLink = document.querySelector(".list3")
-fruits.addEventListener("click", (e) => {
+fruitsLink.addEventListener("click", (e) => {
   e.preventDefault()
  if(auth.currentUser){
    window.location.href = "/fruts-vegetable-website/files/frutis.html"
