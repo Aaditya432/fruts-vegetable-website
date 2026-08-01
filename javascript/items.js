@@ -201,9 +201,9 @@ function displayTotalPrice (){
             </div> `
 
 }
-function addressdetails(){
+window.addressdetails = function (){
   addressOfCustomer.innerHTML = `
-  <h2>Delivery Address</h2>
+  <h2>Delivery Address</h2>  
   <form id="addressForm">
     <input type="text" id="name" placeholder="Full Name" required><br>
     <input type="tel" id="phone" placeholder="Phone Number" required><br>
