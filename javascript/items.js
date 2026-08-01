@@ -208,7 +208,7 @@ function addressdetails(){
     <input type="text" id="name" placeholder="Full Name" required><br>
     <input type="tel" id="phone" placeholder="Phone Number" required><br>
     <textarea id="address" placeholder="House No, Street, Area" rows="2" required></textarea><br>
-      <button type="submit" id="submitBtn" onclick = "saveaddress()">Save Address</button>
+      <button type="submit" id="submitBtn" >Save Address</button>
   </form>
  `
 
@@ -233,7 +233,7 @@ function addressdetails(){
 
       try {
         await addDoc(collection(db, "addresses"), addressData); 
-        saveAddress();
+        saveAddresss();
 
       
 //         showAddress(savedAddressData);
