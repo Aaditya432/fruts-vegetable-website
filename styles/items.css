@@ -181,9 +181,10 @@ height: 5vh;
 width: 30vw;
  margin-left: 67vw;
  margin-top: 2vh;
+    top: 30%;
  /* top: 32%; */
 }
-.placeorder{
+.button40{
    height: 4.9vh;
    width: 30vw;
   background-color: rgb(103, 179, 255);
