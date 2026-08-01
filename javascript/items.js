@@ -106,6 +106,7 @@ function onload(){
   itemsQuantity();
   displayTotalPrice();
   saveAddresss();
+  placeOrder();
 }
 async function itemsFruits(){
 itemBag = namit.map( item => {
@@ -288,13 +289,16 @@ function saveAddresss(){
      
     })
 }
-function placeOrder(){
-  placeOrderI.innerhtml = 
-  if(totalPriceRu <= 0 ){
-    alert("please select items to place an order")
+window.placeorderinvestigation = function(){
+  if(totalPriceRu <= 0){
+    alert("you have to add item in the bagitem")
   }
-  
 }
+function placeOrder(){
+  placeOrderI.innerhtml =  ` <div class="button40">
+                    <button class="placeorder"> <a href = "placeorder.html" class =  "placing" onclick = " onclick = "placeorderinvestigation()">Place order</a></button>
+                    </div>`
+ }
 
 function itemsQuantity(){
 //   let totalPriceRu = 0;
