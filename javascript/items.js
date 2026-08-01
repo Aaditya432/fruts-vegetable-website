@@ -96,6 +96,7 @@ const quantity =document.querySelector(".Quantityitem");
 const totalPrice = document.querySelector(".totalprice");
 const addressOfCustomer = document.querySelector(".addressofcustomer");
 const saveAddress = document.querySelector(".saveaddress");
+const placeOrderI = document.querySelector(".butt");
 
 // onload();
 function onload(){
@@ -288,6 +289,7 @@ function saveAddresss(){
     })
 }
 function placeOrder(){
+  placeOrderI.innerhtml = 
   if(totalPriceRu <= 0 ){
     alert("please select items to place an order")
   }
