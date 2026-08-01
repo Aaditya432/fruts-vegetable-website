@@ -104,7 +104,7 @@ function onload(){
   quantityNumbers();
   itemsQuantity();
   displayTotalPrice();
-  addressdetails();
+  saveAddresss();
 }
 async function itemsFruits(){
 itemBag = namit.map( item => {
@@ -217,21 +217,48 @@ function addressdetails(){
      // const addressDisplay = document.getElementById('addressDisplay');
     // const changeBtn = document.getElementById('changeAddressBtn');
 
-  // form.addEventListener('submit', async (e) => {
-  //     e.preventDefault();
-  //     btn.innerText = "Saving...";
-  //     btn.disabled = true;
+  form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      btn.innerText = "Saving...";
+      btn.disabled = true;
     onAuthStateChanged(auth, async (user) => {
 
-    // addressData = {
-    //     name: document.getElementById('name').value,
-    //     phone: document.getElementById('phone').value,
-    //     address: document.getElementById('address').value,
-    //     userId: auth.currentUser.uid,
-    //     createdAt : serverTimestamp()
-    //   };
+    addressData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        address: document.getElementById('address').value,
+        userId: auth.currentUser.uid,
+        createdAt : serverTimestamp()
+      };
 
       try {
+        await addDoc(collection(db, "addresses"), addressData); 
+        saveAddress();
+
+      
+//         showAddress(savedAddressData);
+//         function showAddress(data){
+//       document.getElementById('displayName').innerText = "Name: " + data.name;
+//       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
+//       document.getElementById('displayAddress').innerText = "Address: " + data.address;
+          
+//    // address dikhao
+  
+// }
+  }
+ catch (error) {
+        alert("Error: " + error.message);
+      }
+     
+                      
+    
+    })
+  })
+  // })
+}
+function saveAddresss(){
+    onAuthStateChanged(auth, async (user) => {
+            try {
         // await addDoc(collection(db, "addresses"), addressData);
      if(user) {
         const q = query(collection(db, "addresses"), where("userId", "==", user.uid), orderBy("createdAt",  "desc"));
@@ -247,29 +274,20 @@ function addressdetails(){
       <p id="displayName">  ${savedAddressData.name}</p>
       <p id="displayPhone"> ${savedAddressData.phone}</p>
       <p id="displayAddress"> ${savedAddressData.address}</p>
-      <button id="changeAddressBtn" class="btn-secondary">Change Address</button>
+      <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails() "c>Change Address</button>
     </div>`
-      
-//         showAddress(savedAddressData);
-//         function showAddress(data){
-//       document.getElementById('displayName').innerText = "Name: " + data.name;
-//       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-//       document.getElementById('displayAddress').innerText = "Address: " + data.address;
-          
-//    // address dikhao
-  
-// }
-  }
       }
-      }
- catch (error) {
+     }
+              else{
+               function addressdetails();
+              }
+    }
+       catch (error) {
         alert("Error: " + error.message);
       }
      
-                      
-    
     })
-  // })
+  
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
