@@ -269,7 +269,7 @@ function saveAddresss(){
        console.log(savedAddressData);
 
       if (!querySnapshot.empty) {
-        addressofCustomer.innerHTML = ''
+        addressOfCustomer.innerHTML = ''
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
       <h3>Saved Address</h3>
       <p id="displayName">  ${savedAddressData.name}</p>
