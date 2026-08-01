@@ -286,8 +286,14 @@ function saveAddresss(){
       }
      
     })
-  addressdetails();
 }
+function placeOrder(){
+  if(totalPriceRu <= 0 ){
+    alert("please select items to place an order")
+  }
+  
+}
+
 function itemsQuantity(){
 //   let totalPriceRu = 0;
     details.innerHTML = ' ';
