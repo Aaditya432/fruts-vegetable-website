@@ -193,6 +193,11 @@ font-weight: 500;
  font-size: large;
  border-style: none;
 }
+.placing{
+   text-decoration: none;
+   color: black;
+    font-family: "Betania Patmos In GDL", cursive;
+}
 .manish4{
    /* height: 4vh;
    width: 6vw; */
