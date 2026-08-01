@@ -274,7 +274,7 @@ function saveAddresss(){
       <p id="displayName">  ${savedAddressData.name}</p>
       <p id="displayPhone"> ${savedAddressData.phone}</p>
       <p id="displayAddress"> ${savedAddressData.address}</p>
-      <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails() "c>Change Address</button>
+      <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails() ">Change Address</button>
     </div>`
       }
      }
