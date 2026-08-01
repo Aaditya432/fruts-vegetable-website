@@ -105,7 +105,7 @@ function onload(){
   quantityNumbers();
   itemsQuantity();
   displayTotalPrice();
-  // saveAddresss();
+  saveAddresss();
   placeOrder();
 }
 async function itemsFruits(){
