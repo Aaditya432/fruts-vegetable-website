@@ -278,16 +278,14 @@ function saveAddresss(){
     </div>`
       }
      }
-              else{
-               addressdetails();
-              }
+            
     }
        catch (error) {
         alert("Error: " + error.message);
       }
      
     })
-  
+  addressdetails();
 }
 function itemsQuantity(){
 //   let totalPriceRu = 0;
