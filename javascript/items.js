@@ -280,6 +280,9 @@ function saveAddresss(){
       <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails()" >Change Address</button>
     </div>`
       }
+       else{
+         addressdetails()
+       }
      }
             
     }
@@ -290,13 +293,16 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
-  if(totalPriceRu <= 0){
+  if (totalPriceRu <= 0){
     alert("you have to add item in the bagitem")
   }
+  else{
+   window.location.href = "/fruts-vegetable-website/files/placeorder.html"
+  }
 }
-function placeOrder(){
-  placeOrderI.innerhtml =  ` <div class="button40">
-                    <button class="placeorder"> <a href = "placeorder.html" class =  "placing" onclick = " onclick = "placeorderinvestigation()">Place order</a></button>
+window.placeOrder = function (){
+  placeOrderI.innerHtml =  ` <div class="button40">
+                    <button class="placeorder"> <a href = "placeorder.html" class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button>
                     </div>`
  }
 
