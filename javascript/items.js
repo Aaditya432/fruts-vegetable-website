@@ -300,7 +300,7 @@ window.placeorderinvestigation = function(){
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
 }
-window.placeOrder = function (){
+ function placeOrder(){
   placeOrderI.innerHtml =  ` <div class="button40">
                     <button class="placeorder"> <a href = "placeorder.html" class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button>
                     </div>`
