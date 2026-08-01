@@ -301,7 +301,7 @@ window.placeorderinvestigation = function(){
   }
 }
  function placeOrder(){
-  placeOrderI.innerHtml =  ` <div class="button40">
+  placeOrderI.innerHtMl =  ` <div class="button40">
                     <button class="placeorder"> <a href = "placeorder.html" class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button>
                     </div>`
  }
