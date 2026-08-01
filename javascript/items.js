@@ -269,12 +269,13 @@ function saveAddresss(){
        console.log(savedAddressData);
 
       if (!querySnapshot.empty) {
+        addressofCustomer.innerHTML = ''
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
       <h3>Saved Address</h3>
       <p id="displayName">  ${savedAddressData.name}</p>
       <p id="displayPhone"> ${savedAddressData.phone}</p>
       <p id="displayAddress"> ${savedAddressData.address}</p>
-      <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails() ">Change Address</button>
+      <button id="changeAddressBtn" class="btn-secondary"  onclick = "addressdetails()" >Change Address</button>
     </div>`
       }
      }
