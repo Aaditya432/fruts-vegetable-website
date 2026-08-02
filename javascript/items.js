@@ -295,7 +295,6 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
-  saveAddresss();
   if (totalPriceRu <= 0){
     alert("you have to add item in the bagitem")
   }
