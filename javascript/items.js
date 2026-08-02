@@ -215,7 +215,10 @@ window.addressdetails = function (){
   </form>
  `
 
-        const form = document.getElementById('addressForm');
+   const form = document.getElementById('addressForm');
+   const name = document.getElementById('name');
+   const phone = document.getElementById('phone');
+   const address = document.getElementById('address');
     const btn = document.getElementById('submitBtn');
      // const addressDisplay = document.getElementById('addressDisplay');
     // const changeBtn = document.getElementById('changeAddressBtn');
@@ -227,13 +230,13 @@ window.addressdetails = function (){
     onAuthStateChanged(auth, async (user) => {
 
     addressData = {
-        name: document.getElementById('name').value,
-        phone: document.getElementById('phone').value,
-        address: document.getElementById('address').value,
+        name: name.value.trim(),
+        phone: phone.value.trim(),
+        address: address.value.trim(),
         userId: auth.currentUser.uid,
         createdAt : serverTimestamp()
       };
-    if (addressData.name.trim() != "" && addressData.phone.trim() != "" && addressData.address.trim() != "" ){
+       if (name != "" && phone != "" && address != "" ){
       try {
         await addDoc(collection(db, "addresses"), addressData); 
         saveAddresss();
@@ -260,6 +263,7 @@ window.addressdetails = function (){
   })
   // })
 }
+
 function saveAddresss(){
     onAuthStateChanged(auth, async (user) => {
             try {
@@ -295,7 +299,42 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
-  addressdetails();
+ const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+
+  if(name != "" && phone != "" && address != "" ){
+    alert("⚠️ Please save your delivery address first!");
+    document.getElementById('addressForm').scrollIntoView({behavior: "smooth"});
+    return; // yahi ruk jao, aage mat jao
+  }
+
+  // STEP 2: Firebase me check karo address save hai bhi ya nahi
+ onAuthStateChanged(auth, async (user) => {
+  if(!user){
+    alert("Please login first");
+    return;
+  }
+
+  // STEP 3: Agar sab thik hai to order place karo
+  const placeBtn = document.getElementById('button40');
+  placeBtn.innerText = "Placing Order...";
+  placeBtn.disabled = true;
+
+  try {
+    await addDoc(collection(db, "addresses"), {
+      userId: user.uid,
+      deliveryAddress: {name, phone, address}, // address sath bhej do
+       createdAt: serverTimestamp()
+    });
+    
+    alert("Order Placed Successfully!");
+    // cart clear karo
+  } catch(error){
+    console.log("Error:", error);
+    alert("Error placing order");
+  } 
+ })
   if (totalPriceRu <= 0){
     alert("you have to add item in the bagitem")
   }
