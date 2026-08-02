@@ -204,6 +204,7 @@ function displayTotalPrice (){
 
 }
 window.addressdetails = function (){
+  adressOfCustomer.innerHTML = " "
   addressOfCustomer.innerHTML = `
   <h2>Delivery Address</h2>  
   <form id="addressForm">
