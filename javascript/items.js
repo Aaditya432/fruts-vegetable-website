@@ -232,7 +232,7 @@ window.addressdetails = function (){
         userId: auth.currentUser.uid,
         createdAt : serverTimestamp()
       };
-
+    if (addressData.name.trim() != "" && addressData.phone.trim() != "" && addressData.address.trim() != "" ){
       try {
         await addDoc(collection(db, "addresses"), addressData); 
         saveAddresss();
@@ -248,11 +248,12 @@ window.addressdetails = function (){
   
 // }
   }
+ 
  catch (error) {
         alert("Error: " + error.message);
       }
      
-                      
+    }             
     
     })
   })
@@ -293,6 +294,7 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
+  saveAddresss();
   if (totalPriceRu <= 0){
     alert("you have to add item in the bagitem")
   }
