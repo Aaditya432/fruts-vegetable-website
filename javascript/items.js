@@ -235,7 +235,8 @@ window.addressdetails = function (){
         address: address.value.trim(),
         userId: auth.currentUser.uid,
         createdAt : serverTimestamp()
-      };
+      }
+    console.log(addressData.name)
        if (name != "" && phone != "" && address != "" ){
       try {
         await addDoc(collection(db, "addresses"), addressData); 
