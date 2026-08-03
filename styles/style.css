@@ -158,7 +158,8 @@ border-bottom: 2px solid rgb(255, 0, 0)
     /* margin-top: 24vh */
 }
 .userexist{
-    
+    margin-left: 20vw;
+    cursor: pointer;
 }
 .login2{
     position: absolute;
