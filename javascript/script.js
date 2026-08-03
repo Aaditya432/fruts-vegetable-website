@@ -133,19 +133,21 @@ let name = document.getElementById("name").value;
 //     });
 // }
 
-// 3. LOGIN
-// document.getElementByclassname("signup1").addEventListener("sig", async (e) => {
-//   e.preventDefault();
-//   const email = document.getElementById("email").value;
-//   const password = document.getElementById("password").value;
+3. LOGIN
+document.getElementByclassname(".login").addEventListener("click", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-//   try {
-//     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-//     alert("Login success!");
-//   } catch (error) {
-//     alert("Login Error: " + error.message);
-//   }
-// });
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    alert("Login success!");
+   
+    window.location.href = "/fruts-vegetable-website/files/vegetables.html";
+  } catch (error) {
+    alert("Login Error: " + error.message);
+  }
+});
 
 // 4. Login hai ya nahi check karna
 // onAuthStateChanged(auth, async (user) => {
