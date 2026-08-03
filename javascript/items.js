@@ -315,12 +315,6 @@ window.placeorderinvestigation = function(){
     alert("Please login first");
     return;
   }
-
-  // STEP 3: Agar sab thik hai to order place karo
-  const placeBtn = document.getElementById('button40');
-  placeBtn.innerText = "Placing Order...";
-  placeBtn.disabled = true;
-
   try {
     await addDoc(collection(db, "addresses"), {
       userId: user.uid,
