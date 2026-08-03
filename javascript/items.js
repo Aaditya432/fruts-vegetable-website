@@ -312,16 +312,17 @@ window.placeorderinvestigation = function(){
     alert("Please login first");
     return;
   }
+      else{
+   window.location.href = "/fruts-vegetable-website/files/placeorder.html"
+  }
    })
   // if (totalPriceRu <= 0){
   //   alert("you have to add item in the bagitem")
   // }
 }
-  //  else{
-  //  window.location.href = "/fruts-vegetable-website/files/placeorder.html"
-  // }
+
  function placeOrder(){
-  placeOrderI.innerHTML =  ` <button class="button40"> <a href = "placeorder.html" class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button> `
+  placeOrderI.innerHTML =  ` <button class="button40"> <a  class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button> `
  }
 
 function itemsQuantity(){
