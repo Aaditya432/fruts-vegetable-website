@@ -335,11 +335,13 @@ window.placeorderinvestigation = function(){
     console.log("Error:", error);
     alert("Error placing order");
   } 
+  
  })
   // if (totalPriceRu <= 0){
   //   alert("you have to add item in the bagitem")
   // }
-  else{
+}
+   else{
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
 }
