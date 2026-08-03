@@ -288,7 +288,7 @@ function saveAddresss(){
     </div>`
       }
        else{
-         saveAddressData = null;
+         savedAddressData = null;
        addressdetails()
        }
      }
@@ -303,7 +303,7 @@ function saveAddresss(){
 window.placeorderinvestigation = function(){
 
 
-  if(saveAddressData  == null ){
+  if(savedAddressData  == null ){
     alert("⚠️ Please save your delivery address first!");
     document.getElementById('addressForm').scrollIntoView({behavior: "smooth"});
     return; // yahi ruk jao, aage mat jao
