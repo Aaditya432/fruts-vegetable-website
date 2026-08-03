@@ -271,13 +271,13 @@ function saveAddresss(){
         // await addDoc(collection(db, "addresses"), addressData);
      if(user) {
         const q = query(collection(db, "addresses"), where("userId", "==", user.uid), orderBy("createdAt",  "desc"));
+           
       const querySnapshot = await getDocs(q);
+        if (!querySnapshot.empty) {
           const docSnap = querySnapshot.docs[0]; // pehla address le lo
         addressDocId = docSnap.id;
         savedAddressData = docSnap.data();
        console.log(savedAddressData);
-
-      if (!querySnapshot.empty) {
         addressOfCustomer.innerHTML = ''
         saveAddress.innerHTML =   `  <div id="addressDisplay" class="address-box hidden">
       <h3>Saved Address</h3>
