@@ -83,3 +83,20 @@ color: rgb(0, 0, 0)
    /* margin-left:  3vw; */
 color: rgb(0, 0, 0)
 }
+@media screen and (max-width : 600px) {
+.images38{
+  width:25vw;
+}
+  .details45{
+    width: 40vw;
+  }
+}
+
+
+
+
+
+
+
+
+
