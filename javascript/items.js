@@ -336,9 +336,9 @@ window.placeorderinvestigation = function(){
     alert("Error placing order");
   } 
  })
-  if (totalPriceRu <= 0){
-    alert("you have to add item in the bagitem")
-  }
+  // if (totalPriceRu <= 0){
+  //   alert("you have to add item in the bagitem")
+  // }
   else{
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
