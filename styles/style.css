@@ -144,26 +144,8 @@ border-bottom: 2px solid rgb(255, 0, 0)
    transition-duration: 2s;
 } */
 .signup1{
-   /* position: absolute; */
-     /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* width: 100vw ;
-    height: 100vh; */
-    /* justify-content: center;
-    align-items: center; */
-    /* margin-left: 24.10vw;
-    margin-right: 5vw;
-    margin-top: 15vh; */
      background-color: rgb(108, 108, 71);
-  }
-/* .formsubmit{
-
-
 }
-
-    .signup2 :hover{ */
-        /* color: rgb(10, 10, 10);
-    } */
 .heading34{
   position: absolute;
     margin-left:37vw;
@@ -209,10 +191,6 @@ border-bottom: 2px solid rgb(255, 0, 0)
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
-.signup3{
-    position: absolute;
-    transform: translate(0 , -400vh);
-}
 .imaging{
  height: 2vh;
  width: 2vw;
@@ -251,38 +229,7 @@ height: 20vh;
 width: 15vw;
 margin: 2vh 2vw;
 }
-/* }
-.footer{ */
-    /* margin-left: 20vw; */
-    /* margin-right: 20vw; */
-    /* height: 30vh;
-    width: 100%;
-    background-color: rgb(14, 13, 13);
-    margin-top: 5vh; */
-/* } */
- /* .itemscontainer4{
-    position: absolute;
-     display: flex;
-    flex-wrap: wrap;
-    width: 70% ;
-    height: 100%;
-    margin-left: 24.10vw;
-    margin-right: 5vw;
-    margin-top: 15vh;
-
-}  */
-  /* @media screen and (max-width : 1200px){
-    .navi{
-        width: 15vw ;
-        margin-left: 9vw; */
-        /* background-color: aqua; */
-/* }
-.heading{
-    margin-top: 3vh;
-    font-size: smaller;
-} */ 
-
-    @media screen and (max-width : 500px) { 
+ @media screen and (max-width : 500px) { 
     .navi{
         width: 15vw ;
         margin-left: 9vw;
