@@ -230,6 +230,9 @@ border-bottom: 2px solid rgb(255, 0, 0)
 .information{
     margin-top: 7vh;
 }
+.userexist{
+    
+}
 .middle{
     display: flex;
     flex-wrap: wrap;
