@@ -301,6 +301,7 @@ function saveAddresss(){
 }
 window.placeorderinvestigation = function(){
  const name = document.getElementById('name').value.trim();
+  console.log(name)
   const phone = document.getElementById('phone').value.trim();
   const address = document.getElementById('address').value.trim();
 
