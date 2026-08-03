@@ -341,9 +341,9 @@ window.placeorderinvestigation = function(){
   //   alert("you have to add item in the bagitem")
   // }
 }
-   else{
-   window.location.href = "/fruts-vegetable-website/files/placeorder.html"
-  }
+  //  else{
+  //  window.location.href = "/fruts-vegetable-website/files/placeorder.html"
+  // }
 }
  function placeOrder(){
   placeOrderI.innerHTML =  ` <button class="button40"> <a href = "placeorder.html" class =  "placing" onclick = "placeorderinvestigation()">Place order</a></button> `
