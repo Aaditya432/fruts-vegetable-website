@@ -300,12 +300,9 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
- const name = document.getElementById('name').value.trim();
-  console.log(name)
-  const phone = document.getElementById('phone').value.trim();
-  const address = document.getElementById('address').value.trim();
 
-  if(name != "" && phone != "" && address != "" ){
+
+  if(!saveAddressData ){
     alert("⚠️ Please save your delivery address first!");
     document.getElementById('addressForm').scrollIntoView({behavior: "smooth"});
     return; // yahi ruk jao, aage mat jao
