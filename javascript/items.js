@@ -302,35 +302,17 @@ function saveAddresss(){
     })
 }
 window.placeorderinvestigation = function(){
-
-
   if(savedAddressData  == null ){
     alert("⚠️ Please save your delivery address first!");
     document.getElementById('addressForm').scrollIntoView({behavior: "smooth"});
     return; // yahi ruk jao, aage mat jao
   }
-
-  // STEP 2: Firebase me check karo address save hai bhi ya nahi
  onAuthStateChanged(auth, async (user) => {
   if(!user){
     alert("Please login first");
     return;
   }
-  try {
-    await addDoc(collection(db, "addresses"), {
-      userId: user.uid,
-      deliveryAddress: {name, phone, address}, // address sath bhej do
-       createdAt: serverTimestamp()
-    });
-    
-    alert("Order Placed Successfully!");
-    // cart clear karo
-  } catch(error){
-    console.log("Error:", error);
-    alert("Error placing order");
-  } 
-  
- })
+   })
   // if (totalPriceRu <= 0){
   //   alert("you have to add item in the bagitem")
   // }
