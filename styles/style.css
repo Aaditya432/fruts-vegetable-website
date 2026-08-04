@@ -301,6 +301,9 @@ margin: 2vh 2vw;
     margin-left: 45vw;
       background-color:rgb(108, 108, 71);
 }
+     #login{
+          background-color:rgb(108, 108, 71);
+     }
 .sig{ 
     height: 5vh;
     width: 13vw;
@@ -315,6 +318,20 @@ margin: 2vh 2vw;
      font-family: "Betania Patmos In GDL", cursive;
      text-transform: uppercase;
 }
+     .login{
+             height: 5vh;
+    width: 13vw;
+    background-color:hwb(16 2% 4%);
+    color: rgb(239, 223, 217);
+    margin-top: 3vh;
+    cursor: pointer;
+    font-size: xx-small;
+     border: 1px solid gray; 
+     border-radius: 2%;
+    border-style: none;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase;
+     }
 .itemss{
     height: 7vh;
     width: 30vw;
