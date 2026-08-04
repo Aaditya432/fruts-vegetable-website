@@ -64,7 +64,7 @@ document.querySelector(".login").addEventListener("click", async (e) => {
 });
 
 userExist.addEventListener("click" , ()=>{
-  removeHeading.innerHTML = "";
+  removeHeading.innerHTML = "login";
     document.getElementById("signup2").style.display = "none";
     document.getElementById("login").style.display = "block";
 })
