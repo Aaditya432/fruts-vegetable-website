@@ -153,9 +153,9 @@ border-bottom: 2px solid rgb(255, 0, 0)
 }
 #signup2{
      position: absolute;
-    background-color:rgb(108, 108, 71);
     margin-left:40vw;
     margin-top: 30vh;
+       background-color:rgb(108, 108, 71);
     /* margin-top: 24vh */
 }
 .userexist{
@@ -168,9 +168,9 @@ border-bottom: 2px solid rgb(255, 0, 0)
 }
 #login{
    position: absolute;
-    background-color:rgb(108, 108, 71);
     margin-left:44vw;
     margin-top: 40vh;
+ background-color:rgb(108, 108, 71);
     /* margin-top: 24vh */
 }
 /* .login3{
@@ -342,7 +342,7 @@ margin: 2vh 2vw;
  border-bottom: 2px solid rgb(255, 0, 0)
 }
      .heading34{
-         margin-left: 43vw;
+         margin-left: 45vw;
      }
  .itemsss{
     margin-left: 15vw;
