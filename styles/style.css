@@ -163,6 +163,7 @@ border-bottom: 2px solid rgb(255, 0, 0)
     cursor: pointer;
 }
 #login2{
+    display: none;
     position: absolute;
     margin-left:44vw;
     margin-top: 40vh;
@@ -288,7 +289,7 @@ margin: 2vh 2vw;
     border: 1px solid gray;
      text-align: center;
 }
-.signup2{
+#signup2{
     margin-top:33vh;
     margin-left: 45vw;
       background-color:rgb(108, 108, 71);
