@@ -16,7 +16,7 @@ const signup1 = document.querySelector(".signup1")
 const userExist = document.querySelector(".userexist")
 const userNotExist = document.querySelector(".usernotexist")
 const login2 = document.querySelector(".login2")
-  document.getElementById("login2").style.display = "none";
+  document.getElementById("login").style.display = "none";
 // 2. SIGNUP
 document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
