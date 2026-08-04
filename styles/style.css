@@ -166,16 +166,16 @@ border-bottom: 2px solid rgb(255, 0, 0)
     margin-left: 15vw;
     cursor: pointer;
 }
-#login2{
+#login{
  
     position: absolute;
     margin-left:44vw;
     margin-top: 40vh;
     /* margin-top: 24vh */
 }
-.login3{
+/* .login3{
     transform: translate(0vw , 43vh);
-}
+} */
 #loginemail{
 margin-top: 2vh;
 }
