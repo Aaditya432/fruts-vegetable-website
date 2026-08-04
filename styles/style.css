@@ -162,6 +162,10 @@ border-bottom: 2px solid rgb(255, 0, 0)
     margin-left: 20vw;
     cursor: pointer;
 }
+.usernotexist{
+    margin-left: 15vw;
+    cursor: pointer;
+}
 #login2{
  
     position: absolute;
