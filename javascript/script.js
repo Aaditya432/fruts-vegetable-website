@@ -13,6 +13,7 @@ const container = document.querySelector(".container")
 const main = document.querySelector(".contet")
 const signup= document.querySelector(".signup")
 const signup1 = document.querySelector(".signup1")
+const userExist = document.querySelector(".login")
 // 2. SIGNUP
 document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
@@ -57,3 +58,8 @@ document.getElementByclassname(".login").addEventListener("click", async (e) => 
     alert("Login Error: " + error.message);
   }
 });
+
+userExist.addEventListener("click" , ()=>{
+    document.getElement
+}
+                          )
