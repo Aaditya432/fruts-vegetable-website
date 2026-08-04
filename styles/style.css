@@ -167,6 +167,22 @@ border-bottom: 2px solid rgb(255, 0, 0)
     margin-top: 50vh;
     /* margin-top: 24vh */
 }
+#loginemail{
+margin-top: 2vh;
+}
+#loginpassword{
+    margin-top: 2vh;
+}
+#login{
+    color: white;
+    height: 4vh;
+    width: 6vw;
+     border-style: none;
+    background-color:hwb(16 0% 0%);
+    cursor: pointer;
+     font-family: "Betania Patmos In GDL", cursive;
+     text-transform: uppercase; 
+}
        .button :hover{
         color: rgb(10, 10, 10);
     }
