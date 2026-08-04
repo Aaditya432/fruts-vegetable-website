@@ -44,7 +44,7 @@ let name = document.getElementById("name").value;
   }
 });
 // 3. LOGIN
-document.getElementByclassname(".login").addEventListener("click", async (e) => {
+document.getElementByclassName(".login").addEventListener("click", async (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
