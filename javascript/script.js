@@ -14,6 +14,7 @@ const main = document.querySelector(".contet")
 const signup= document.querySelector(".signup")
 const signup1 = document.querySelector(".signup1")
 const userExist = document.querySelector(".userexist")
+const login1 = document.querySelector(".login1")
 // 2. SIGNUP
 document.querySelector(".sig").addEventListener("click" , async (e) => {
     e.preventDefault()
@@ -60,6 +61,7 @@ document.querySelector(".login").addEventListener("click", async (e) => {
 });
 
 userExist.addEventListener("click" , ()=>{
+    login1.classList.toggle("login2");
     document.getElementById("signup2").style.display = "none";
     document.getElementById("login").style.display = "block";
 })
