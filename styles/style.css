@@ -341,6 +341,9 @@ margin: 2vh 2vw;
  .itemss  :hover{ 
  border-bottom: 2px solid rgb(255, 0, 0)
 }
+     .heading34{
+         margin-left: 43vw;
+     }
  .itemsss{
     margin-left: 15vw;
 } 
