@@ -60,6 +60,6 @@ document.querySelector(".login").addEventListener("click", async (e) => {
 });
 
 userExist.addEventListener("click" , ()=>{
-    document.getElementByClassName("signup2").style.display = none;
+    document.getElementById("signup2").style.display = none;
     document.getElementById("login").style.display = block;
 })
