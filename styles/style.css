@@ -227,6 +227,17 @@ margin-top: 2vh;
     margin-top: 1vh;
     margin-bottom: 2vh;
 }
+#loginemail{
+      border: 1px solid gray   ;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+#loginpassword{
+      border: 1px solid gray   ;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+}
 .imaging{
  height: 2vh;
  width: 2vw;
