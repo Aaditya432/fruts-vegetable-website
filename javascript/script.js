@@ -16,6 +16,7 @@ const signup1 = document.querySelector(".signup1")
 const userExist = document.querySelector(".userexist")
 const userNotExist = document.querySelector(".usernotexist")
 const login2 = document.querySelector(".login2")
+const removeHeading = document.querySelector(".heading34")
   document.getElementById("login").style.display = "none";
 // 2. SIGNUP
 document.querySelector(".sig").addEventListener("click" , async (e) => {
@@ -63,6 +64,7 @@ document.querySelector(".login").addEventListener("click", async (e) => {
 });
 
 userExist.addEventListener("click" , ()=>{
+  removeHeading.innerHTML = "";
     document.getElementById("signup2").style.display = "none";
     document.getElementById("login").style.display = "block";
 })
