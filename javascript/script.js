@@ -64,10 +64,10 @@ document.querySelector(".login").addEventListener("click", async (e) => {
 
 userExist.addEventListener("click" , ()=>{
     document.getElementById("signup2").style.display = "none";
-    document.getElementById("login2").style.display = "block";
+    document.getElementById("login").style.display = "block";
 })
 userNotExist.addEventListener("click" , ()=>{
     document.getElementById("signup2").style.display = "block";
-    document.getElementById("login2").style.display = "none";
+    document.getElementById("login").style.display = "none";
 })
 
