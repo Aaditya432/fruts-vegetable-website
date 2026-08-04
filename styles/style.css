@@ -174,11 +174,12 @@ margin-top: 2vh;
 #loginpassword{
     margin-top: 2vh;
 }
-#login{
+.login{
     color: white;
     height: 4vh;
     width: 6vw;
      border-style: none;
+    margin-top: 2vh;
     background-color:hwb(16 0% 0%);
     cursor: pointer;
      font-family: "Betania Patmos In GDL", cursive;
