@@ -161,7 +161,7 @@ border-bottom: 2px solid rgb(255, 0, 0)
     margin-left: 20vw;
     cursor: pointer;
 }
-.login2{
+#login2{
     position: absolute;
     margin-left:40vw;
     margin-top: 50vh;
