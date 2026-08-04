@@ -69,6 +69,7 @@ userExist.addEventListener("click" , ()=>{
     document.getElementById("login").style.display = "block";
 })
 userNotExist.addEventListener("click" , ()=>{
+  removeHeading.innerHTML = "sign up to see content"
     document.getElementById("signup2").style.display = "block";
     document.getElementById("login").style.display = "none";
 })
