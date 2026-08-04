@@ -163,7 +163,7 @@ border-bottom: 2px solid rgb(255, 0, 0)
     cursor: pointer;
 }
 #login2{
-    display: none;
+ 
     position: absolute;
     margin-left:44vw;
     margin-top: 40vh;
