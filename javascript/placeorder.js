@@ -21,8 +21,8 @@ const details45 = document.querySelector(".itemsDetails45");
 
 // 3. Login hai to latest order uthao
 onAuthStateChanged(auth, async (user) => {
-    const snap = await getDocs(collection(db, "itemBag"));
-  await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "itemBag", d.id))));
+  //   const snap = await getDocs(collection(db, "itemBag"));
+  // await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "itemBag", d.id))));
     
         for(let item of orderItem){
     let id = item.id ? item.id : item; 
