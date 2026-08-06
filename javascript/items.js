@@ -73,6 +73,7 @@ async function syncCartToDatabase(){
   const snapshot = await getDocs(collection(db, "products"));
       snapshot.forEach(docSnap => {
       const itemsimp = docSnap.data();
+        console.log(itemsimp)
         products.push({
      id: docSnap.id,
     images: itemsimp.images,         
