@@ -36,14 +36,8 @@ let addressData;
 console.log(namit);
 syncCartToDatabase();
 async function syncCartToDatabase(){
-  // let product = JSON.parse(localStorage.getItem("cart")) || [];
-  // if(cart.length === 0) return;
-
-  // Purana cart collection delete
   const snap = await getDocs(collection(db, "products"));
   await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "products", d.id))));
-
-  // Naya data daalo
   for(let item of products){
     let id = item.id ? item.id : item; 
     let product = products.find(p => String(p.id) === String(id));
