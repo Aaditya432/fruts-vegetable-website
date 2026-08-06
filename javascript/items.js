@@ -113,14 +113,15 @@ itemBag = namit.map( item => {
 }
 })
   console.log(itemBag)
+  const userId = auth.currentUser.uid
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
     
     if(products){
-      await setDoc(doc(db, "itemBag", String(id).padStart(3, '0')), {
+      await setDoc(doc(db, "customers", userId, "itembag" ,String(id).padStart(3, '0')), {
         id: products.id,
-        userid: auth.currentUser.uid,
+        userid: userId,
         name: products.images,
         kilogram: products.kilogram,
         price : products.price ,
