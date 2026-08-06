@@ -24,6 +24,7 @@ import { getFirestore, collection, getDocs, doc, getDoc, updateDoc, deleteDoc , 
 
 
 let products = fruits.concat(vegetables)
+console.log(products)
  let totalPriceRu;
 let itemBag;
 let Bags;
