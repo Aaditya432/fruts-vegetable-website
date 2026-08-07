@@ -120,6 +120,7 @@ itemBag = namit.map( item => {
     let products = itemBag.find(p => String(p.id) === String(id));
     
     if(products){
+      await deleteDoc(doc(db, "customers" , userId ,"itemBag" , )
       await setDoc(doc(db, "customers" , userId ,"itemBag" ,String(id).padStart(3, '0')), {
         id: products.id,
         userid: userId,
