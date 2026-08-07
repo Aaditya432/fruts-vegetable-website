@@ -113,21 +113,21 @@ itemBag = namit.map( item => {
 }
 })
   console.log(itemBag)
+  const userId = auth.currentUser.uid;
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
     
     if(products){
-      await setDoc(doc(db,  "itemBag" ,String(id).padStart(3, '0')), {
+      await setDoc(doc(db, "customer" , userId ,"itemBag" ,String(id).padStart(3, '0')), {
         id: products.id,
-        userid: auth.currentUser.uid,
+        userid: userId,
         name: products.images,
         kilogram: products.kilogram,
         price : products.price ,
        englishName: products.englishName,
        hindiName: products.hindiName,
-        }
-       {merge: true});
+        },  {merge: true});
 }
    }
    localStorage.setItem("orderitems", JSON.stringify(itemBag) )
