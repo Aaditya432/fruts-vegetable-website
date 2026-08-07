@@ -43,7 +43,7 @@ onAuthStateChanged(auth, async (user) => {
         }
   if (user) {
     const q = query(
-      collection(db, "customers" , userId, "itemBag"),
+      collection(db, "customers" , user.uid, "itemBag"),
       where("userid", "==", user.uid),
  // sirf last wala order
     );
