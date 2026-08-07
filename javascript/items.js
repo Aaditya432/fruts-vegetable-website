@@ -113,14 +113,13 @@ itemBag = namit.map( item => {
 }
 })
   console.log(itemBag)
-  const userId = auth.currentUser.uid
   console.log(userId)
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
     
     if(products){
-      await setDoc(doc(db, "customers", userId, "itemBag" ,String(id).padStart(3, '0')), {
+      await setDoc(doc(db,  "itemBag" ,String(id).padStart(3, '0')), {
         id: products.id,
         userid: userId,
         name: products.images,
@@ -134,16 +133,6 @@ itemBag = namit.map( item => {
    localStorage.setItem("orderitems", JSON.stringify(itemBag) )
    
 }
-// function displayLength(){
-//         if(namit.length > 0){
-//               BagItems.style.visitbility = "visible"
-//          BagItems.innerText = `bag items  ${namit.length}`
-//              }
-//              else{
-//               BagItems.style.visitbility = " hidden"
-
-//              }
-// }
  mangoItems = localStorage.getItem("mango")
  if (mangoItems != undefined){
   mango = JSON.parse(mangoItems)
@@ -220,9 +209,6 @@ window.addressdetails = function (){
    const phone = document.getElementById('phone');
    const address = document.getElementById('address');
     const btn = document.getElementById('submitBtn');
-     // const addressDisplay = document.getElementById('addressDisplay');
-    // const changeBtn = document.getElementById('changeAddressBtn');
-
   form.addEventListener('submit', async (e) => {
       e.preventDefault();
       btn.innerText = "Saving...";
@@ -241,28 +227,14 @@ window.addressdetails = function (){
       try {
         await addDoc(collection(db, "addresses"), addressData); 
         saveAddresss();
-
-      
-//         showAddress(savedAddressData);
-//         function showAddress(data){
-//       document.getElementById('displayName').innerText = "Name: " + data.name;
-//       document.getElementById('displayPhone').innerText = "Phone: " + data.phone;
-//       document.getElementById('displayAddress').innerText = "Address: " + data.address;
-          
-//    // address dikhao
-  
-// }
   }
  
  catch (error) {
         alert("Error: " + error.message);
       }
-     
-    }             
-    
-    })
+         }             
+       })
   })
-  // })
 }
 
 function saveAddresss(){
