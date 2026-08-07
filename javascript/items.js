@@ -225,7 +225,7 @@ window.addressdetails = function (){
     console.log(addressData.name)
        if (name != "" && phone != "" && address != "" ){
       try {
-        await addDoc(collection(db, "addresses"), addressData); 
+        await addDoc(collection(db, "addresses"), addressData);                                                                     
         saveAddresss();
   }
  
@@ -284,6 +284,7 @@ window.placeorderinvestigation = function(){
     return;
   }
       else{
+        
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
