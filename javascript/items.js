@@ -115,6 +115,18 @@ itemBag = namit.map( item => {
 })
   console.log(itemBag)
   const userId = auth.currentUser.uid;
+   // 1. Firebase se purana cart nikalo
+  const snapshot = await getDocs(collection(db, "customers", userId, "itemBag"));
+  const firebaseIds = snapshot.docs.map(d => d.id); 
+
+  // 2. Local cart ke ids nikalo
+  const localIds = itemBag.map(item => String(item.id).padStart(3, '0')); // ["001"]
+
+  for(let id of firebaseIds){
+    if(!localIds.includes(id)){
+      await deleteDoc(doc(db, "customers", userId, "itemBag", id));
+    }
+    
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
