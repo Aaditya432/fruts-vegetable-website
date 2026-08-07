@@ -23,13 +23,13 @@ const details45 = document.querySelector(".itemsDetails45");
 onAuthStateChanged(auth, async (user) => {
   //   const snap = await getDocs(collection(db, "itemBag"));
   // await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "itemBag", d.id))));
-    
+    const userId = auth.currentUser.id
         for(let item of orderItem){
     let id = item.id ? item.id : item; 
     let orderI = orderItem.find(p => String(p.id) === String(id));
     
     if(orderI){
-      await setDoc(doc(db, "itemBag", String(id).padStart(3, '0')), {
+      await setDoc(doc(db, "customers", userId , "itemBag" , String(id).padStart(3, '0')), {
         id: orderI.id,
         name: orderI.images,
         kg: orderI.kilogram,
@@ -43,7 +43,7 @@ onAuthStateChanged(auth, async (user) => {
         }
   if (user) {
     const q = query(
-      collection(db, "itemBag"),
+      collection(db, "customers" , userId, "itemBag"),
       where("userid", "==", user.uid),
  // sirf last wala order
     );
