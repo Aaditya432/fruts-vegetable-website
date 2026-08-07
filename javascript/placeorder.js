@@ -42,9 +42,11 @@ onAuthStateChanged(auth, async (user) => {
     }
         }
   if (user) {
+      for(let item of orderItem){
+     let id = item.id ? item.id : item; 
+      
     const q = query(
-      collection(db, "customers" , user.uid, "itemBag"),
-      where("userid", "==", user.uid),
+      collection(db, "customers" , user.uid, "itemBag" , String(id).padStart(3, '0')),
  // sirf last wala order
     );
   
@@ -65,6 +67,7 @@ onAuthStateChanged(auth, async (user) => {
      
       });
     }
+  }
   }
     console.log(realItem);
 
