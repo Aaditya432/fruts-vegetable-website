@@ -114,7 +114,7 @@ itemBag = namit.map( item => {
 })
   console.log(itemBag)
   const userId = auth.currentUser.uid
-  console.log(userid)
+  console.log(userId)
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
     let products = itemBag.find(p => String(p.id) === String(id));
