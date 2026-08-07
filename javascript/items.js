@@ -126,6 +126,7 @@ itemBag = namit.map( item => {
     if(!localIds.includes(id)){
       await deleteDoc(doc(db, "customers", userId, "itemBag", id));
     }
+  }
     
    for(let item of itemBag){
     let id = item.id ? item.id : item; 
