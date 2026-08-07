@@ -126,7 +126,8 @@ itemBag = namit.map( item => {
         price : products.price ,
        englishName: products.englishName,
        hindiName: products.hindiName,
-        });
+        }
+       {merge: true});
 }
    }
    localStorage.setItem("orderitems", JSON.stringify(itemBag) )
