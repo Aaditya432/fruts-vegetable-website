@@ -10,8 +10,9 @@
    }
 .waitingitem{
    position: absolute;
-   margin-left: 30vw;
+   margin-left: 45vw;
    margin-top: 17vh;
+   color: black;
 }
 .items4{
     /* left: 0; */
