@@ -23,24 +23,24 @@ const details45 = document.querySelector(".itemsDetails45");
 onAuthStateChanged(auth, async (user) => {
   //   const snap = await getDocs(collection(db, "itemBag"));
   // await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "itemBag", d.id))));
-    const userId = auth.currentUser.id
-        for(let item of orderItem){
-    let id = item.id ? item.id : item; 
-    let orderI = orderItem.find(p => String(p.id) === String(id));
+    // const userId = auth.currentUser.id
+    //     for(let item of orderItem){
+    // let id = item.id ? item.id : item; 
+    // let orderI = orderItem.find(p => String(p.id) === String(id));
     
-    if(orderI){
-      await setDoc(doc(db, "customers", userId , "itemBag" , String(id).padStart(3, '0')), {
-        id: orderI.id,
-        name: orderI.images,
-        kg: orderI.kilogram,
-        price : orderI.price ,
-       englishName: orderI.englishName,
-       hindiName: orderI.hindiName,
-       userid : auth.currentUser.uid,
+    // if(orderI){
+    //   await setDoc(doc(db, "customers", userId , "itemBag" , String(id).padStart(3, '0')), {
+    //     id: orderI.id,
+    //     name: orderI.images,
+    //     kg: orderI.kilogram,
+    //     price : orderI.price ,
+    //    englishName: orderI.englishName,
+    //    hindiName: orderI.hindiName,
+    //    userid : auth.currentUser.uid,
     
-      });
-    }
-        }
+    //   });
+    // }
+    //     }
   if (user) {
       for(let item of orderItem){
      let id = item.id ? item.id : item; 
