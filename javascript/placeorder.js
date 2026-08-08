@@ -62,7 +62,7 @@ onAuthStateChanged(auth, async (user) => {
         name : order.name,
         englishName : order.englishName,
         hindiName : order.hindiName,
-        kg : order.kg,
+        kg : order.kilogram,
         price :  order.price,
         })
      
