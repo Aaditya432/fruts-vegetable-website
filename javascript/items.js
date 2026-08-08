@@ -93,9 +93,11 @@ const totalPrice = document.querySelector(".totalprice");
 const addressOfCustomer = document.querySelector(".addressofcustomer");
 const saveAddress = document.querySelector(".saveaddress");
 const placeOrderI = document.querySelector(".butt");
+const waitingItem = document.querySelector("waitingitem");
 
 // onload();
-itemsContainer23.innerHTML = "<p>wait for a while</p>  ";
+waitingItem.innerHTML = "<p>wait for a while</p>  ";
+
 function onload(){
   itemsFruits();
   displayItems();
