@@ -46,11 +46,12 @@ onAuthStateChanged(auth, async (user) => {
      let id = item.id ? item.id : item; 
       
     const q = query(
-      collection(db, "customers" , user.uid, "itemBag" , String(id).padStart(3, '0')),
+      collection(db, "customers" , user.uid, "itemBag"),
  // sirf last wala order
     );
   
     const querySnapshot = await getDocs(q);
+          
 
     if (querySnapshot.empty) {
       containerInner.innerHTML = "<p>Koi order nahi mila</p>";
