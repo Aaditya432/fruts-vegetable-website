@@ -337,6 +337,7 @@ details.innerHTML+= `
    
 // })
    function displayItems(){
+     waitingItem.innerHTML = " ";
      itemsContainer23.innerHTML = ``;
      itemBag.forEach(items =>{
    itemsContainer23.innerHTML  += `<section class="items4">
