@@ -95,6 +95,7 @@ const saveAddress = document.querySelector(".saveaddress");
 const placeOrderI = document.querySelector(".butt");
 
 // onload();
+itemsContainer23.innerHtml = "<h3>wait for a while</h3>  ";
 function onload(){
   itemsFruits();
   displayItems();
