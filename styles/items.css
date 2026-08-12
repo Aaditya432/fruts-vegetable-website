@@ -360,7 +360,11 @@ mix-blend-mode: multiply;
    margin-left: 62vw;
 }
      .butt{
-   margin-left: 62vw;
+        height: 5vh;
+       width: 30vw;
+      margin-left: 62vw;
+      margin-top: 2vh;
+        top: 33%;
 }
    #changeAddressBtn{
     border-style: none;
