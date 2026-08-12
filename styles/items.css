@@ -364,7 +364,7 @@ mix-blend-mode: multiply;
        width: 30vw;
       margin-left: 62vw;
       margin-top: 2vh;
-        top: 33%;
+        /* top: 33%; */
 }
    #changeAddressBtn{
     border-style: none;
