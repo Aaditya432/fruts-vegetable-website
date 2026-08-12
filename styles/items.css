@@ -218,7 +218,7 @@ font-weight: 500;
     height: 3vh;
     width: 8vw;
     color: black;
-   background-color: hwb(16 0% 0%);
+    background-color: rgb(103, 179, 255);
    margin-top: 2vh;
    cursor: pointer;
    }
@@ -346,10 +346,10 @@ mix-blend-mode: multiply;
    }
    #changeAddressBtn{
     border-style: none;
-    height: 7vh;
-    width: 15vw;
+    height: 5vh;
+    width: 20vw;
     color: black;
-   background-color: hwb(16 0% 0%);
+ background-color: rgb(103, 179, 255);
    margin-top: 2vh;
    cursor: pointer;
    }
