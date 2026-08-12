@@ -218,7 +218,16 @@ font-weight: 500;
     height: 3vh;
     width: 8vw;
     color: black;
-    background-color: rgb(103, 179, 255);
+   background-color: rgb(255, 162, 162);
+   margin-top: 2vh;
+   cursor: pointer;
+   }
+#submitBtn{
+    border-style: none;
+    height: 3vh;
+    width: 8vw;
+    color: black;
+   background-color: rgb(255, 162, 162);
    margin-top: 2vh;
    cursor: pointer;
    }
@@ -344,12 +353,24 @@ mix-blend-mode: multiply;
    .rupees{
       font-size: smaller;
    }
+   .addressofcustomer{
+   margin-left: 62vw;
+}
    #changeAddressBtn{
     border-style: none;
     height: 5vh;
     width: 20vw;
     color: black;
- background-color: rgb(103, 179, 255);
+background-color: rgb(255, 162, 162);
+   margin-top: 2vh;
+   cursor: pointer;
+   }
+   #submitBtn{
+    border-style: none;
+    height: 5vh;
+    width: 20vw;
+    color: black;
+   background-color: rgb(255, 162, 162);
    margin-top: 2vh;
    cursor: pointer;
    }
