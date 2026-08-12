@@ -295,6 +295,9 @@ window.placeorderinvestigation = function(){
     document.getElementById('addressForm').scrollIntoView({behavior: "smooth"});
     return; // yahi ruk jao, aage mat jao
   }
+  else if(savedAddressData  != null && totalPriceRu <= 0 ){
+    itemsContainer23.innerHTML = `<p> add items for placing order </p>`
+  }
  onAuthStateChanged(auth, async (user) => {
   if(!user){
     alert("Please login first");
