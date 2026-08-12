@@ -214,8 +214,14 @@ font-weight: 500;
   mix-blend-mode: darken;
 }
 .changeAddressBtn{
-   
-}
+    border-style: none;
+    height: 3vh;
+    width: 8vw;
+    color: black;
+   background-color: hwb(16 0% 0%);
+   margin-top: 2vh;
+   cursor: pointer;
+   }
 @media screen and (max-width : 600px) {
    .itemscontainer234{
       position: absolute;
@@ -337,6 +343,15 @@ mix-blend-mode: multiply;
    }
    .rupees{
       font-size: smaller;
+   }
+   .changeAddressBtn{
+    border-style: none;
+    height: 3vh;
+    width: 15vw;
+    color: black;
+   background-color: hwb(16 0% 0%);
+   margin-top: 2vh;
+   cursor: pointer;
    }
    .tota{
       height: 4vh;
