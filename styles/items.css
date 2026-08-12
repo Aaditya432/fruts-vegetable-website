@@ -346,7 +346,7 @@ mix-blend-mode: multiply;
    }
    #changeAddressBtn{
     border-style: none;
-    height: 3vh;
+    height: 7vh;
     width: 15vw;
     color: black;
    background-color: hwb(16 0% 0%);
