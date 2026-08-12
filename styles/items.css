@@ -359,6 +359,9 @@ mix-blend-mode: multiply;
    .saveaddress{
    margin-left: 62vw;
 }
+     .butt{
+   margin-left: 62vw;
+}
    #changeAddressBtn{
     border-style: none;
     height: 5vh;
