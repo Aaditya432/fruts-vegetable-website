@@ -356,6 +356,9 @@ mix-blend-mode: multiply;
    .addressofcustomer{
    margin-left: 62vw;
 }
+   .saveaddress{
+   margin-left: 62vw;
+}
    #changeAddressBtn{
     border-style: none;
     height: 5vh;
