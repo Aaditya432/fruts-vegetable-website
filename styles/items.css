@@ -359,12 +359,28 @@ mix-blend-mode: multiply;
    .saveaddress{
    margin-left: 62vw;
 }
-     .butt{
-        height: 5vh;
-       width: 30vw;
-      margin-left: 62vw;
-      margin-top: 2vh;
-        /* top: 33%; */
+    .butt{
+/* position: absolute; */
+height: 5vh;
+width: 30vw;
+ margin-left: 64vw;
+ margin-top: 2vh;
+ /* top: 32%; */
+}
+.button40{
+   height: 4.9vh;
+   width: 30vw;
+  background-color: rgb(103, 179, 255);
+   color: black;
+   cursor: pointer;
+font-weight: 500;
+ font-size: large;
+ border-style: none;
+}
+.placing{
+   text-decoration: none;
+   color: black;
+    font-family: "Betania Patmos In GDL", cursive;
 }
    #changeAddressBtn{
     border-style: none;
