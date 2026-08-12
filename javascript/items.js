@@ -301,7 +301,7 @@ window.placeorderinvestigation = function(){
     return;
   }
       else if(savedAddressData  != null && totalPriceRu <= 0 ){
-    itemsContainer23.innerHTML = `<p> add items for placing order </p>`
+    itemsContainer23.innerHTML = `<p> this field should not be empty  </p>`
   }
       else{
         
