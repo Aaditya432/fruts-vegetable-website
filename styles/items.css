@@ -213,7 +213,7 @@ font-weight: 500;
    /* /* background-color: rgb(255,162,162); */
   mix-blend-mode: darken;
 }
-.changeAddressBtn{
+#changeAddressBtn{
     border-style: none;
     height: 3vh;
     width: 8vw;
@@ -344,7 +344,7 @@ mix-blend-mode: multiply;
    .rupees{
       font-size: smaller;
    }
-   .changeAddressBtn{
+   #changeAddressBtn{
     border-style: none;
     height: 3vh;
     width: 15vw;
