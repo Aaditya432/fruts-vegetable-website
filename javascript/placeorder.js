@@ -98,6 +98,7 @@ orderITem();
 
 //   let totalPriceRu = 0;
 function orderDetails () {
+    details45.innerHTML = " ";
 realItem.forEach((orderdetail)=>{
 details45.innerHTML += `   <div class="details45">
                 <div class="naming45">
@@ -118,6 +119,7 @@ details45.innerHTML += `   <div class="details45">
 
 
   function orderITem (){
+      containerInner.innerHTML = " ";
   realItem.forEach(item => {
     containerInner.innerHTML +=    `    <div class="images38">
                     <img  class="manish89" src=../${item.name} alt="">
