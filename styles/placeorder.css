@@ -101,6 +101,9 @@ color: rgb(0, 0, 0)
    margin-right: 3vw;
    margin-top: 2vh;
 }
+.orderconfirmationtext{
+    margin-top: 3vh;
+}
 @media screen and (max-width : 600px) {
   .purchaseditem{
     display: flex;
