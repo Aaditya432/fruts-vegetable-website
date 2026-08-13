@@ -59,6 +59,7 @@ function amount (){
     realItem.forEach((items) =>{
         priceOfItems += ${items.price}
     })
+    priceAmonunt.innerHTML = 
 }
 
 function orderDetails () {
