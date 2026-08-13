@@ -91,6 +91,12 @@ color: rgb(0, 0, 0)
   margin-left: 29vw;
   text-align: center;
 }
+.rupees1{
+     margin-left: 5vw;
+}
+.price1{
+   margin-right: 3vw;
+}
 @media screen and (max-width : 600px) {
   .purchaseditem{
     display: flex;
