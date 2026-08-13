@@ -18,7 +18,7 @@ console.log(orderItem);
 
 const containerInner = document.querySelector(".containerinner");
 const details45 = document.querySelector(".itemsDetails45");
-const priceAmount = document.querySelect(".prices");
+const priceAmount = document.querySelector(".prices");
 
 onAuthStateChanged(auth, async (user) => {
   if (user && !rendered) {
