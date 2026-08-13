@@ -74,7 +74,9 @@ function amount (){
 }
 
 function orderconfirm (){
-    orderConfirm.innerHTML = ` <p> for order confirmation you have to call on this number 7222953707 after confirmation you will get your order soon </p>`
+    orderConfirm.innerHTML = `
+    <p> for order confirmation you have to call on this number 7222953707 after confirmation you will get your order soon </p>
+    `
 }
 
 function orderDetails () {
