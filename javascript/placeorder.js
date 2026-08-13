@@ -47,11 +47,12 @@ onAuthStateChanged(auth, async (user) => {
       });
     }
   }
-  }
+  
     console.log(realItem);
 
 orderDetails();
 orderITem();
+  }
 });
 
 function orderDetails () {
