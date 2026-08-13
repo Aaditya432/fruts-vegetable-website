@@ -103,6 +103,8 @@ color: rgb(0, 0, 0)
 }
 .orderconfirmationtext{
     margin-top: 3vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 @media screen and (max-width : 600px) {
   .purchaseditem{
