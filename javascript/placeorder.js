@@ -57,9 +57,12 @@ orderITem();
 function amount (){
     priceOfItems = 0;
     realItem.forEach((items) =>{
-        priceOfItems += ${items.price}
+        priceOfItems += items.price
     })
-    priceAmonunt.innerHTML = 
+    priceAmonunt.innerHTML =     `<div class="totalPrice">
+                <span class="price1">totalprice</span>
+                <span class="rupees1">Rs ${priceOfItems}</span>
+            </div> `
 }
 
 function orderDetails () {
