@@ -89,6 +89,7 @@ color: rgb(0, 0, 0)
   width: 41vw;
   border: 2px solid black;
   margin-left: 29vw;
+  text-align: center;
 }
 @media screen and (max-width : 600px) {
   .purchaseditem{
