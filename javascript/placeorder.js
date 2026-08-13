@@ -65,7 +65,7 @@ function amount (){
     realItem.forEach((items) =>{
         priceOfItems += items.price
     })
-    priceAmonunt.innerHTML =     `
+    priceAmount.innerHTML =     `
                 <span class="price1">totalprice</span>
                 <span class="rupees1">Rs ${priceOfItems}</span>
                 `
