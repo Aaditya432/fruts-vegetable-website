@@ -52,17 +52,23 @@ onAuthStateChanged(auth, async (user) => {
 
 orderDetails();
 orderITem();
+amount();
 });
+
+    // priceAmonunt.innerHTML =     `<div class="totalPrice">
+    //             <span class="price1">totalprice</span>
+    //             <span class="rupees1">Rs ${priceOfItems}</span>
+    //         </div> `
 
 function amount (){
     priceOfItems = 0;
     realItem.forEach((items) =>{
         priceOfItems += items.price
     })
-    priceAmonunt.innerHTML =     `<div class="totalPrice">
+    priceAmonunt.innerHTML =     `
                 <span class="price1">totalprice</span>
                 <span class="rupees1">Rs ${priceOfItems}</span>
-            </div> `
+                `
 }
 
 function orderDetails () {
