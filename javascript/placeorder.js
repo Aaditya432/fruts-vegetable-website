@@ -8,46 +8,24 @@ let realItem = [];
 let orderItem;
 let items;
 
-
+let rendered = false;
 items = localStorage.getItem("orderitems")
 if(items != undefined){
     orderItem = JSON.parse(items);
 }
 console.log(orderItem);
-// 2. Apna config yaha paste kar
 
 const containerInner = document.querySelector(".containerinner");
 const details45 = document.querySelector(".itemsDetails45");
 
-// 3. Login hai to latest order uthao
 onAuthStateChanged(auth, async (user) => {
-  //   const snap = await getDocs(collection(db, "itemBag"));
-  // await Promise.all(snap.docs.map(d => deleteDoc(doc(db, "itemBag", d.id))));
-    // const userId = auth.currentUser.id
-    //     for(let item of orderItem){
-    // let id = item.id ? item.id : item; 
-    // let orderI = orderItem.find(p => String(p.id) === String(id));
-    
-    // if(orderI){
-    //   await setDoc(doc(db, "customers", userId , "itemBag" , String(id).padStart(3, '0')), {
-    //     id: orderI.id,
-    //     name: orderI.images,
-    //     kg: orderI.kilogram,
-    //     price : orderI.price ,
-    //    englishName: orderI.englishName,
-    //    hindiName: orderI.hindiName,
-    //    userid : auth.currentUser.uid,
-    
-    //   });
-    // }
-    //     }
-  if (user) {
+  if (user && !rendered) {
+      rendered = true;
       for(let item of orderItem){
      let id = item.id ? item.id : item; 
       
     const q = query(
       collection(db, "customers" , user.uid, "itemBag"),
- // sirf last wala order
     );
   
     const querySnapshot = await getDocs(q);
@@ -75,28 +53,7 @@ onAuthStateChanged(auth, async (user) => {
 orderDetails();
 orderITem();
 });
-// async function placeOrder() {
-//     if (!currentUser) return alert("Pehle login karo");
 
-//     if (userCart.length === 0) return alert("Cart khali hai");
-
-    // const orderData = {
-    //     userId: currentUser.uid,        // kisne khareeda
-    //     email: currentUser.email,       // email bhi save kar lo
-    //     items: itemBag,                // pura cart yahi save ho jayega
-    //     totalAmount: totalPriceRu,  // total kitna hua
-    //     status: "Placed",               // Placed, Shipped, Delivered
-    //     orderDate: serverTimestamp()    // time auto save
-    // };
-
-    // "orders" collection me naya document ban jayega
-    // await addDoc(collection(db, "orders"), orderData);
-
-    // userCart = []; // cart khali
-    // saveCart(); // firebase cart bhi khali
-    // alert("Order placed successfully!");
-
-//   let totalPriceRu = 0;
 function orderDetails () {
     details45.innerHTML = " ";
 realItem.forEach((orderdetail)=>{
