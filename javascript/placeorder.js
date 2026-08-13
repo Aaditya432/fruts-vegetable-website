@@ -7,6 +7,7 @@ import { addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.1
 let realItem = [];
 let orderItem;
 let items;
+let priceOfItems;
 
 let rendered = false;
 items = localStorage.getItem("orderitems")
@@ -17,6 +18,7 @@ console.log(orderItem);
 
 const containerInner = document.querySelector(".containerinner");
 const details45 = document.querySelector(".itemsDetails45");
+const priceAmount = document.querySelect(".prices");
 
 onAuthStateChanged(auth, async (user) => {
   if (user && !rendered) {
@@ -51,6 +53,13 @@ onAuthStateChanged(auth, async (user) => {
 orderDetails();
 orderITem();
 });
+
+function amount (){
+    priceOfItems = 0;
+    realItem.forEach((items) =>{
+        priceOfItems += ${items.price}
+    })
+}
 
 function orderDetails () {
     details45.innerHTML = " ";
