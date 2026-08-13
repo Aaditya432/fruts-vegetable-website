@@ -83,6 +83,13 @@ color: rgb(0, 0, 0)
    /* margin-left:  3vw; */
 color: rgb(0, 0, 0)
 }
+.prices{
+  margin-top: 2vh;
+  height: 3vh;
+  width: 30vw;
+  border: black;
+  margin-left: 30vw;
+}
 @media screen and (max-width : 600px) {
   .purchaseditem{
     display: flex;
