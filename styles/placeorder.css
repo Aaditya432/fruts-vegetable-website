@@ -86,9 +86,9 @@ color: rgb(0, 0, 0)
 .prices{
   margin-top: 2vh;
   height: 5vh;
-  width: 40vw;
+  width: 41vw;
   border: 2px solid black;
-  margin-left: 28vw;
+  margin-left: 29vw;
 }
 @media screen and (max-width : 600px) {
   .purchaseditem{
