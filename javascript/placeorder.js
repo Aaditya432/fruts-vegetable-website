@@ -19,6 +19,7 @@ console.log(orderItem);
 const containerInner = document.querySelector(".containerinner");
 const details45 = document.querySelector(".itemsDetails45");
 const priceAmount = document.querySelector(".prices");
+const orderConfirm = document.querySelector(".orderconfirmationtext");
 
 onAuthStateChanged(auth, async (user) => {
   if (user && !rendered) {
@@ -53,6 +54,7 @@ onAuthStateChanged(auth, async (user) => {
 orderDetails();
 orderITem();
 amount();
+orderconfirm();
 });
 
     // priceAmonunt.innerHTML =     `<div class="totalPrice">
@@ -69,6 +71,10 @@ function amount (){
                 <span class="price1">totalprice</span>
                 <span class="rupees1">Rs ${priceOfItems}</span>
                 `
+}
+
+function orderconfirm (){
+    orderConfirm.innerHTML = ` <p> for order confirmation you have to call on this number 7222953707 after confirmation you will get your order soon </p>`
 }
 
 function orderDetails () {
