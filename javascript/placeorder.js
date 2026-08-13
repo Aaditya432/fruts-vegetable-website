@@ -21,10 +21,8 @@ const details45 = document.querySelector(".itemsDetails45");
 onAuthStateChanged(auth, async (user) => {
   if (user && !rendered) {
       rendered = true;
-      for(let item of orderItem){
-     let id = item.id ? item.id : item; 
       
-    const q = query(
+        const q = query(
       collection(db, "customers" , user.uid, "itemBag"),
     );
   
@@ -52,7 +50,6 @@ onAuthStateChanged(auth, async (user) => {
 
 orderDetails();
 orderITem();
-  }
 });
 
 function orderDetails () {
