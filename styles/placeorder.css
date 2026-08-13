@@ -93,9 +93,12 @@ color: rgb(0, 0, 0)
 }
 .rupees1{
      margin-left: 5vw;
+   margin-top: 1vh;
+  
 }
 .price1{
    margin-right: 3vw;
+   margin-top: 1vh;
 }
 @media screen and (max-width : 600px) {
   .purchaseditem{
