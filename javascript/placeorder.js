@@ -37,7 +37,7 @@ onAuthStateChanged(auth, async (user) => {
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
-          if(order.items && order.items.lenght > 0 ){
+          if(order.items && order.items.length > 0 ){
               order.items.forEach((item)=>{  
         realItem.push({
         name : item.name,
