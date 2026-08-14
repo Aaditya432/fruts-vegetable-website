@@ -304,7 +304,23 @@ window.placeorderinvestigation = function(){
     itemsContainer23.innerHTML = `<p> this field should not be empty  </p>`
   }
       else{
-        
+  
+  // 1. itemBag ke saare items nikalo
+  const bagSnap = await getDocs(collection(db, "customers", user.uid, "itemBag"));
+  const orderItems = [];
+  bagSnap.forEach(doc => orderItems.push(doc.data()));
+
+  // 2. Naya order banao orders collection m
+  await addDoc(collection(db, "addresses", addressDocId , "orders"), {
+    items: orderItems,
+    status: "Placed",
+    orderDate: serverTimestamp()
+  });
+
+  // 3. Cart khali kar do taaki agla order new ho
+  bagSnap.forEach(doc => {
+    deleteDoc(doc.ref); // har item delete
+  });
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
