@@ -123,9 +123,9 @@ color: rgb(0, 0, 0)
   .prices{
   margin-top: 2vh;
   height: 5vh;
-  width: 60vw;
+  width: 66vw;
   border: 2px solid black;
-  margin-left: 25vw;
+  margin-left: 20vw;
   text-align: center;
   background-color: rgb(255, 162, 162);
   font-weight: bold;
