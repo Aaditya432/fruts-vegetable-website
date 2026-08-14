@@ -312,7 +312,7 @@ window.placeorderinvestigation = function(){
         console.log(orderItems);
         console.log(addressDocId)
   // 2. Naya order banao orders collection m
-  await addDoc(collection(db, "addresses", addressDocId , "orders"), {
+  await addDoc(collection(db, "customers", user.uid , "itemBag"), {
     items: orderItems,
     status: "Placed",
     orderDate: serverTimestamp()
