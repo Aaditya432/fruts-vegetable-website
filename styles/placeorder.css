@@ -120,6 +120,17 @@ color: rgb(0, 0, 0)
   margin-top: 2vh;
     width:18vw;
   }
+  .prices{
+  margin-top: 2vh;
+  height: 5vh;
+  width: 60vw;
+  border: 2px solid black;
+  margin-left: 25vw;
+  text-align: center;
+  background-color: rgb(255, 162, 162);
+  font-weight: bold;
+  font-size: large;
+}
 }
 
 
