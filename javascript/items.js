@@ -312,7 +312,7 @@ window.placeorderinvestigation = function(){
 
   // 2. Naya order banao orders collection m
   await addDoc(collection(db, "addresses", addressDocId , "orders"), {
-    items: orderItems,
+    items: ...orderItems,
     status: "Placed",
     orderDate: serverTimestamp()
   });
