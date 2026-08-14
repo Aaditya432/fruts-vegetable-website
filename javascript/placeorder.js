@@ -37,14 +37,17 @@ onAuthStateChanged(auth, async (user) => {
     } else {
       querySnapshot.forEach((doc) => {
         const order = doc.data();
+          if(order.items && order.items.lenght > 0 ){
+              order.items.forEach((item)=>{  
         realItem.push({
-        name : order.name,
-        englishName : order.englishName,
-        hindiName : order.hindiName,
-        kg : order.kilogram,
-        price :  order.price,
+        name : item.name,
+        englishName : item.englishName,
+        hindiName : item.hindiName,
+        kg : item.kilogram,
+        price :  item.price,
         })
-     
+                  })
+          }
       });
     }
   }
