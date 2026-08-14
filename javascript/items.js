@@ -310,7 +310,7 @@ window.placeorderinvestigation = function(){
   const orderItems = [];
   bagSnap.forEach(doc => orderItems.push(doc.data()));
         console.log(orderItems);
-
+        console.log(addressDocId)
   // 2. Naya order banao orders collection m
   await addDoc(collection(db, "addresses", addressDocId , "orders"), {
     items: orderItems,
