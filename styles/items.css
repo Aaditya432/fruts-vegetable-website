@@ -435,4 +435,12 @@ background-color: rgb(255, 162, 162);
           margin-top: 2vh;
           top: 32%;
          }
+   .vieworder{
+   position: absolute;
+   height: 4vh;
+   width:  20vw;
+   margin-left: 70vw;
+   top: 12%;
+   background-color: black;
+}
 }
