@@ -50,6 +50,13 @@
 mix-blend-mode: multiply;
 
   }
+.vieworder{
+   position: absolute;
+   height: 3vh;
+   width:  20vw;
+   top: 25%
+   background-color: black;
+}
 .itemsDetails{
    margin-top: 21vh;
    margin-left: 67vw;
