@@ -319,13 +319,13 @@ window.placeorderinvestigation = function(){
   });
 
   // 3. Cart khali kar do taaki agla order new ho
-  bagSnap.forEach(doc => {
-    deleteDoc(doc.ref); // har item delete
-  });
-     //    namit = [ ]
-     // localStorage.setItem("val" , JSON.stringify(namit))
-    
-   window.location.href = "/fruts-vegetable-website/files/placeorder.html"
+const deletePromises = [];
+bagSnap.forEach(doc => {
+  deletePromises.push(deleteDoc(doc.ref)); // har delete ko promise me daalo
+});
+
+await Promise.all(deletePromises);
+window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
   // if (totalPriceRu <= 0){
