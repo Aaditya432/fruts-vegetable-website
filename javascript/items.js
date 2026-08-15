@@ -308,11 +308,11 @@ window.placeorderinvestigation = function(){
   // 1. itemBag ke saare items nikalo
   const bagSnap = await getDocs(collection(db, "customers", user.uid, "itemBag"));
   const orderItems = [];
-  bagSnap.forEach(doc => orderItems.push(doc.data()));
+  bagSnap.forEach(doc => orderItems.push( {id : doc.id, ...doc.data()}));
         console.log(orderItems);
         console.log(addressDocId)
   // 2. Naya order banao orders collection m
-  await addDoc(collection(db, "customers", user.uid , "itemBag"), {
+  await addDoc(collection(db, "customers", user.uid , "orders"), {
     items: orderItems,
     status: "Placed",
     orderDate: serverTimestamp()
@@ -324,7 +324,7 @@ window.placeorderinvestigation = function(){
   });
      //    namit = [ ]
      // localStorage.setItem("val" , JSON.stringify(namit))
-        itemBag = [ ]
+    
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
