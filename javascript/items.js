@@ -94,7 +94,16 @@ const addressOfCustomer = document.querySelector(".addressofcustomer");
 const saveAddress = document.querySelector(".saveaddress");
 const placeOrderI = document.querySelector(".butt");
 const waitingItem = document.querySelector(".waitingitem");
+const viewOrder = document.querySelector(".vieworder");
 
+
+onAuthStateChanged(auth, (user) => {
+  if(user){
+    // Login hai to button dikhao
+      viewOrder.innerHTML = 
+      `  <button class = "vieworder1" > <a class = " order23" href="/fruts-vegetable-website/files/placeorder.html">your order</a></button>`;
+  }
+});
 // onload();
 waitingItem.innerHTML = "<p>wait for a while</p>  ";
 
