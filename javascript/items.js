@@ -325,6 +325,9 @@ bagSnap.forEach(doc => {
 });
 
 await Promise.all(deletePromises);
+        namit = [];
+          localStorage.setItem('val' , JSON.stringify(namit))
+        
 window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
