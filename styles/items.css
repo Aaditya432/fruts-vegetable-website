@@ -54,7 +54,8 @@ mix-blend-mode: multiply;
    position: absolute;
    height: 3vh;
    width:  20vw;
-   top: 25%
+   margin-left: 67vw;
+   top: 25%;
    background-color: black;
 }
 .itemsDetails{
