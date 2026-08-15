@@ -62,6 +62,11 @@ mix-blend-mode: multiply;
    text-decoration: none;
    color: white;
 }
+.vieworder1{
+   border-style: none;
+   background-color: black;
+   margin-left: 3vw;
+}
 .itemsDetails{
    margin-top: 21vh;
    margin-left: 67vw;
