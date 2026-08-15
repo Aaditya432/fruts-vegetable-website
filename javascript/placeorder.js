@@ -26,7 +26,7 @@ onAuthStateChanged(auth, async (user) => {
       rendered = true;
       
         const q = query(
-      collection(db, "customers" , user.uid, "itemBag"),
+      collection(db, "customers" , user.uid, "orders"),
     );
   
     const querySnapshot = await getDocs(q);
