@@ -322,6 +322,7 @@ window.placeorderinvestigation = function(){
   bagSnap.forEach(doc => {
     deleteDoc(doc.ref); // har item delete
   });
+        namit = []
    window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
