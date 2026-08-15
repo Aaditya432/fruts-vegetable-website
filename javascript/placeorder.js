@@ -27,6 +27,8 @@ onAuthStateChanged(auth, async (user) => {
       
         const q = query(
       collection(db, "customers" , user.uid, "orders"),
+            orderBy("orderDate", "desc" )
+            limit(1)
     );
   
     const querySnapshot = await getDocs(q);
