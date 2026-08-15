@@ -318,6 +318,8 @@ window.placeorderinvestigation = function(){
     orderDate: serverTimestamp()
   });
 
+                namit = [];
+          localStorage.setItem('val' , JSON.stringify(namit))
   // 3. Cart khali kar do taaki agla order new ho
 const deletePromises = [];
 bagSnap.forEach(doc => {
@@ -325,8 +327,6 @@ bagSnap.forEach(doc => {
 });
 
 await Promise.all(deletePromises);
-        namit = [];
-          localStorage.setItem('val' , JSON.stringify(namit))
         
 window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
