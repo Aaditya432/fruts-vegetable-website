@@ -45,12 +45,12 @@ function displayQuantity1() {
     for (let i = 0; i < vegetables.length; i++) {
       if (vegetables[i].id == VId) {
         vegetables[i].kilogram += 1;
-        vegetables[i].price = vegetables[i].kilogram * 50;
+        vegetables[i].price = vegetables[i].kilogram *   vegetables[i].price;
         return vegetables[i];
       }
       else if (vegetables[i].minusId == VId) {
         vegetables[i].kilogram -= 1;
-        vegetables[i].price = vegetables[i].kilogram * 50
+        vegetables[i].price = vegetables[i].kilogram *  vegetables[i].price
         return vegetables[i];
       }
     }
