@@ -58,14 +58,14 @@ function displayQuantity( ){
    for(let i = 0; i < fruits.length; i++){
   if(fruits[i].id ==fId ){ 
             fruits[i].kilogram += 1;
-           fruits[i].price = fruits[i].kilogram * 50;
+           fruits[i].price = fruits[i].kilogram * fruits[i].price;
                   return fruits[i]
        }
             else if (fruits[i].minusId == fId )
   {
     
              fruits[i].kilogram  -= 1;
-             fruits[i].price = fruits[i].kilogram * 50
+             fruits[i].price = fruits[i].kilogram * fruits[i].price
                     return fruits[i]
              }   
        }})
