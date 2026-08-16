@@ -58,7 +58,7 @@ function displayQuantity( ){
    for(let i = 0; i < fruits.length; i++){
   if(fruits[i].id ==fId ){ 
             fruits[i].kilogram += 1;
-           fruits[i].price = fruits[i].kilogram * fruits[i].price;
+           fruits[i].price1 = fruits[i].kilogram * fruits[i].price;
                   return fruits[i]
        }
             else if (fruits[i].minusId == fId )
@@ -95,7 +95,7 @@ function displayFruits2( fruitsid ){
                  <img src=../${fitems.button4} alt="" class = "image56" >
                 </button>
                 <span class="manish">${fitems.kilogram}Kg =</span>
-                <span class = "naresh">${fitems.price} Rs </span>
+                <span class = "naresh">${fitems.price1} Rs </span>
                   <button class="button3" onclick = "displayFruits2(${fitems.minusId})">
                  <img src=../${fitems.button5} alt="" class = "image57" >
                 </button>
@@ -118,7 +118,7 @@ fruitsContainer.innerHTML += `  <section class="items3">
                  <img src=../${items.button4} alt="" class = "image56" >
                 </button>
                 <span class="manish">${items.kilogram}Kg =</span>
-                <span class = "naresh">${items.price} Rs </span>
+                <span class = "naresh">${items.price1} Rs </span>
                  <button class="button3" onclick = "displayFruits2(${items.minusId})">
                  <img src=../${items.button5} alt="" class = "image57" >
                 </button>
