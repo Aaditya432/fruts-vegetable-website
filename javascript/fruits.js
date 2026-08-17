@@ -53,25 +53,25 @@ else{
 
              }
             }
-function displayQuantity( ){
-     Meesho = manish.map((fId)=>{ 
-   for(let i = 0; i < fruits.length; i++){
-  if(fruits[i].id ==fId ){ 
-            fruits[i].kilogram += 1;
-           fruits[i].price1 = fruits[i].kilogram * fruits[i].price;
-                  return fruits[i]
-       }
-            else if (fruits[i].minusId == fId )
-  {
+// function displayQuantity( ){
+//      Meesho = manish.map((fId)=>{ 
+//    for(let i = 0; i < fruits.length; i++){
+//   if(fruits[i].id ==fId ){ 
+//             fruits[i].kilogram += 1;
+//            fruits[i].price1 = fruits[i].kilogram * fruits[i].price;
+//                   return fruits[i]
+//        }
+//             else if (fruits[i].minusId == fId )
+//   {
     
-             fruits[i].kilogram  -= 1;
-             fruits[i].price1 = fruits[i].kilogram * fruits[i].price
-                    return fruits[i]
-             }   
-       }})
-       manish.shift()
-       localStorage.setItem("value" , JSON.stringify(fruits))
-    } 
+//              fruits[i].kilogram  -= 1;
+//              fruits[i].price1 = fruits[i].kilogram * fruits[i].price
+//                     return fruits[i]
+//              }   
+//        }})
+//        manish.shift()
+//        localStorage.setItem("value" , JSON.stringify(fruits))
+//     } 
 mahesh = localStorage.getItem("value");
 // console.log(mahesh);
 if(mahesh != undefined ){
