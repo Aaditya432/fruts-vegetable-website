@@ -340,7 +340,7 @@ bagSnap.forEach(doc => {
 
 await Promise.all(deletePromises);
 
-        PlaceorderI.innerHTML = " ";
+        PlaceOOrderI.innerHTML = " ";
 window.location.href = "/fruts-vegetable-website/files/placeorder.html"
   }
    })
