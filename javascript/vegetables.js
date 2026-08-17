@@ -43,12 +43,12 @@ function displayBagItemsN(itemid) {
 function displayQuantity1() {
   manshu = manju.map((VId) => {
     for (let i = 0; i < vegetables.length; i++) {
-      if (vegetables[i].id == VId) {
+      if (vegetables[i].id == VId && vegetables[i].kilogram > 0) {
         vegetables[i].kilogram += 1;
         vegetables[i].price1 = vegetables[i].kilogram *   vegetables[i].price;
         return vegetables[i];
       }
-      else if (vegetables[i].minusId == VId) {
+      else if (vegetables[i].minusId == VId && vegetables[i].kilogram != 1) {
         vegetables[i].kilogram -= 1;
         vegetables[i].price1 = vegetables[i].kilogram *  vegetables[i].price
         return vegetables[i];
@@ -59,13 +59,13 @@ function displayQuantity1() {
   localStorage.setItem("itemsPrice", JSON.stringify(vegetables))
 }
 meenu = localStorage.getItem("itemsPrice");
-// console.log(mahesh);
-// if (meenu != undefined) {
-//   vegetables = JSON.parse(meenu);
-// }
-//else {
-//  vegetables = [];
-//
+console.log(mahesh);
+if (meenu != undefined) {
+  vegetables = JSON.parse(meenu);
+}
+else {
+ vegetables = [];
+
 console.log(vegetables)
 
 function displayFruits4(Vsid) {
