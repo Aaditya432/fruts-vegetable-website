@@ -46,7 +46,7 @@ onAuthStateChanged(auth, async (user) => {
         englishName : item.englishName,
         hindiName : item.hindiName,
         kg : item.kilogram,
-        price :  item.price,
+        price1 :  item.price1,
         })
                   })
           }
@@ -70,7 +70,7 @@ orderconfirm();
 function amount (){
     priceOfItems = 0;
     realItem.forEach((items) =>{
-        priceOfItems += items.price
+        priceOfItems += items.price1
     })
     priceAmount.innerHTML =     `
                 <span class="price1">totalprice</span>
@@ -98,7 +98,7 @@ details45.innerHTML += `   <div class="details45">
                  </div>
                  <div class="priceitems45">
                 <span class="pri45">price</span>
-                <span class="pAout45">Rs ${orderdetail.price}</span>
+                <span class="pAout45">Rs ${orderdetail.price1}</span>
                  </div>
                  </div>`
   })
