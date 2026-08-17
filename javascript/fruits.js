@@ -65,7 +65,7 @@ function displayQuantity( ){
   {
     
              fruits[i].kilogram  -= 1;
-             fruits[i].price = fruits[i].kilogram * fruits[i].price
+             fruits[i].price1 = fruits[i].kilogram * fruits[i].price
                     return fruits[i]
              }   
        }})
