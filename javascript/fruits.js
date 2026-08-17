@@ -72,14 +72,14 @@ else{
 //        manish.shift()
 //        localStorage.setItem("value" , JSON.stringify(fruits))
 //     } 
-mahesh = localStorage.getItem("value");
-// console.log(mahesh);
-if(mahesh != undefined ){
-fruits  = JSON.parse(mahesh);
-}
-else{
-frutis = [ ]
-}
+// mahesh = localStorage.getItem("value");
+// // console.log(mahesh);
+// if(mahesh != undefined ){
+// fruits  = JSON.parse(mahesh);
+// }
+// else{
+// frutis = [ ]
+// }
 function displayFruits2( fruitsid ){
         manish.push(fruitsid)
          displayQuantity();
