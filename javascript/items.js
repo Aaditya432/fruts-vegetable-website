@@ -50,6 +50,7 @@ async function syncCartToDatabase(){
         button4: product.button4,
         kilogram: product.kilogram,
         price : product.price ,
+        price1 : product.price1,
         button5: product.button5,
        englishName: product.englishName,
        hindiName: product.hindiName,
@@ -76,6 +77,7 @@ async function syncCartToDatabase(){
     button4: itemsimp.button4,
     kilogram: itemsimp.kilogram,
     price: itemsimp.price,
+    price1 : itemsimp.price1,      
     button5: itemsimp.button5,
     englishName: itemsimp.englishName,
    hindiName: itemsimp.hindiName,
@@ -151,6 +153,7 @@ itemBag = namit.map( item => {
         name: products.images,
         kilogram: products.kilogram,
         price : products.price ,
+        price1 : products.price1,
        englishName: products.englishName,
        hindiName: products.hindiName,
         },  {merge: true});
@@ -208,7 +211,7 @@ function quantityNumbers (){
 function displayTotalPrice (){
      totalPriceRu = 0;
     itemBag.forEach((itemsss)=>{
-     totalPriceRu +=  itemsss.price ; 
+     totalPriceRu +=  itemsss.price1 ; 
     })
   totalPrice.innerHTML =    ` 
             <div class="tota">
@@ -365,7 +368,7 @@ details.innerHTML+= `
                  </div>
                  <div class="priceitems">
                 <span class="pri21">price</span>
-                <span class="pAout">Rs ${itemss.price}</span>
+                <span class="pAout">Rs ${itemss.price1}</span>
                  </div>
                  </div>`
  }) }
@@ -383,7 +386,7 @@ details.innerHTML+= `
                  <h3 class="english33">${items.englishName}</h3>
                  <h3 class="hindi33">(${items.hindiName})</h3>
                 <h2 class = "kg1" > kilogram : ${items.kilogram}Kg</h2>
-                <h2 class = "naresh2">Price : ${items.price} Rs </h2>
+                <h2 class = "naresh2">Price : ${items.price1} Rs </h2>
                 </div>
                 <div class = "crossButton ">
                 <button class = "buttonb"  onclick = "removeItem(${items.id}) "> <img class = "img32" src = ../${items.cross} alt="">  
