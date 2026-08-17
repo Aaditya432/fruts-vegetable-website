@@ -56,12 +56,12 @@ else{
 function displayQuantity( ){
      Meesho = manish.map((fId)=>{ 
    for(let i = 0; i < fruits.length; i++){
-  if(fruits[i].id ==fId ){ 
+  if(fruits[i].id == fId && fruits[i].kilogram > 0){ 
             fruits[i].kilogram += 1;
            fruits[i].price1 = fruits[i].kilogram * fruits[i].price;
                   return fruits[i]
        }
-            else if (fruits[i].minusId == fId )
+            else if (fruits[i].minusId == fId && fruits[i].kilogram != 1)
   {
     
              fruits[i].kilogram  -= 1;
