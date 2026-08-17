@@ -75,7 +75,7 @@ function displayFruits5( fvsid ){
                 </div>
                   <div class = "printPrice3">
                 <span class="manish2">${Atems.kilogram}Kg =</span>
-                <span class = "naresh2">${Atems.price} Rs </span>
+                <span class = "naresh2">${Atems.price1} Rs </span>
                 </div>
                 <h3 class="english">${Atems.englishName}</h3>
                  <h4 class="hindi">(${Atems.hindiName})</h4>
@@ -93,7 +93,7 @@ data.forEach( (items) =>{
                 </div>
                   <div class = "printPrice3">
                 <span class="manish2">${items.kilogram}Kg =</span>
-                <span class = "naresh2">${items.price} Rs </span>
+                <span class = "naresh2">${items.price1} Rs </span>
                 </div>
                 <h3 class="english">${items.englishName}</h3>
                  <h4 class="hindi">(${items.hindiName})</h4>
