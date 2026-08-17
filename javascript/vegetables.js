@@ -45,12 +45,12 @@ function displayQuantity1() {
     for (let i = 0; i < vegetables.length; i++) {
       if (vegetables[i].id == VId) {
         vegetables[i].kilogram += 1;
-        vegetables[i].price = vegetables[i].kilogram *   vegetables[i].price;
+        vegetables[i].price1 = vegetables[i].kilogram *   vegetables[i].price;
         return vegetables[i];
       }
       else if (vegetables[i].minusId == VId) {
         vegetables[i].kilogram -= 1;
-        vegetables[i].price = vegetables[i].kilogram *  vegetables[i].price
+        vegetables[i].price1 = vegetables[i].kilogram *  vegetables[i].price
         return vegetables[i];
       }
     }
@@ -60,9 +60,9 @@ function displayQuantity1() {
 }
 meenu = localStorage.getItem("itemsPrice");
 // console.log(mahesh);
-if (meenu != undefined) {
-  vegetables = JSON.parse(meenu);
-}
+// if (meenu != undefined) {
+//   vegetables = JSON.parse(meenu);
+// }
 //else {
 //  vegetables = [];
 //
@@ -83,7 +83,7 @@ function displayFruits4(Vsid) {
                  <img src=../${Vitems.button4} alt="" class = "image57" >
                 </button>
                 <span class="manish1">${Vitems.kilogram}Kg =</span>
-                <span class = "naresh1">${Vitems.price} Rs </span>
+                <span class = "naresh1">${Vitems.price1} Rs </span>
                   <button class="button4" onclick = "displayFruits4(${Vitems.minusId})">
                  <img src=../${Vitems.button5} alt="" class = "image58" >
                 </button>
@@ -106,7 +106,7 @@ vegetables.forEach( items => {
                  <img src=../${items.button4} alt="" class = "image57" >
                 </button>
                 <span class="manish1">${items.kilogram}Kg =</span>
-                <span class = "naresh1">${items.price} Rs </span>
+                <span class = "naresh1">${items.price1} Rs </span>
                  <button class="button4" onclick = "displayFruits4(${items.minusId})">
                  <img src=../${items.button5} alt="" class = "image58" >
                 </button>
